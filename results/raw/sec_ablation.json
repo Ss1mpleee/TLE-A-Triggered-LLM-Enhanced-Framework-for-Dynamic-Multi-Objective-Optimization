@@ -1,0 +1,194 @@
+[
+  {
+    "variant": "V0_TLE_full",
+    "problem": "DF1",
+    "seed": 0,
+    "igd": 0.0286424078300875,
+    "elapsed_sec": 0.2056875228881836,
+    "invocations": 103
+  },
+  {
+    "variant": "V0_TLE_full",
+    "problem": "DF1",
+    "seed": 1,
+    "igd": 0.0190004038077073,
+    "elapsed_sec": 0.204329252243042,
+    "invocations": 98
+  },
+  {
+    "variant": "V0_TLE_full",
+    "problem": "DF1",
+    "seed": 2,
+    "igd": 0.01970400867839779,
+    "elapsed_sec": 0.20276522636413574,
+    "invocations": 100
+  },
+  {
+    "variant": "V1_single_signal",
+    "problem": "DF1",
+    "seed": 0,
+    "igd": 0.01492727536383296,
+    "elapsed_sec": 0.1708691120147705,
+    "invocations": 0
+  },
+  {
+    "variant": "V1_single_signal",
+    "problem": "DF1",
+    "seed": 1,
+    "igd": 0.01577228715624674,
+    "elapsed_sec": 0.17875146865844727,
+    "invocations": 0
+  },
+  {
+    "variant": "V1_single_signal",
+    "problem": "DF1",
+    "seed": 2,
+    "igd": 0.017659750491748425,
+    "elapsed_sec": 0.1702885627746582,
+    "invocations": 0
+  },
+  {
+    "variant": "V2_heuristic_budget",
+    "problem": "DF1",
+    "seed": 0,
+    "igd": 0.021811725339895796,
+    "elapsed_sec": 0.18738532066345215,
+    "invocations": 32
+  },
+  {
+    "variant": "V2_heuristic_budget",
+    "problem": "DF1",
+    "seed": 1,
+    "igd": 0.01565410649559665,
+    "elapsed_sec": 0.1861741542816162,
+    "invocations": 37
+  },
+  {
+    "variant": "V2_heuristic_budget",
+    "problem": "DF1",
+    "seed": 2,
+    "igd": 0.03938663566037036,
+    "elapsed_sec": 0.18359661102294922,
+    "invocations": 27
+  },
+  {
+    "variant": "V3_no_llm",
+    "problem": "DF1",
+    "seed": 0,
+    "igd": 0.024880725889328135,
+    "elapsed_sec": 0.1567401885986328,
+    "invocations": 0
+  },
+  {
+    "variant": "V3_no_llm",
+    "problem": "DF1",
+    "seed": 1,
+    "igd": 0.021427944876517547,
+    "elapsed_sec": 0.1560814380645752,
+    "invocations": 0
+  },
+  {
+    "variant": "V3_no_llm",
+    "problem": "DF1",
+    "seed": 2,
+    "igd": 0.01678939716437267,
+    "elapsed_sec": 0.15604591369628906,
+    "invocations": 0
+  },
+  {
+    "variant": "V0_TLE_full",
+    "problem": "DF5",
+    "seed": 0,
+    "igd": 0.0531124568871782,
+    "elapsed_sec": 0.18473553657531738,
+    "invocations": 56
+  },
+  {
+    "variant": "V0_TLE_full",
+    "problem": "DF5",
+    "seed": 1,
+    "igd": 0.022216825041685824,
+    "elapsed_sec": 0.17896437644958496,
+    "invocations": 26
+  },
+  {
+    "variant": "V0_TLE_full",
+    "problem": "DF5",
+    "seed": 2,
+    "igd": 0.0757750688913619,
+    "elapsed_sec": 0.18360424041748047,
+    "invocations": 53
+  },
+  {
+    "variant": "V1_single_signal",
+    "problem": "DF5",
+    "seed": 0,
+    "igd": 0.06714090887751394,
+    "elapsed_sec": 0.16705608367919922,
+    "invocations": 0
+  },
+  {
+    "variant": "V1_single_signal",
+    "problem": "DF5",
+    "seed": 1,
+    "igd": 0.07127252884393259,
+    "elapsed_sec": 0.16660308837890625,
+    "invocations": 0
+  },
+  {
+    "variant": "V1_single_signal",
+    "problem": "DF5",
+    "seed": 2,
+    "igd": 0.03575793300392648,
+    "elapsed_sec": 0.16711854934692383,
+    "invocations": 0
+  },
+  {
+    "variant": "V2_heuristic_budget",
+    "problem": "DF5",
+    "seed": 0,
+    "igd": 0.08482927329245783,
+    "elapsed_sec": 0.17872118949890137,
+    "invocations": 18
+  },
+  {
+    "variant": "V2_heuristic_budget",
+    "problem": "DF5",
+    "seed": 1,
+    "igd": 0.0630633512747861,
+    "elapsed_sec": 0.17611384391784668,
+    "invocations": 26
+  },
+  {
+    "variant": "V2_heuristic_budget",
+    "problem": "DF5",
+    "seed": 2,
+    "igd": 0.08719351530212884,
+    "elapsed_sec": 0.17856073379516602,
+    "invocations": 19
+  },
+  {
+    "variant": "V3_no_llm",
+    "problem": "DF5",
+    "seed": 0,
+    "igd": 0.05428941600862045,
+    "elapsed_sec": 0.15587520599365234,
+    "invocations": 0
+  },
+  {
+    "variant": "V3_no_llm",
+    "problem": "DF5",
+    "seed": 1,
+    "igd": 0.05698584423523994,
+    "elapsed_sec": 0.15232014656066895,
+    "invocations": 0
+  },
+  {
+    "variant": "V3_no_llm",
+    "problem": "DF5",
+    "seed": 2,
+    "igd": 0.06691086668917956,
+    "elapsed_sec": 0.15383005142211914,
+    "invocations": 0
+  }
+]

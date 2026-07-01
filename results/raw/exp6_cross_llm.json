@@ -1,0 +1,146 @@
+[
+  {
+    "model": "qwen2.5:7b",
+    "prob": "DF1",
+    "seed": 0,
+    "igd": 0.7201582973911438,
+    "invocations": 30,
+    "elapsed_sec": 0.29538512229919434
+  },
+  {
+    "model": "qwen2.5:7b",
+    "prob": "DF1",
+    "seed": 1,
+    "igd": 0.7025953701260002,
+    "invocations": 63,
+    "elapsed_sec": 0.4089212417602539
+  },
+  {
+    "model": "qwen2.5:7b",
+    "prob": "DF5",
+    "seed": 0,
+    "igd": 0.06515367793813714,
+    "invocations": 42,
+    "elapsed_sec": 0.32863378524780273
+  },
+  {
+    "model": "qwen2.5:7b",
+    "prob": "DF5",
+    "seed": 1,
+    "igd": 0.06254341942957989,
+    "invocations": 60,
+    "elapsed_sec": 0.39070558547973633
+  },
+  {
+    "model": "qwen2.5:7b",
+    "prob": "DF7",
+    "seed": 0,
+    "igd": 0.6574757707671667,
+    "invocations": 29,
+    "elapsed_sec": 0.28726696968078613
+  },
+  {
+    "model": "qwen2.5:7b",
+    "prob": "DF7",
+    "seed": 1,
+    "igd": 0.7092830419418646,
+    "invocations": 47,
+    "elapsed_sec": 0.3537445068359375
+  },
+  {
+    "model": "qwen3.5:9b",
+    "prob": "DF1",
+    "seed": 0,
+    "igd": 0.7086956736543543,
+    "invocations": 14,
+    "elapsed_sec": 89.88741207122803
+  },
+  {
+    "model": "qwen3.5:9b",
+    "prob": "DF1",
+    "seed": 1,
+    "igd": 0.6390612488229082,
+    "invocations": 20,
+    "elapsed_sec": 120.9240493774414
+  },
+  {
+    "model": "qwen3.5:9b",
+    "prob": "DF5",
+    "seed": 0,
+    "igd": 0.37681515455902553,
+    "invocations": 4,
+    "elapsed_sec": 24.27388906478882
+  },
+  {
+    "model": "qwen3.5:9b",
+    "prob": "DF5",
+    "seed": 1,
+    "igd": 0.6597800153620149,
+    "invocations": 6,
+    "elapsed_sec": 36.34968900680542
+  },
+  {
+    "model": "qwen3.5:9b",
+    "prob": "DF7",
+    "seed": 0,
+    "igd": 0.5624976840956888,
+    "invocations": 15,
+    "elapsed_sec": 90.47146415710449
+  },
+  {
+    "model": "qwen3.5:9b",
+    "prob": "DF7",
+    "seed": 1,
+    "igd": 0.3871185251212102,
+    "invocations": 17,
+    "elapsed_sec": 102.94129490852356
+  },
+  {
+    "model": "carstenuhlig/omnicoder-9b:q8_0",
+    "prob": "DF1",
+    "seed": 0,
+    "igd": 0.7086956736543543,
+    "invocations": 14,
+    "elapsed_sec": 202.4110426902771
+  },
+  {
+    "model": "carstenuhlig/omnicoder-9b:q8_0",
+    "prob": "DF1",
+    "seed": 1,
+    "igd": 0.6390612488229082,
+    "invocations": 20,
+    "elapsed_sec": 278.5713584423065
+  },
+  {
+    "model": "carstenuhlig/omnicoder-9b:q8_0",
+    "prob": "DF5",
+    "seed": 0,
+    "igd": 0.37681515455902553,
+    "invocations": 4,
+    "elapsed_sec": 55.90749955177307
+  },
+  {
+    "model": "carstenuhlig/omnicoder-9b:q8_0",
+    "prob": "DF5",
+    "seed": 1,
+    "igd": 0.6597800153620149,
+    "invocations": 6,
+    "elapsed_sec": 83.75426506996155
+  },
+  {
+    "model": "carstenuhlig/omnicoder-9b:q8_0",
+    "prob": "DF7",
+    "seed": 0,
+    "igd": 0.5624976840956888,
+    "invocations": 15,
+    "elapsed_sec": 209.09338521957397
+  },
+  {
+    "model": "carstenuhlig/omnicoder-9b:q8_0",
+    "prob": "DF7",
+    "seed": 1,
+    "igd": 0.3871185251212102,
+    "invocations": 17,
+    "elapsed_sec": 236.87222337722778
+  }
+]

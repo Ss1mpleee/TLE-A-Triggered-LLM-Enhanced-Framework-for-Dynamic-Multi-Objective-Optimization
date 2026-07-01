@@ -1,0 +1,251 @@
+# =============================================================================
+# .gitignore for the TLE-DMO repository
+#   (Triggered LLM-Enhanced Evolutionary Algorithm for Dynamic
+#    Multi-Objective Optimization)
+#
+# The repository layout (mirrored from the project root `D:\新论文\实验\`):
+#   baselines/      <- six baseline algorithms (DE, NSGA-II, MOEA/D, ...)
+#   benchmarks/     <- CEC 2018 DF1-DF5 + UAV scenario
+#   core/           <- TLE, bandit, triggers, prompts, DE operators
+#   experiments/    <- run scripts + plot scripts
+#   proposed/       <- TLE-specific glue
+#   results/
+#     raw/          <- small JSON result files (COMMITTED for reproducibility)
+#     figures/      <- generated PNG/PDF (NOT committed — regenerated)
+#     llm_cache/    <- per-prompt LLM response cache (NOT committed)
+# =============================================================================
+
+
+# -----------------------------------------------------------------------------
+# 1. Python build / cache artifacts
+# -----------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+build/
+dist/
+.eggs/
+pip-wheel-metadata/
+*.pyo
+*.pyd
+
+# Distribution / packaging
+.Python
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+
+# -----------------------------------------------------------------------------
+# 2. Virtual environments
+# -----------------------------------------------------------------------------
+venv/
+.venv/
+env/
+.ENV/
+conda-env/
+.python-version
+.python-version.*
+
+
+# -----------------------------------------------------------------------------
+# 3. Environment variables / secrets / local config
+# -----------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.env.local
+secrets.*
+api_keys.txt
+ollama_config.local.json
+huggingface_token.txt
+
+
+# -----------------------------------------------------------------------------
+# 4. LLM response cache
+#   - Each file is a single LLM (prompt_hash -> response) entry.
+#   - The cache is rebuilt on first run via the cache layer in `core/llm_interface.py`.
+#   - 4000+ files = ~100 MB; safe to discard, and avoids committing any private
+#     prompts users may have injected.
+# -----------------------------------------------------------------------------
+results/llm_cache/
+**/llm_cache/
+*.cache.json
+llm_response_cache/
+ollama_logs/
+
+
+# -----------------------------------------------------------------------------
+# 5. Generated figures (rebuilt from raw/ + plot scripts)
+# -----------------------------------------------------------------------------
+results/figures/*.png
+results/figures/*.pdf
+results/figures/*.svg
+results/figures/*.eps
+**/figures/*.png
+**/figures/*.pdf
+!results/figures/.gitkeep
+
+# Allow committing one example figure for the README preview.
+# Comment in if you want that:
+# !results/figures/example_*.png
+
+
+# -----------------------------------------------------------------------------
+# 6. LaTeX build artifacts (from compiling the paper from `../论文/`)
+# -----------------------------------------------------------------------------
+*.aux
+*.log
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.out
+*.synctex.gz
+*.toc
+*.lot
+*.lof
+*.run.xml
+main.pdf
+paper.pdf
+manuscript.pdf
+
+# Bibliography backups
+*.baktxt
+*.bak
+
+
+# -----------------------------------------------------------------------------
+# 7. Editor / IDE
+# -----------------------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.vs/
+.vscode/settings.json
+*.code-workspace
+*.sublime-project
+*.sublime-workspace
+
+# Spyder / PyCharm / Rope
+.spyderproject/
+.spyproject/
+_rope_project/
+profile_default/
+
+
+# -----------------------------------------------------------------------------
+# 8. OS-generated files
+# -----------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+
+# -----------------------------------------------------------------------------
+# 9. Logs / runtime artifacts
+# -----------------------------------------------------------------------------
+*.log
+*.log.*
+logs/
+*.pid
+*.seed
+*.pidfile
+*.prof
+*.out
+nohup.out
+*.trc
+*.trc.gz
+*.replay
+
+
+# -----------------------------------------------------------------------------
+# 10. Test / coverage / benchmark output
+# -----------------------------------------------------------------------------
+.coverage
+.coverage.*
+coverage.xml
+coverage.json
+htmlcov/
+.tox/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+benchmark_artifacts/
+test_results/
+*.bench
+pytest_*.xml
+junit_*.xml
+
+
+# -----------------------------------------------------------------------------
+# 11. Notebook checkpoints
+# -----------------------------------------------------------------------------
+.ipynb_checkpoints/
+*.ipynb_checkpoints/
+profile_default/
+*.ipynb_meta
+
+
+# -----------------------------------------------------------------------------
+# 12. Large / generated raw results (KEEP raw/*.json for reproducibility)
+# -----------------------------------------------------------------------------
+results/figures/
+results/llm_cache/
+results/checkpoints/
+*.npz
+*.npy
+*.h5
+*.hdf5
+*.parquet
+*.arrow
+
+# Keep the small raw JSON result files (committed for reproducibility)
+!results/raw/
+!results/raw/**/*.json
+!results/raw/**/*.csv
+
+
+# -----------------------------------------------------------------------------
+# 13. Ollama model weights (do NOT commit — pull from registry)
+# -----------------------------------------------------------------------------
+ollama_models/
+*.gguf
+*.bin
+*.safetensors
+hf_cache/
+huggingface/
+.cache/huggingface/
+
+
+# -----------------------------------------------------------------------------
+# 14. Misc
+# -----------------------------------------------------------------------------
+*.bak
+*.tmp
+*.orig
+*.rej
+*.swp
+*.swo
+*.swn
+TODO.local.md
+NOTES.local.md
+scratch/
+playground/
+sandbox/

@@ -1,0 +1,322 @@
+[
+  {
+    "variant": "V0_TLE_full",
+    "problem": "DF1",
+    "seed": 0,
+    "igd": 0.7201582973911438,
+    "elapsed_sec": 0.2957901954650879,
+    "invocations": 30
+  },
+  {
+    "variant": "V0_TLE_full",
+    "problem": "DF1",
+    "seed": 1,
+    "igd": 0.7025953701260002,
+    "elapsed_sec": 0.40611910820007324,
+    "invocations": 63
+  },
+  {
+    "variant": "V0_TLE_full",
+    "problem": "DF1",
+    "seed": 2,
+    "igd": 0.7016673561281007,
+    "elapsed_sec": 0.3648073673248291,
+    "invocations": 52
+  },
+  {
+    "variant": "V0_TLE_full",
+    "problem": "DF1",
+    "seed": 3,
+    "igd": 0.3940858221873544,
+    "elapsed_sec": 0.4874002933502197,
+    "invocations": 87
+  },
+  {
+    "variant": "V0_TLE_full",
+    "problem": "DF1",
+    "seed": 4,
+    "igd": 0.7194340929080023,
+    "elapsed_sec": 0.3294034004211426,
+    "invocations": 41
+  },
+  {
+    "variant": "V0_TLE_full",
+    "problem": "DF5",
+    "seed": 0,
+    "igd": 0.06515367793813714,
+    "elapsed_sec": 0.2668583393096924,
+    "invocations": 42
+  },
+  {
+    "variant": "V0_TLE_full",
+    "problem": "DF5",
+    "seed": 1,
+    "igd": 0.06254341942957989,
+    "elapsed_sec": 0.3863067626953125,
+    "invocations": 60
+  },
+  {
+    "variant": "V0_TLE_full",
+    "problem": "DF5",
+    "seed": 2,
+    "igd": 0.08628624305725639,
+    "elapsed_sec": 0.34176015853881836,
+    "invocations": 46
+  },
+  {
+    "variant": "V0_TLE_full",
+    "problem": "DF5",
+    "seed": 3,
+    "igd": 0.06831311830915983,
+    "elapsed_sec": 0.41251349449157715,
+    "invocations": 62
+  },
+  {
+    "variant": "V0_TLE_full",
+    "problem": "DF5",
+    "seed": 4,
+    "igd": 0.06795853249321626,
+    "elapsed_sec": 0.3096492290496826,
+    "invocations": 37
+  },
+  {
+    "variant": "V1_single_signal",
+    "problem": "DF1",
+    "seed": 0,
+    "igd": 0.7177413653938376,
+    "elapsed_sec": 0.17302775382995605,
+    "invocations": 0
+  },
+  {
+    "variant": "V1_single_signal",
+    "problem": "DF1",
+    "seed": 1,
+    "igd": 0.21904779448155207,
+    "elapsed_sec": 0.17044663429260254,
+    "invocations": 0
+  },
+  {
+    "variant": "V1_single_signal",
+    "problem": "DF1",
+    "seed": 2,
+    "igd": 0.3577380822446598,
+    "elapsed_sec": 0.1772913932800293,
+    "invocations": 0
+  },
+  {
+    "variant": "V1_single_signal",
+    "problem": "DF1",
+    "seed": 3,
+    "igd": 0.23127485860047803,
+    "elapsed_sec": 0.17405390739440918,
+    "invocations": 0
+  },
+  {
+    "variant": "V1_single_signal",
+    "problem": "DF1",
+    "seed": 4,
+    "igd": 0.4496565753075919,
+    "elapsed_sec": 0.1724090576171875,
+    "invocations": 0
+  },
+  {
+    "variant": "V1_single_signal",
+    "problem": "DF5",
+    "seed": 0,
+    "igd": 0.06018957244493261,
+    "elapsed_sec": 0.17432165145874023,
+    "invocations": 0
+  },
+  {
+    "variant": "V1_single_signal",
+    "problem": "DF5",
+    "seed": 1,
+    "igd": 0.09011085057963386,
+    "elapsed_sec": 0.17173981666564941,
+    "invocations": 0
+  },
+  {
+    "variant": "V1_single_signal",
+    "problem": "DF5",
+    "seed": 2,
+    "igd": 0.06886930568533724,
+    "elapsed_sec": 0.17215633392333984,
+    "invocations": 0
+  },
+  {
+    "variant": "V1_single_signal",
+    "problem": "DF5",
+    "seed": 3,
+    "igd": 0.0967088060538891,
+    "elapsed_sec": 0.17154717445373535,
+    "invocations": 0
+  },
+  {
+    "variant": "V1_single_signal",
+    "problem": "DF5",
+    "seed": 4,
+    "igd": 0.07025421946130458,
+    "elapsed_sec": 0.17156219482421875,
+    "invocations": 0
+  },
+  {
+    "variant": "V2_heuristic_budget",
+    "problem": "DF1",
+    "seed": 0,
+    "igd": 0.7373384351040303,
+    "elapsed_sec": 0.2337503433227539,
+    "invocations": 14
+  },
+  {
+    "variant": "V2_heuristic_budget",
+    "problem": "DF1",
+    "seed": 1,
+    "igd": 0.3195122906444403,
+    "elapsed_sec": 35.09387826919556,
+    "invocations": 32
+  },
+  {
+    "variant": "V2_heuristic_budget",
+    "problem": "DF1",
+    "seed": 2,
+    "igd": 0.7080355030503468,
+    "elapsed_sec": 0.24514460563659668,
+    "invocations": 17
+  },
+  {
+    "variant": "V2_heuristic_budget",
+    "problem": "DF1",
+    "seed": 3,
+    "igd": 0.7133723389817826,
+    "elapsed_sec": 0.23187947273254395,
+    "invocations": 14
+  },
+  {
+    "variant": "V2_heuristic_budget",
+    "problem": "DF1",
+    "seed": 4,
+    "igd": 0.726395139694296,
+    "elapsed_sec": 0.2300872802734375,
+    "invocations": 14
+  },
+  {
+    "variant": "V2_heuristic_budget",
+    "problem": "DF5",
+    "seed": 0,
+    "igd": 0.027810366481949546,
+    "elapsed_sec": 0.2221071720123291,
+    "invocations": 14
+  },
+  {
+    "variant": "V2_heuristic_budget",
+    "problem": "DF5",
+    "seed": 1,
+    "igd": 0.08582646491697725,
+    "elapsed_sec": 0.2471785545349121,
+    "invocations": 20
+  },
+  {
+    "variant": "V2_heuristic_budget",
+    "problem": "DF5",
+    "seed": 2,
+    "igd": 0.05860874310158173,
+    "elapsed_sec": 17.75445818901062,
+    "invocations": 26
+  },
+  {
+    "variant": "V2_heuristic_budget",
+    "problem": "DF5",
+    "seed": 3,
+    "igd": 0.060829047178402255,
+    "elapsed_sec": 3.120093822479248,
+    "invocations": 21
+  },
+  {
+    "variant": "V2_heuristic_budget",
+    "problem": "DF5",
+    "seed": 4,
+    "igd": 0.05004652803389236,
+    "elapsed_sec": 0.23720097541809082,
+    "invocations": 17
+  },
+  {
+    "variant": "V3_no_llm",
+    "problem": "DF1",
+    "seed": 0,
+    "igd": 0.3706508744362639,
+    "elapsed_sec": 0.15834355354309082,
+    "invocations": 0
+  },
+  {
+    "variant": "V3_no_llm",
+    "problem": "DF1",
+    "seed": 1,
+    "igd": 0.46707893927204625,
+    "elapsed_sec": 0.16202116012573242,
+    "invocations": 0
+  },
+  {
+    "variant": "V3_no_llm",
+    "problem": "DF1",
+    "seed": 2,
+    "igd": 0.37176009631210605,
+    "elapsed_sec": 0.15953373908996582,
+    "invocations": 0
+  },
+  {
+    "variant": "V3_no_llm",
+    "problem": "DF1",
+    "seed": 3,
+    "igd": 0.40683310872748374,
+    "elapsed_sec": 0.16143345832824707,
+    "invocations": 0
+  },
+  {
+    "variant": "V3_no_llm",
+    "problem": "DF1",
+    "seed": 4,
+    "igd": 0.3057211625649542,
+    "elapsed_sec": 0.1591496467590332,
+    "invocations": 0
+  },
+  {
+    "variant": "V3_no_llm",
+    "problem": "DF5",
+    "seed": 0,
+    "igd": 0.0602814764141722,
+    "elapsed_sec": 0.15770292282104492,
+    "invocations": 0
+  },
+  {
+    "variant": "V3_no_llm",
+    "problem": "DF5",
+    "seed": 1,
+    "igd": 0.09653168262972393,
+    "elapsed_sec": 0.15930962562561035,
+    "invocations": 0
+  },
+  {
+    "variant": "V3_no_llm",
+    "problem": "DF5",
+    "seed": 2,
+    "igd": 0.054301938936292676,
+    "elapsed_sec": 0.16023540496826172,
+    "invocations": 0
+  },
+  {
+    "variant": "V3_no_llm",
+    "problem": "DF5",
+    "seed": 3,
+    "igd": 0.07363688787360283,
+    "elapsed_sec": 0.15827202796936035,
+    "invocations": 0
+  },
+  {
+    "variant": "V3_no_llm",
+    "problem": "DF5",
+    "seed": 4,
+    "igd": 0.06650672543641974,
+    "elapsed_sec": 0.1607370376586914,
+    "invocations": 0
+  }
+]

@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "D:\新论文\实验\experiments\run_extended.py", line 305, in <module>
+    main()
+    ~~~~^^
+  File "D:\新论文\实验\experiments\run_extended.py", line 299, in main
+    run_uav_extended(seeds=seeds)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\新论文\实验\experiments\run_extended.py", line 169, in run_uav_extended
+    cfg = type(cfg_seed)(seed=cfg_seed)  # placeholder, replaced below
+TypeError: int() got an unexpected keyword argument 'seed'
