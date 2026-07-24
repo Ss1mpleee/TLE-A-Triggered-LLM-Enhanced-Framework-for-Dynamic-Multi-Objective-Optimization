@@ -1,10 +1,27 @@
-"""Publication-quality plots for TEVC submission.
+#!/usr/bin/env python
+"""
+TLE-DMO reproduction script.
 
-Output: D:/新论文/论文/figures/ (PNG @ 300dpi + PDF vector).
+The four lines below make this script runnable from any working directory:
+it puts the repository root on `sys.path` and exposes the standard result
+directories as module-level `Path` constants.  Do not delete them.
+"""
+from __future__ import annotations
+from pathlib import Path
+import sys
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO_ROOT))
+
+RAW_DIR   = REPO_ROOT / "results" / "raw"
+FIG_DIR   = REPO_ROOT / "results" / "figures"
+CACHE_DIR = REPO_ROOT / "results" / "llm_cache"
+
+"""Publication-quality plots.
+
+Output: FIG_DIR (PNG @ 300 dpi + PDF vector).
 Style: IEEE-journal clean (colorblind palette, serif font, tight bbox).
 """
-import sys
-sys.path.insert(0, r'D:\新论文\实验')
 import json
 import numpy as np
 import matplotlib
@@ -52,7 +69,7 @@ HATCH = {
 PROBLEM_COLORS = sns.color_palette('Set2', 5)
 
 RAW = Path(r'D:\新论文\实验\results\raw')
-FIG = Path(r'D新论文/论文/figures') if False else Path(r'D:\新论文\论文\figures')
+FIG = FIG_DIR
 FIG.mkdir(parents=True, exist_ok=True)
 
 

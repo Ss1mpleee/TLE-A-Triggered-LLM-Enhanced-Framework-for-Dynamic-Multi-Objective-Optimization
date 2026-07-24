@@ -1,3 +1,22 @@
+#!/usr/bin/env python
+"""
+TLE-DMO reproduction script.
+
+The four lines below make this script runnable from any working directory:
+it puts the repository root on `sys.path` and exposes the standard result
+directories as module-level `Path` constants.  Do not delete them.
+"""
+from __future__ import annotations
+from pathlib import Path
+import sys
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO_ROOT))
+
+RAW_DIR   = REPO_ROOT / "results" / "raw"
+FIG_DIR   = REPO_ROOT / "results" / "figures"
+CACHE_DIR = REPO_ROOT / "results" / "llm_cache"
+
 """S4: Trigger entropy_threshold sensitivity plot.
 
 Sweeps the entropy_threshold parameter (0.001 to 0.5) which controls when
@@ -12,9 +31,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib as mpl
 
-SRC = Path(r'D:\新论文\实验\results\raw\exp_trigger_threshold.json')
-OUT_PNG = Path(r'D:\新论文\论文\figures\fig_trigger_sweep.png')
-OUT_PDF = Path(r'D:\新论文\论文\figures\fig_trigger_sweep.pdf')
+SRC = RAW_DIR / "exp_trigger_threshold.json"
+OUT_PNG = FIG_DIR / "fig_trigger_sweep.png"
+OUT_PDF = FIG_DIR / "fig_trigger_sweep.pdf"
 
 PROBLEMS = ['DF1', 'DF5']
 PROBLEM_COLORS = {'DF1': '#7eb6d9', 'DF5': '#4ca28a'}

@@ -1,3 +1,22 @@
+#!/usr/bin/env python
+"""
+TLE-DMO reproduction script.
+
+The four lines below make this script runnable from any working directory:
+it puts the repository root on `sys.path` and exposes the standard result
+directories as module-level `Path` constants.  Do not delete them.
+"""
+from __future__ import annotations
+from pathlib import Path
+import sys
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO_ROOT))
+
+RAW_DIR   = REPO_ROOT / "results" / "raw"
+FIG_DIR   = REPO_ROOT / "results" / "figures"
+CACHE_DIR = REPO_ROOT / "results" / "llm_cache"
+
 """Plot cross-LLM comparison from exp6_cross_llm.json.
 
 Shows: for each (model, problem), mean IGD with std error bars.
@@ -24,7 +43,7 @@ plt.rcParams['axes.labelsize'] = 11
 plt.rcParams['legend.fontsize'] = 9
 sns.set_style('whitegrid')
 
-data = json.load(open(r'D:\新论文\实验\results\raw\exp6_cross_llm.json', encoding='utf-8'))
+data = json.load(open(RAW_DIR / "exp6_cross_llm.json", encoding='utf-8'))
 by_mp = defaultdict(list)
 for r in data:
     by_mp[(r['model'], r['prob'])].append(r)
@@ -112,7 +131,7 @@ ax.grid(True, alpha=0.3)
 ax.set_ylim(bottom=0)
 
 plt.tight_layout()
-out = Path(r'D:\新论文\论文\figures\fig_cross_llm.png')
+out = FIG_DIR / "fig_cross_llm.png"
 plt.savefig(out, dpi=300, bbox_inches='tight')
 plt.savefig(out.with_suffix('.pdf'), bbox_inches='tight')
 print(f'Saved {out} + .pdf')

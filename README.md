@@ -1,15 +1,21 @@
 # TLE: Triggered LLM-Enhanced Evolutionary Algorithm
 
 > An open-source Python implementation of the **TLE** framework for
-> **dynamic multi-objective optimization (DMO)**, with a triple-signal trigger,
-> a dual-channel LLM-to-EA mapping, and a UCB1 bandit-based LLM call budget
-> scheduler. All experimental artifacts of the accompanying paper are
+> **dynamic multi-objective optimization (DMO)**, with a triple-signal
+> trigger, a dual-channel LLM-to-EA mapping, and a UCB1 bandit-based LLM
+> call budget scheduler. All experimental artifacts of the accompanying
+> paper (Tables 1-5, Figures 1-6, plus the graphical abstract) are
 > reproducible from a single command.
 
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg)]()
 [![License](https://img.shields.io/badge/license-MIT-green.svg)]()
 [![Code style](https://img.shields.io/badge/code%20style-black-000000.svg)]()
 [![Status](https://img.shields.io/badge/status-paper%20under%20review-yellow.svg)]()
+
+**Authors:** Shu-Chuan Chu, Ya-Yu Zhang, Tong-Bang Jiang, Shyi-Ming Chen,
+Vaclav Snasel, Jeng-Shyang Pan (corresponding) — in submission order.
+**Peer review:** single-blind (reviewers see author names; we still
+recommend anonymising any new GitHub issues you file about the code).
 
 ---
 
@@ -52,11 +58,11 @@ DE/rand/1/bin + NSGA-II search engine with three LLM-related modules:
    $\Omega(\sqrt{KT})$ dynamic-regret lower bound.
 
 The framework is evaluated on the CEC 2018 DMO benchmark suite
-(DF1--DF5, $n = 8$ seeds per problem) and on a dynamic multi-UAV
-task-allocation scenario ($n = 5$ seeds, two fleet sizes, 200 generations
-per configuration). A cross-LLM sensitivity analysis uses three locally
-deployed open-source models: **Qwen-2.5-7B-Instruct**, **Qwen-3.5-9B-Instruct**,
-and **OmniCoder-9B-Instruct**.
+(DF1, DF2, DF3, DF5, DF7, $n = 8$ seeds per problem) and on a dynamic
+multi-UAV task-allocation scenario ($n = 5$ seeds, four fleet sizes, 200
+generations per configuration). A cross-LLM sensitivity analysis uses
+three locally deployed open-source models: **Qwen-2.5-7B-Instruct**,
+**Qwen-3.5-9B-Instruct**, and **OmniCoder-9B-Instruct**.
 
 Two non-trivial findings are reported in the paper:
 
@@ -85,54 +91,72 @@ Two non-trivial findings are reported in the paper:
 
 ```
 .
-├── baselines/                # six comparison algorithms
-│   ├── __init__.py
-│   ├── moea_dd.py            # MOEA/DD-like (Zhang & Liu 2018)
-│   └── pps_dmoea.py          # PPS-DMOEA (Zhou et al. 2014)
+├── baselines/                # baseline algorithms that need their own class
+│   ├── __init__.py           #     re-exports MOEADD, PPSDEBaseline
+│   ├── moea_dd.py            #     MOEA/DD-like (Li & Zhang 2015)
+│   └── pps_dmoea.py          #     PPS-DMOEA (Zhou et al. 2014)
 │
 ├── benchmarks/               # problem definitions
+│   ├── __init__.py           #     re-exports DMOProblem, get_reference_pf, ...
+│   ├── cec2018.py            #     CEC 2018 DF1/DF2/DF3/DF5/DF7/DF10 (DF10 is 3-obj)
+│   └── uav_scenario.py       #     dynamic multi-UAV task-allocation simulator
+│
+├── core/                     # TLE framework core (all algorithms live here)
+│   ├── __init__.py           #     re-exports TLE, DEBaseline, DNSGAIIA, ...
+│   ├── bandit.py             #     UCB1 bandit + HeuristicDecayScheduler + fixed budget
+│   ├── de_operators.py       #     DE/rand/1/bin + polynomial mutation
+│   ├── llm_interface.py      #     Ollama client + persistent LLM response cache
+│   ├── moo_utils.py          #     non-dominated sort, crowding distance, IGD/HV
+│   ├── multi_action.py       #     multi-action variant of TLE (TLE-MA in the paper)
+│   ├── prompts.py            #     system + user prompt templates
+│   ├── tle.py                #     the TLE class (DE/NSGA-II backbone + 3 TLE modules)
+│   └── triggers.py           #     triple-signal trigger
+│
+├── proposed/                 # single-file CLI entry point (Algorithm 1 in the paper)
 │   ├── __init__.py
-│   ├── cec2018.py            # CEC 2018 DF1--DF5 dynamic multi-objective suite
-│   └── uav_scenario.py       # dynamic multi-UAV task-allocation simulator
+│   └── run_tle.py            #     `python -m proposed.run_tle --problem DF1 --n_seeds 8`
 │
-├── core/                     # TLE framework core
-│   ├── __init__.py
-│   ├── bandit.py             # UCB1 bandit + HeuristicDecayScheduler
-│   ├── de_operators.py       # DE/rand/1/bin + polynomial mutation
-│   ├── llm_interface.py      # Ollama client + persistent LLM response cache
-│   ├── moo_utils.py          # non-dominated sort, crowding distance, IGD/HV
-│   ├── prompts.py            # system + user prompt templates
-│   ├── tle.py                # the TLE class (DE/NSGA-II + 3 TLE modules)
-│   └── triggers.py           # triple-signal trigger
-│
-├── proposed/                 # TLE-specific glue + entry point (Algorithm 1)
-│
-├── experiments/              # run scripts and plot scripts
-│   ├── run_main_cec2018.py   # 8-seed main comparison (DE, NSGA-II, MOEA/D, MOEA/DD, DNSGA-II-A, PPS-DMOEA, TLE)
-│   ├── run_v3_seeds.py       # 75 extra runs for the final 8-seed main result
-│   ├── run_sec_experiments.py# 5-seed ablation
-│   ├── run_uav.py            # 5-seed UAV scenario
-│   ├── run_cross_llm.py      # 2-seed cross-LLM sensitivity
-│   ├── run_moeadd.py         # MOEA/DD baseline
-│   ├── friedman_test.py      # Friedman test + Nemenyi critical-difference computation
-│   ├── plot_tevc.py          # publication-quality IGD/HV/convergence plots
-│   ├── plot_cross_llm.py     # cross-LLM diamond plots
-│   ├── plot_extra.py         # Pareto-front, budget-comparison, LLM-call plots
-│   ├── graphical_abstract.py # 5x5 cm graphical abstract for SWEVO submission
-│   └── *.py                  # ~15 more analysis / debug scripts (legacy)
+├── experiments/              # run scripts and plot scripts (reproduces the paper)
+│   ├── run_main_cec2018.py   # 5-algorithm × 5-problem × 8-seed main comparison
+│   ├── run_v3_seeds.py       # 75 extra runs that produced sec_main_v3.json
+│   ├── run_sec_experiments.py# 4-variant ablation (V0--V3)
+│   ├── run_uav.py            # 4-/8-UAV scenario
+│   ├── run_uav_30seeds.py    # 30-seed UAV (the headline 8-UAV table)
+│   ├── run_uav_b3_ablation.py# per-action ablation on the UAV scenario
+│   ├── run_cross_llm.py      # 3 models × 3 problems × 2 seeds
+│   ├── run_moeadd.py         # MOEA/DD baseline (separate to keep the main script light)
+│   ├── run_pareto_fronts.py  # 3 Pareto-front snapshots for Fig.6
+│   ├── run_trigger_sweep.py  # trigger-threshold sweep (used by Fig.S3)
+│   ├── run_trigger_threshold.py
+│   ├── friedman_test.py      # Friedman + Nemenyi critical-difference computation
+│   ├── plot_tevc.py          # 9 publication-quality IGD / HV / convergence / scatter plots
+│   ├── plot_cross_llm.py     # cross-LLM diamond + per-call latency plots
+│   ├── plot_extra.py         # architecture / cost-quality / LLM-call plots
+│   ├── plot_nemenyi_cd.py    # critical-difference diagram
+│   ├── plot_seed_boxplots.py # per-seed IGD box plots
+│   ├── plot_trigger_sweep.py # trigger-threshold sweep plot
+│   ├── plot_pareto_dispatch.py
+│   └── graphical_abstract.py # 5×5 cm graphical abstract
 │
 ├── results/                  # all experimental output (mostly regenerable)
-│   ├── raw/                  # small JSON result files (committed for reproducibility)
-│   ├── figures/              # generated PNG/PDF (regenerated from raw + plot scripts)
+│   ├── raw/                  # 11 small JSON result files (committed for reproducibility)
+│   ├── figures/              # generated PNG/PDF (regenerated by plot_*.py; gitignored)
 │   └── llm_cache/            # per-prompt Ollama response cache (gitignored)
 │
 ├── .gitignore                # Python / IDE / OS / large-binary exclusions
+├── requirements.txt
+├── run_all.sh                # one-command full reproduction
 └── README.md                 # this file
 ```
 
-**Note**: the `__init__.py` files in `baselines/`, `benchmarks/`, and
-`core/` make the directory a proper Python package; you can `import
-core.tle` from any subdirectory once `PYTHONPATH=.` is set.
+**Package layout.** Every directory under `core/`, `baselines/`, `benchmarks/`,
+`experiments/`, `proposed/` has an `__init__.py` that re-exports the public
+API, so you can `import core`, `from benchmarks import DMOProblem`,
+`from proposed import run_tle` etc. without touching `sys.path`. The
+`experiments/*.py` and `proposed/run_tle.py` scripts additionally ship a
+small preamble that puts the repository root on `sys.path` and exposes
+`RAW_DIR`, `FIG_DIR`, and `CACHE_DIR` as `Path` constants, so each
+script is runnable from any working directory.
 
 ---
 
@@ -175,23 +199,28 @@ python -c "import core.tle; print('TLE import OK')"
 ### 4.3 One-command full reproduction
 
 ```bash
-# Optional: clean previous results
-rm -rf results/raw/*
+# Optional: clean previous results (raw/ is committed for reproducibility;
+# you usually want to keep it)
+# rm -rf results/raw/*
 
 # Full reproduction (~90 GPU-h on RTX 4090)
 bash run_all.sh
 
 # OR: just the headline 8-seed main comparison (~25 GPU-h)
-python -m experiments.run_main_cec2018 --n_seeds 8
+python -m experiments.run_main_cec2018 --seeds 0 1 2 3 4 5 6 7 --pop-size 50 --max-gen 200
+
+# OR: a single-seed smoke test of the proposed method (cache-hits make this ~3s)
+python -m proposed.run_tle --problem DF1 --seeds 0 --max-gen 5 --pop-size 10
 ```
 
 `run_all.sh` re-executes, in order:
 
-1. The 8-seed main comparison on DF1--DF5
+1. The 8-seed main comparison on DF1/DF2/DF3/DF5/DF7
 2. The 5-seed ablation (V0--V3)
 3. The 5-seed UAV comparison (4-UAV and 8-UAV)
-4. The 2-seed cross-LLM analysis (3 models x 3 problems)
-5. All plot regeneration (including the graphical abstract)
+4. The 2-seed cross-LLM analysis (3 models × 3 problems)
+5. The Friedman test + Nemenyi CD
+6. All plot regeneration (including the graphical abstract)
 
 The total wall time is dominated by LLM inference. If you only have CPU
 hardware, expect ~30x slowdown.
@@ -204,24 +233,42 @@ hardware, expect ~30x slowdown.
 
 | Module | Lines | Role |
 |---|---|---|
-| `tle.py` | ~480 | The `TLE` class. Subclass of `DE_NSGA2`; adds the three TLE modules. Public API: `step()`, `recommend()`, `update_bandit()`. |
-| `triggers.py` | ~140 | The three trigger functions: `entropy_descent_trigger()`, `fitness_stagnation_trigger()`, `environmental_change_trigger()`. Returns a boolean per generation. |
+| `tle.py` | ~480 | The `TLE` class. Subclass of the shared DE/NSGA-II engine; adds the three TLE modules. Public API: `optimize()`. |
+| `triggers.py` | ~140 | The three trigger functions: `entropy_descent_trigger`, `fitness_stagnation_trigger`, `environmental_change_trigger`. Returns a boolean per generation. |
 | `bandit.py` | ~120 | `UCBBandit` and `HeuristicDecayScheduler` for the LLM call budget. |
-| `de_operators.py` | ~180 | `DE_rand_1_bin`, `polynomial_mutation`, `crossover` operators. |
-| `llm_interface.py` | ~220 | `OllamaClient` (synchronous), `LLMResponseCache` (SHA-256 keyed JSON cache), and the `query_llm()` high-level helper. |
-| `moo_utils.py` | ~310 | `non_dominated_sort`, `crowding_distance`, `compute_igd`, `compute_hv` (numba-accelerated inner loop). |
-| `prompts.py` | ~90 | `SYSTEM_PROMPT` and `build_user_prompt(state)` --- see Appendix A.1 of the paper for the full template. |
+| `de_operators.py` | ~180 | `de_rand_1_bin`, `polynomial_mutation`, `crossover` operators. |
+| `llm_interface.py` | ~220 | `LLMClient` (synchronous Ollama wrapper), `LLMResponseCache` (md5-keyed JSON cache), and the `query_llm()` high-level helper. |
+| `moo_utils.py` | ~310 | `fast_non_dominated_sort`, `crowding_distance`, `compute_igd`, `compute_hv` (numba-accelerated inner loop optional). |
+| `multi_action.py` | ~340 | The `TLEMultiAction` class (TLE-MA in the paper): multi-action variant where the LLM picks one of `VALID_ACTIONS` per generation. |
+| `prompts.py` | ~330 | `SYSTEM_PROMPT` and `build_user_prompt(state)` --- see Appendix A.1 of the paper for the full template. |
 
 ### 5.2 The `proposed` package
 
-Contains the top-level entry point that runs the full TLE loop end-to-end and
-prints the population statistics that become Tables 1--5 in the paper.
+Contains the single-file entry point `proposed.run_tle` that runs the full
+TLE loop end-to-end without going through the multi-algorithm experiment
+driver.  Useful for a quick smoke test or a single-(problem, seed) run:
+
+```bash
+python -m proposed.run_tle --problem DF1 --seeds 0 --max-gen 5 --pop-size 10
+```
 
 ### 5.3 The `baselines` package
 
-Only the non-trivial baselines (MOEA/DD and PPS-DMOEA) live here, because
-they are not in the `pymoo` library. DE, NSGA-II, MOEA/D, and DNSGA-II-A are
-implemented inside `core/tle.py` and switched via a constructor flag.
+The five baselines compared against TLE in the paper are:
+
+| Baseline | Where it lives | Why not in `pymoo`? |
+|---|---|---|
+| DE + NSGA-II selection | `core.tle.DEBaseline` | our own DE/NSGA-II engine (shared across all algos) |
+| DNSGA-II-A | `core.tle.DNSGAIIA` | small dynamic-specific tweak (random immigrants after change) |
+| PPS-DMOEA | `baselines.pps_dmoea.PPSDEBaseline` | population-prediction logic is non-trivial |
+| MOEA/DD | `baselines.moea_dd.MOEADD` | decomposition + DE update is non-trivial |
+| DE-LM-static-trigger | `core.tle.StaticLMEABaseline` | static-trigger LLM-EA (for ablation) |
+
+The 5th entry of the main comparison, **DE-LM-static-trigger**, is the
+ablation baseline that invokes the LLM at every generation (vs. TLE's
+triggered scheme). All five are re-exported from `core.__init__` and
+`baselines.__init__` so the experiment scripts can import them
+uniformly.
 
 ### 5.4 The `experiments` package
 
@@ -251,29 +298,33 @@ python -m experiments.plot_tevc --input results/raw/sec_main_v3.json
 ### 6.2 Ablation (Table 3, V0--V3)
 
 ```bash
-python -m experiments.run_sec_experiments --variants V0,V1,V2,V3 --n_seeds 5
-python -m experiments.plot_tevc --ablation results/raw/sec_ablation_v2.json
+python -m experiments.run_sec_experiments --seeds 0 1 2 3 4
+python -m experiments.plot_tevc
 ```
 
 ### 6.3 UAV scenario (Table 5)
 
 ```bash
-python -m experiments.run_uav --n_fleets 4 8 --n_seeds 5
-python -m experiments.plot_tevc --uav results/raw/exp3_uav_v2.json
+# 4-/8-UAV comparison (the headline 8-UAV row in Table 5)
+python -m experiments.run_uav --seeds 0 1 2 3 4 --n-uavs 4 8
+python -m experiments.plot_tevc
+
+# 30-seed UAV (the 8-UAV detailed table)
+python -m experiments.run_uav_30seeds
 ```
 
 ### 6.4 Cross-LLM (Figure: fig_cross_llm)
 
 ```bash
-python -m experiments.run_cross_llm --models qwen2.5:7b,qwen3.5:9b,omnicoder-9b --n_seeds 2
-python -m experiments.plot_cross_llm --input results/raw/exp6_cross_llm.json
+python -m experiments.run_cross_llm --seeds 0 1
+python -m experiments.plot_cross_llm
 ```
 
 ### 6.5 Regenerate the graphical abstract
 
 ```bash
 python -m experiments.graphical_abstract
-# -> results/figures/graphical_abstract.png (5x5 cm @ 600 dpi)
+# -> results/figures/graphical_abstract.png (5×5 cm @ 600 dpi = 1181×1181 px)
 ```
 
 ---
@@ -286,19 +337,20 @@ the paper. The default values are:
 
 | Parameter | Value | Notes |
 |---|---|---|
-| Population size $N$ | 100 | DE/NSGA-II population |
+| Population size $N$ | 50 | standard CEC 2018 DMO convention |
 | Number of generations $T$ | 200 | including environmental changes |
+| Decision variables $D$ | 10 | consistent across all problems |
 | DE scaling factor $F$ | 0.5 (initial) | modulated by LLM in $[0.3, 0.9]$ |
 | DE crossover rate $CR$ | 0.9 (initial) | modulated by LLM in $[0.5, 1.0]$ |
 | Polynomial mutation $\eta_m$ | 20 | SBX + PM |
-| Environmental change frequency $\tau$ | 20 generations | small-step |
+| Environmental change frequency $\tau$ | 10 generations | small-step (matches PlatEMO) |
 | Change severity $\sigma$ | problem-specific | see CEC 2018 spec |
 | UCB1 exploration constant $c$ | $\sqrt{2}$ | Auer 2002 |
 | UCB1 budget cap $B_{\max}$ | 60 (5--15% of $T$) | per-run |
 | Trigger window $W$ | 10 generations | entropy + stagnation window |
 | Stagnation threshold $\delta$ | $10^{-4}$ | relative IGD improvement |
-| LLM temperature | 0.7 | Ollama default for instruct models |
-| LLM max tokens | 256 | JSON output cap |
+| LLM temperature | 0.0 | deterministic (matches Ollama instruct defaults) |
+| LLM max tokens | 500 | JSON output cap (covers the longest response we've seen) |
 
 ---
 
@@ -325,14 +377,18 @@ CPU-only reproduction is supported but 25--30x slower.
 
 ```
 results/
-├── raw/                          # small JSON files, committed for reproducibility
+├── raw/                          # 11 small JSON files, committed for reproducibility
 │   ├── sec_main_v3.json          # 8-seed main comparison, 215 runs
 │   ├── sec_ablation_v2.json      # 5-seed ablation, 4 variants x 2 problems
-│   ├── exp3_uav_v2.json          # 5-seed UAV comparison
+│   ├── exp3_uav_v2.json          # 5-seed UAV comparison, 4-/8-UAV
+│   ├── exp3_uav_v3.json          # 8-UAV detailed (used by Table 5)
+│   ├── exp3_uav_b3.json          # per-action ablation on 8-UAV
+│   ├── exp3_uav_b6.json          # 6 seed pairs for the b6 sub-table
+│   ├── exp3_uav_combined.json    # combined UAV runs across scripts
 │   ├── exp4_moeadd.json          # MOEA/DD baseline runs
-│   ├── exp6_cross_llm.json       # 2-seed cross-LLM, 3 models x 3 problems
-│   ├── sec_pps_real_df1_df5.json # extended PPS-DMOEA runs on DF1+DF5
-│   └── *.log, *.err              # stdout/stderr from the run scripts
+│   ├── exp6_cross_llm.json       # 2-seed cross-LLM, 3 models × 3 problems
+│   ├── exp_pareto_fronts.json    # 3 Pareto-front snapshots for Fig.6
+│   └── exp_trigger_threshold.json# trigger-threshold sweep
 │
 ├── figures/                      # generated PNG/PDF, gitignored
 │   ├── fig_main_igd.{png,pdf}
@@ -345,71 +401,65 @@ results/
 │   ├── fig_budget_comparison.{png,pdf}
 │   ├── fig_cost_quality.{png,pdf}
 │   ├── fig_llm_calls.{png,pdf}
-│   ├── tle_architecture_v2.{png,pdf}
-│   └── graphical_abstract.png    # 5x5 cm @ 600 dpi
+│   └── graphical_abstract.png    # 5×5 cm @ 600 dpi
 │
 └── llm_cache/                    # per-prompt Ollama response cache, gitignored
-    └── <sha256_hash>.json        # {"prompt": ..., "response": ..., "ts": ...}
+    └── <md5_hash>.json           # {"prompt": ..., "response": ..., "ts": ...}
 ```
 
 **JSON result schema** (a single run):
 
 ```json
 {
+  "algo": "TLE",
   "problem": "DF1",
-  "algorithm": "TLE",
   "seed": 7,
-  "n_gen": 200,
-  "pop_size": 100,
-  "llm_model": "qwen2.5:7b",
-  "metrics": {
-    "igd_per_gen":    [0.92, 0.81, ..., 0.6476],
-    "hv_per_gen":     [0.0, 0.05, ..., 0.1827],
-    "llm_calls":      42,
-    "llm_call_gens":  [12, 24, 36, 48, ...]
-  },
-  "hyperparams": {
-    "F": 0.5, "CR": 0.9, "pop_size": 100, "T": 200,
-    "bandit": "UCB1", "trigger_window": 10
-  }
+  "max_gen": 200,
+  "pop_size": 50,
+  "igd": 0.6476,
+  "hv": 0.1827,
+  "elapsed_sec": 12.4,
+  "invocations": 42
 }
 ```
 
+(The `v3` files do not embed per-generation IGD/HV trajectories or the
+hyperparameter snapshot — those live in the per-generation LLM cache
+under `results/llm_cache/` and can be reconstructed by re-running the
+matching script with the same seed. The committed `raw/` files are the
+*minimal* end-of-run summary used by the plot scripts.)
+
 ---
 
-## 10. Figures: what is in the paper, what is supplementary
+## 10. Figures
 
 The main paper uses **4 figures + 1 graphical abstract** in its body. The
-remaining ~20 PNGs in `results/figures/` are committed to this repository
-as **GitHub-side supplementary material** to provide additional evidence
-and reproducibility context. They are NOT a formally typeset supplementary
-PDF; they are raw plots with the same data the paper uses.
+companion PDF (`supplementary_material.pdf`, attached separately) contains
+the additional plots. The `results/figures/` directory in this repository
+holds 10 regenerable plots (PNG + PDF, 300 dpi); they are gitignored and
+regenerated from `results/raw/*.json` by `experiments/plot_tevc.py` and
+`experiments/plot_cross_llm.py`.
 
-| File | Where it appears | Why it is not in the paper body |
-|---|---|---|
-| `tle_architecture_v2.png` | §3 Method (fig:arch) | in the paper |
-| `fig_cost_quality.png` | §5 Results (fig:costqual) | in the paper |
-| `fig_llm_calls.png` | §5 Results (fig:llmcalls) | in the paper |
-| `fig_cross_llm.png` | §6 Discussion (fig:cross) | in the paper |
-| `graphical_abstract.png` | EVISE upload | in EVISE |
-| `fig_main_igd.png` | (supplementary) | data already in **Table 1** |
-| `fig_main_hv.png` | (supplementary) | data already in **Table 2** |
-| `fig_convergence_curves.png` | (supplementary) | the 8-seed dynamic-trajectory story is hard to convey in a table; kept here for transparency |
-| `fig_pareto_front_df2.png` | (supplementary) | the "PPS-DMOEA catastrophic" image — paper mentions it in §6.2, the figure lives here |
-| `fig_ablation.png` | (supplementary) | data already in **Table 3** |
-| `fig_uav.png` | (supplementary) | data already in **Table 5** |
-| `fig_budget_comparison.png` | (supplementary) | bandit-vs-heuristic evidence; the paper mentions it in §5.3 ablation but the figure is here |
-| `tle_architecture.png` | _deprecated_ | v1 architecture (superseded by v2) |
-| `cec2018_hv.png`, `cec2018_igd.png` | _deprecated_ | early bar-chart versions |
-| `convergence.png`, `cost_quality.png` | _deprecated_ | early plot-script outputs |
-| `invocations.png`, `uav_metrics.png`, `llm_sensitivity.png` | _deprecated_ | early UAV / LLM sensitivity plots |
-| `fig_convergence.png`, `fig_hv_comparison.png`, `fig_main_comparison.png` | _deprecated_ | mid-iteration versions |
-| `llm_calls_long_vs_short.png`, `long_budget_validation.png` | _deprecated_ | early validation plots |
+| File (regenerable) | Where it appears |
+|---|---|
+| `fig_main_igd.png` / `.pdf` | (plot companion) — the IGD bar plot in §5 |
+| `fig_main_hv.png` / `.pdf` | (plot companion) — the HV bar plot in §5 |
+| `fig_convergence_curves.png` / `.pdf` | (supplementary) — exponential-decay fit to per-generation IGD |
+| `fig_pareto_front_df2.png` / `.pdf` | (supplementary) — the "PPS-DMOEA catastrophic" image |
+| `fig_ablation.png` / `.pdf` | (plot companion) — the ablation bar plot |
+| `fig_uav.png` / `.pdf` | (plot companion) — the UAV fleet-size comparison |
+| `fig_llm_calls.png` / `.pdf` | (plot companion) — the LLM-call budget bar plot |
+| `fig_cost_quality.png` / `.pdf` | (plot companion) — the cost-vs-quality scatter |
+| `fig_budget_comparison.png` / `.pdf` | (plot companion) — bandit vs. heuristic scheduler |
+| `graphical_abstract.png` | 5×5 cm @ 600 dpi for use as a thumbnail |
 
-If a reviewer asks for one of the supplementary figures to be moved into the
-paper body (which is a common revision outcome), the corresponding PNG is
-already at the right resolution and aspect ratio and can be `\includegraphics`ed
-without re-plotting.
+To regenerate all 10:
+
+```bash
+python -m experiments.plot_tevc
+python -m experiments.plot_cross_llm
+python -m experiments.graphical_abstract
+```
 
 ---
 
@@ -418,10 +468,10 @@ without re-plotting.
 This repository is released under the **MIT License**. See `LICENSE` (or the
 top of every source file) for the full text.
 
-The CEC 2018 benchmark functions are not bundled --- they are downloaded
-from the official CEC archive on first run.
+The CEC 2018 benchmark functions are implemented from the published spec in
+`benchmarks/cec2018.py`; no external binary is bundled.
 
-The LLM model weights are not bundled --- they are pulled from the
+The LLM model weights are not bundled — they are pulled from the
 [Ollama model registry](https://ollama.com/library).
 
 ---
@@ -431,18 +481,18 @@ The LLM model weights are not bundled --- they are pulled from the
 If you use this code in academic work, please cite the accompanying paper:
 
 ```bibtex
-@article{anon2026tle,
+@article{chu2026tle,
   title   = {TLE: A Triggered {LLM}-Enhanced Framework for Dynamic
              Multi-Objective Optimization --- An Empirical Study},
-  author  = {Anonymous, Anonymous and Anonymous, Anonymous},
+  author  = {Chu, Shu-Chuan and Zhang, Ya-Yu and Jiang, Tong-Bang
+             and Chen, Shyi-Ming and Snasel, Vaclav and Pan, Jeng-Shyang},
   journal = {Swarm and Evolutionary Computation},
   year    = {2026},
   note    = {Under review}
 }
 ```
 
-(The full author list and DOI will be filled in once the paper is accepted.
-For now the metadata is anonymized for double-blind review.)
+The author list above is the full author list in submission order.
 
 ---
 
@@ -450,8 +500,9 @@ For now the metadata is anonymized for double-blind review.)
 
 For questions about the code:
 
-- Open a GitHub issue at <https://github.com/[username]/TLE-DMO/issues>
-- Or contact the corresponding author (see the cover letter for details)
+- Open a GitHub issue at <https://github.com/Ss1mpleee/A-Triggered-LLM-Enhanced-Framework-for-Dynamic-Multi-Objective-Optimization-An-Empirical-Study/issues>
+- Or contact the corresponding author, Jeng-Shyang Pan, at
+  `100112@nuist.edu.cn`
 
 For questions about the paper itself, contact the corresponding author
 through the journal submission system.

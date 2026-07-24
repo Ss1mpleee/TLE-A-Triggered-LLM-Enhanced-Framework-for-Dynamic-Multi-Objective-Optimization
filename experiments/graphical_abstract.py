@@ -1,3 +1,22 @@
+#!/usr/bin/env python
+"""
+TLE-DMO reproduction script.
+
+The four lines below make this script runnable from any working directory:
+it puts the repository root on `sys.path` and exposes the standard result
+directories as module-level `Path` constants.  Do not delete them.
+"""
+from __future__ import annotations
+from pathlib import Path
+import sys
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO_ROOT))
+
+RAW_DIR   = REPO_ROOT / "results" / "raw"
+FIG_DIR   = REPO_ROOT / "results" / "figures"
+CACHE_DIR = REPO_ROOT / "results" / "llm_cache"
+
 """
 graphical_abstract.py
 Generate a 5x5 cm graphical abstract for the TLE paper (Swarm and Evolutionary Computation).
@@ -16,15 +35,13 @@ To avoid text overflow, this version:
   - uses TIGHT boxes (no wasted whitespace)
   - places outcome labels OUTSIDE the boxes (under each box)
 """
-from __future__ import annotations
-
 import matplotlib.pyplot as plt
 from matplotlib.patches import FancyBboxPatch, FancyArrowPatch
 from pathlib import Path
 
 
 HERE = Path(__file__).resolve().parent
-FIG_DIR = HERE.parents[1] / "论文" / "figures"
+# FIG_DIR is provided by the standard preamble at the top of this file.
 FIG_DIR.mkdir(parents=True, exist_ok=True)
 
 

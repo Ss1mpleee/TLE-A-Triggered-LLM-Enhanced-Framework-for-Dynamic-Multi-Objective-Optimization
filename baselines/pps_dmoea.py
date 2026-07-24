@@ -13,9 +13,6 @@ Core idea:
 - Initialize half the new population around x_pred, half randomly
 - If prediction is poor (center distance > threshold), use full restart
 """
-import sys
-sys.path.insert(0, "D:/新论文/实验")
-
 import numpy as np
 from typing import Tuple, Optional, Dict, Any
 

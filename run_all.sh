@@ -3,7 +3,7 @@
 # run_all.sh — single-command full reproduction
 #
 # Re-executes, in order:
-#   1. 8-seed main comparison on DF1--DF5
+#   1. 8-seed main comparison on DF1/DF2/DF3/DF5/DF7
 #   2. 5-seed ablation (V0--V3)
 #   3. 5-seed UAV comparison (4-UAV and 8-UAV)
 #   4. 2-seed cross-LLM analysis (3 models x 3 problems)

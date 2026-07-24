@@ -1,3 +1,22 @@
+#!/usr/bin/env python
+"""
+TLE-DMO reproduction script.
+
+The four lines below make this script runnable from any working directory:
+it puts the repository root on `sys.path` and exposes the standard result
+directories as module-level `Path` constants.  Do not delete them.
+"""
+from __future__ import annotations
+from pathlib import Path
+import sys
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO_ROOT))
+
+RAW_DIR   = REPO_ROOT / "results" / "raw"
+FIG_DIR   = REPO_ROOT / "results" / "figures"
+CACHE_DIR = REPO_ROOT / "results" / "llm_cache"
+
 """
 Comprehensive SEC-level experiment:
 - 5 algos: DE, DE-LM-static-trigger, PPS-DMOEA, TLE (the new key comparisons)
@@ -6,9 +25,6 @@ Comprehensive SEC-level experiment:
 - max_gen=200
 - Plus ablation: 4 variants × 2 problems × 3 seeds
 """
-import sys
-sys.path.insert(0, "D:/新论文/实验")
-
 import json
 import time
 import argparse

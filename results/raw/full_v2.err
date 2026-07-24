@@ -1,2 +1,0 @@
-D:\新论文\实验\benchmarks\cec2018.py:68: RuntimeWarning: invalid value encountered in sqrt
-  f2 = g * (1 - np.sqrt(rotated[:, 0] / np.maximum(g, 1e-12)))

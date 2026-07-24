@@ -1,11 +1,27 @@
+#!/usr/bin/env python
+"""
+TLE-DMO reproduction script.
+
+The four lines below make this script runnable from any working directory:
+it puts the repository root on `sys.path` and exposes the standard result
+directories as module-level `Path` constants.  Do not delete them.
+"""
+from __future__ import annotations
+from pathlib import Path
+import sys
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO_ROOT))
+
+RAW_DIR   = REPO_ROOT / "results" / "raw"
+FIG_DIR   = REPO_ROOT / "results" / "figures"
+CACHE_DIR = REPO_ROOT / "results" / "llm_cache"
+
 """
 UAV Scenario Experiment
 =======================
 Run all algorithms on dynamic multi-UAV task allocation.
 """
-import sys
-sys.path.insert(0, "D:/新论文/实验")
-
 import json
 import time
 import argparse
@@ -60,7 +76,7 @@ def run_uav_experiment(
     pop_size=30,
     max_gen=40,
     llm_model=DEFAULT_MODEL,
-    output_file="实验/results/raw/exp3_uav.json",
+    output_file=str(RAW_DIR / "exp3_uav.json"),
 ):
     """Run UAV scenario experiment."""
     global _current_scenario
@@ -175,7 +191,7 @@ if __name__ == "__main__":
     parser.add_argument("--pop-size", type=int, default=20)
     parser.add_argument("--max-gen", type=int, default=30)
     parser.add_argument("--model", type=str, default=DEFAULT_MODEL)
-    parser.add_argument("--output", type=str, default="实验/results/raw/exp3_uav.json")
+    parser.add_argument("--output", type=str, default=str(RAW_DIR / "exp3_uav.json"))
     args = parser.parse_args()
 
     print(f"=== UAV Experiment ===")

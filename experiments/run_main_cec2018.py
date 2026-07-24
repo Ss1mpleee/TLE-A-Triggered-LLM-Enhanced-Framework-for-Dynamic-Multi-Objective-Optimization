@@ -1,11 +1,27 @@
+#!/usr/bin/env python
+"""
+TLE-DMO reproduction script.
+
+The four lines below make this script runnable from any working directory:
+it puts the repository root on `sys.path` and exposes the standard result
+directories as module-level `Path` constants.  Do not delete them.
+"""
+from __future__ import annotations
+from pathlib import Path
+import sys
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO_ROOT))
+
+RAW_DIR   = REPO_ROOT / "results" / "raw"
+FIG_DIR   = REPO_ROOT / "results" / "figures"
+CACHE_DIR = REPO_ROOT / "results" / "llm_cache"
+
 """
 Main Experiment Script: TLE vs Baselines on CEC2018 Dynamic Multi-Objective
 ==========================================================================
 Runs all baselines + TLE on multiple CEC2018 problems and saves results to JSON.
 """
-import sys
-sys.path.insert(0, "D:/新论文/实验")
-
 import json
 import time
 import argparse
@@ -196,7 +212,7 @@ def main():
     parser.add_argument("--max-gen", type=int, default=100)
     parser.add_argument("--d", type=int, default=10)
     parser.add_argument("--output", type=str,
-                        default="实验/results/raw/exp2_dynamic_mo.json")
+                        default=str(RAW_DIR / "exp2_dynamic_mo.json"))
     parser.add_argument("--model", type=str, default=DEFAULT_MODEL)
     args = parser.parse_args()
 

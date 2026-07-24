@@ -3,9 +3,9 @@
 #   (Triggered LLM-Enhanced Evolutionary Algorithm for Dynamic
 #    Multi-Objective Optimization)
 #
-# The repository layout (mirrored from the project root `D:\新论文\实验\`):
-#   baselines/      <- six baseline algorithms (DE, NSGA-II, MOEA/D, ...)
-#   benchmarks/     <- CEC 2018 DF1-DF5 + UAV scenario
+# The repository layout:
+#   baselines/      <- baseline algorithms that need their own class
+#   benchmarks/     <- CEC 2018 DF1/DF2/DF3/DF5/DF7/DF10 + UAV scenario
 #   core/           <- TLE, bandit, triggers, prompts, DE operators
 #   experiments/    <- run scripts + plot scripts
 #   proposed/       <- TLE-specific glue
@@ -249,3 +249,17 @@ NOTES.local.md
 scratch/
 playground/
 sandbox/
+
+# -----------------------------------------------------------------------------
+# 15. Local smoke-test scripts (the leading underscore marks them as
+#     developer-only; keep one canonical _smoke_test.py at the repo root)
+# -----------------------------------------------------------------------------
+_sandbox_*.py
+_research_*.py
+_local_*.py
+_tmp_*.py
+
+# -----------------------------------------------------------------------------
+# 16. _deprecated/ subdir is no longer committed
+# -----------------------------------------------------------------------------
+_deprecated/

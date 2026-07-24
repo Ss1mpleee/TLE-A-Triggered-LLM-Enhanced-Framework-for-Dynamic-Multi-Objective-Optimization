@@ -1,3 +1,22 @@
+#!/usr/bin/env python
+"""
+TLE-DMO reproduction script.
+
+The four lines below make this script runnable from any working directory:
+it puts the repository root on `sys.path` and exposes the standard result
+directories as module-level `Path` constants.  Do not delete them.
+"""
+from __future__ import annotations
+from pathlib import Path
+import sys
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO_ROOT))
+
+RAW_DIR   = REPO_ROOT / "results" / "raw"
+FIG_DIR   = REPO_ROOT / "results" / "figures"
+CACHE_DIR = REPO_ROOT / "results" / "llm_cache"
+
 """S5: Pareto fronts for DF1, DF5, DF7 across DE, DNSGA-II-A, TLE.
 
 Main paper already shows DF2 (catastrophic failure). SM shows DF1/DF5/DF7
@@ -7,15 +26,14 @@ TLE actually produce" comparison.
 Output: figures/fig_pareto_dispatch.png (and .pdf)
 """
 import json
-import sys
 from pathlib import Path
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib as mpl
 
-SRC = Path(r'D:\新论文\实验\results\raw\exp_pareto_fronts.json')
-OUT_PNG = Path(r'D:\新论文\论文\figures\fig_pareto_dispatch.png')
-OUT_PDF = Path(r'D:\新论文\论文\figures\fig_pareto_dispatch.pdf')
+SRC = RAW_DIR / "exp_pareto_fronts.json"
+OUT_PNG = FIG_DIR / "fig_pareto_dispatch.png"
+OUT_PDF = FIG_DIR / "fig_pareto_dispatch.pdf"
 
 ALGOS = ['DE', 'DNSGA-II-A', 'TLE']
 ALGO_LABELS = {'DE': 'DE', 'DNSGA-II-A': 'DNSGA-II-A', 'TLE': 'TLE'}

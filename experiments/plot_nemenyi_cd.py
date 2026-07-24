@@ -1,3 +1,22 @@
+#!/usr/bin/env python
+"""
+TLE-DMO reproduction script.
+
+The four lines below make this script runnable from any working directory:
+it puts the repository root on `sys.path` and exposes the standard result
+directories as module-level `Path` constants.  Do not delete them.
+"""
+from __future__ import annotations
+from pathlib import Path
+import sys
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO_ROOT))
+
+RAW_DIR   = REPO_ROOT / "results" / "raw"
+FIG_DIR   = REPO_ROOT / "results" / "figures"
+CACHE_DIR = REPO_ROOT / "results" / "llm_cache"
+
 """S2: Nemenyi critical-difference diagram.
 
 Replaces nothing (new). Visualizes Friedman + Nemenyi post-hoc ranking.
@@ -12,9 +31,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib as mpl
 
-SRC = Path(r'D:\新论文\实验\results\raw\sec_main_v3.json')
-OUT_PNG = Path(r'D:\新论文\论文\figures\fig_nemenyi_cd.png')
-OUT_PDF = Path(r'D:\新论文\论文\figures\fig_nemenyi_cd.pdf')
+SRC = RAW_DIR / "sec_main_v3.json"
+OUT_PNG = FIG_DIR / "fig_nemenyi_cd.png"
+OUT_PDF = FIG_DIR / "fig_nemenyi_cd.pdf"
 
 ALGOS = ['DE', 'DE-LM-static-trigger', 'PPS-DMOEA', 'DNSGA-II-A', 'MOEA/DD', 'TLE']
 ALGO_LABELS = {

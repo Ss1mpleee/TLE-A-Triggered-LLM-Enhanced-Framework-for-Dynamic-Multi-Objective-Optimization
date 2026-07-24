@@ -1,3 +1,22 @@
+#!/usr/bin/env python
+"""
+TLE-DMO reproduction script.
+
+The four lines below make this script runnable from any working directory:
+it puts the repository root on `sys.path` and exposes the standard result
+directories as module-level `Path` constants.  Do not delete them.
+"""
+from __future__ import annotations
+from pathlib import Path
+import sys
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO_ROOT))
+
+RAW_DIR   = REPO_ROOT / "results" / "raw"
+FIG_DIR   = REPO_ROOT / "results" / "figures"
+CACHE_DIR = REPO_ROOT / "results" / "llm_cache"
+
 """Add seeds 5-9 (5 additional seeds) to sec_main + UAV experiments.
 
 This expands the sample size from 5 to 10 seeds for stronger statistical
@@ -8,9 +27,6 @@ With LLM cache, the runtime is dominated by non-LLM baselines (DE, PPS,
 DNSGA-II-A) which run in ~1s each.  Estimated total: 5 algos × 5 probs ×
 5 new seeds × ~5s/run = ~10 min for main.  UAV: ~5 min.
 """
-import sys
-sys.path.insert(0, r'D:\新论文\实验')
-
 import json
 import time
 import numpy as np

@@ -1,9 +1,25 @@
+#!/usr/bin/env python
+"""
+TLE-DMO reproduction script.
+
+The four lines below make this script runnable from any working directory:
+it puts the repository root on `sys.path` and exposes the standard result
+directories as module-level `Path` constants.  Do not delete them.
+"""
+from __future__ import annotations
+from pathlib import Path
+import sys
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO_ROOT))
+
+RAW_DIR   = REPO_ROOT / "results" / "raw"
+FIG_DIR   = REPO_ROOT / "results" / "figures"
+CACHE_DIR = REPO_ROOT / "results" / "llm_cache"
+
 """
 Generate remaining figures: TLE architecture diagram + LLM sensitivity.
 """
-import sys
-sys.path.insert(0, "D:/新论文/实验")
-
 import numpy as np
 import matplotlib
 matplotlib.use("Agg")
@@ -13,7 +29,7 @@ from pathlib import Path
 import json
 from collections import defaultdict
 
-FIG_DIR = Path("实验/results/figures")
+# FIG_DIR is provided by the standard preamble at the top of this file
 FIG_DIR.mkdir(parents=True, exist_ok=True)
 
 
