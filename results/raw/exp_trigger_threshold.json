@@ -1,0 +1,242 @@
+[
+  {
+    "problem": "DF1",
+    "entropy_threshold": 0.001,
+    "seed": 0,
+    "igd": 0.6444065499723541,
+    "invocations": 70,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF1",
+    "entropy_threshold": 0.001,
+    "seed": 1,
+    "igd": 0.4759175014878483,
+    "invocations": 50,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF1",
+    "entropy_threshold": 0.001,
+    "seed": 2,
+    "igd": 0.5223117076252869,
+    "invocations": 40,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF1",
+    "entropy_threshold": 0.01,
+    "seed": 0,
+    "igd": 0.6305059436955683,
+    "invocations": 32,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF1",
+    "entropy_threshold": 0.01,
+    "seed": 1,
+    "igd": 0.5129896288026828,
+    "invocations": 32,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF1",
+    "entropy_threshold": 0.01,
+    "seed": 2,
+    "igd": 0.6836441315604965,
+    "invocations": 31,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF1",
+    "entropy_threshold": 0.05,
+    "seed": 0,
+    "igd": 0.7201582973911438,
+    "invocations": 30,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF1",
+    "entropy_threshold": 0.05,
+    "seed": 1,
+    "igd": 0.7025953701260002,
+    "invocations": 63,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF1",
+    "entropy_threshold": 0.05,
+    "seed": 2,
+    "igd": 0.7016673561281007,
+    "invocations": 52,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF1",
+    "entropy_threshold": 0.1,
+    "seed": 0,
+    "igd": 0.7201582973911438,
+    "invocations": 30,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF1",
+    "entropy_threshold": 0.1,
+    "seed": 1,
+    "igd": 0.7025953701260002,
+    "invocations": 63,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF1",
+    "entropy_threshold": 0.1,
+    "seed": 2,
+    "igd": 0.7016673561281007,
+    "invocations": 51,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF1",
+    "entropy_threshold": 0.5,
+    "seed": 0,
+    "igd": 0.7201582973911438,
+    "invocations": 30,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF1",
+    "entropy_threshold": 0.5,
+    "seed": 1,
+    "igd": 0.7025953701260002,
+    "invocations": 63,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF1",
+    "entropy_threshold": 0.5,
+    "seed": 2,
+    "igd": 0.7016673561281007,
+    "invocations": 51,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF5",
+    "entropy_threshold": 0.001,
+    "seed": 0,
+    "igd": 0.38305561106345576,
+    "invocations": 81,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF5",
+    "entropy_threshold": 0.001,
+    "seed": 1,
+    "igd": 0.3808183599313322,
+    "invocations": 44,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF5",
+    "entropy_threshold": 0.001,
+    "seed": 2,
+    "igd": 0.42214591350627645,
+    "invocations": 48,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF5",
+    "entropy_threshold": 0.01,
+    "seed": 0,
+    "igd": 0.40771129552795526,
+    "invocations": 23,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF5",
+    "entropy_threshold": 0.01,
+    "seed": 1,
+    "igd": 0.47607156390672556,
+    "invocations": 17,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF5",
+    "entropy_threshold": 0.01,
+    "seed": 2,
+    "igd": 0.41386087878645766,
+    "invocations": 13,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF5",
+    "entropy_threshold": 0.05,
+    "seed": 0,
+    "igd": 0.06515367793813714,
+    "invocations": 42,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF5",
+    "entropy_threshold": 0.05,
+    "seed": 1,
+    "igd": 0.06254341942957989,
+    "invocations": 60,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF5",
+    "entropy_threshold": 0.05,
+    "seed": 2,
+    "igd": 0.08628624305725639,
+    "invocations": 46,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF5",
+    "entropy_threshold": 0.1,
+    "seed": 0,
+    "igd": 0.06515367793813714,
+    "invocations": 42,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF5",
+    "entropy_threshold": 0.1,
+    "seed": 1,
+    "igd": 0.06254341942957989,
+    "invocations": 60,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF5",
+    "entropy_threshold": 0.1,
+    "seed": 2,
+    "igd": 0.08628624305725639,
+    "invocations": 46,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF5",
+    "entropy_threshold": 0.5,
+    "seed": 0,
+    "igd": 0.06515367793813714,
+    "invocations": 42,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF5",
+    "entropy_threshold": 0.5,
+    "seed": 1,
+    "igd": 0.06254341942957989,
+    "invocations": 60,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF5",
+    "entropy_threshold": 0.5,
+    "seed": 2,
+    "igd": 0.08628624305725639,
+    "invocations": 46,
+    "elapsed_sec": 0.0
+  }
+]

@@ -1,0 +1,28 @@
+# =============================================================================
+# requirements.txt for the TLE-DMO repository
+#
+# Generated from the actual `import` statements in `core/`, `baselines/`,
+# `benchmarks/`, and `experiments/`.  Pinned to the versions we tested with.
+# =============================================================================
+
+# --- Core numerical / scientific stack -----------------------------------------
+numpy>=1.24,<3.0
+scipy>=1.11,<2.0
+
+# --- Plotting -----------------------------------------------------------------
+matplotlib>=3.7,<4.0
+seaborn>=0.13,<1.0
+
+# --- HTTP client (used to talk to the local Ollama daemon) --------------------
+requests>=2.31,<3.0
+
+# --- Optional: faster non-dominated-sort and IGD inner loop --------------------
+# Uncomment if you want the numba-accelerated path (we ship a pure-numpy
+# fallback that runs ~3x slower but works without numba).
+# numba>=0.58,<1.0
+
+# --- Optional: progress bars for long experiments ----------------------------
+# tqdm>=4.66,<5.0
+
+# --- Optional: nice-looking DataFrame printing --------------------------------
+# pandas>=2.0,<4.0

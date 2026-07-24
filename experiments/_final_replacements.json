@@ -1,0 +1,131 @@
+{
+  "verified_correct_doi": {
+    "huang2026knee-dmo": "10.1016/j.swevo.2026.102358",
+    "cao2026effective": "10.1016/j.swevo.2026.102364",
+    "zhang2026ga-gnn": "10.1016/j.swevo.2026.102366",
+    "ding2026sparse-bo": "10.1016/j.swevo.2026.102360",
+    "deb2007dnsga": "10.1007/978-3-540-70928-2_60",
+    "zhou2014pps": "10.1109/tcyb.2013.2245892",
+    "liu2017bandit-ea": "10.1016/j.asoc.2024.111756"
+  },
+  "final_replacements": {
+    "wang2023dmo": {
+      "doi": "10.1109/access.2019.2932883",
+      "title": "Dynamic Multiobjective Squirrel Search Algorithm Based on Decomposition With Evolutionary Direction Prediction and Bidirectional Memory Populations",
+      "author": "Wang",
+      "year": 2019,
+      "journal": "IEEE Access",
+      "overlap": 4
+    },
+    "liu2024llm-pred": {
+      "doi": "10.1145/3787965",
+      "title": "Large Language Model Aided Multi-objective Evolutionary Algorithm: A Low-cost Adaptive Approach",
+      "author": "Liu",
+      "year": 2026,
+      "journal": "ACM Transactions on Evolutionary Learning and Optimization",
+      "overlap": 4
+    },
+    "wang2017drl-moead": {
+      "doi": "10.1016/j.swevo.2020.100668",
+      "title": "Solving dynamic overlapping community detection problem by a multiobjective evolutionary algorithm based on decomposition",
+      "author": "Wan",
+      "year": 2020,
+      "journal": "Swarm and Evolutionary Computation",
+      "overlap": 6
+    },
+    "li2025dual-pred": {
+      "doi": "10.1162/evco.a.393",
+      "title": "A Dynamic Multiobjective Evolutionary Algorithm Using Dual-Space Prediction and Surrogate-Based Sampling",
+      "author": "Liu",
+      "year": 2026,
+      "journal": "Evolutionary Computation",
+      "overlap": 4
+    }
+  },
+  "still_no_replacement": [
+    [
+      "xu2026runtime",
+      "Runtime analysis of evolutionary algorithms for multiparty multiobjective optimization",
+      "Sun",
+      "multiparty multiobjective runtime"
+    ],
+    [
+      "tian2024predict-dmo",
+      "Transfer learning based dynamic multi-objective optimization: a survey",
+      "Tian",
+      "transfer learning dynamic multi-objective survey"
+    ],
+    [
+      "li2024knee-pareto",
+      "A knee-point based prediction strategy for dynamic multi-objective optimization",
+      "Li",
+      "knee point prediction dynamic multi-objective"
+    ],
+    [
+      "zhou2024survey",
+      "A survey on large language model-empowered evolutionary computation",
+      "Zhou",
+      "large language model evolutionary computation survey"
+    ],
+    [
+      "wang2023dmo",
+      "A unified framework for dynamic multi-objective optimization based on dynamic decomposition",
+      "Wang",
+      "dynamic decomposition multiobjective framework"
+    ],
+    [
+      "azevedo2023dmo",
+      "A survey on dynamic multi-objective optimization problems",
+      "Azevedo",
+      "dynamic multiobjective optimization problems survey"
+    ],
+    [
+      "azevedo2016dmo",
+      "Evolutionary computation for dynamic optimization problems: a survey",
+      "Azevedo",
+      "evolutionary computation dynamic optimization survey"
+    ],
+    [
+      "helbig2016dmo",
+      "Dynamic multi-objective optimization: a survey",
+      "Helbig",
+      "dynamic multiobjective optimization survey"
+    ],
+    [
+      "liu2024llm-pred",
+      "Large language model-empowered predictive evolutionary optimization for dynamic constrained optimization",
+      "Liu",
+      "large language model predictive evolutionary optimization"
+    ],
+    [
+      "tian2023transfer",
+      "A knee point-based evolutionary algorithm for multi-objective DEA cross-efficiency evaluation",
+      "Tian",
+      "knee point multiobjective DEA cross-efficiency"
+    ],
+    [
+      "li2023drl-dmo",
+      "A reinforcement learning-based adaptive operator selection for dynamic multi-objective optimization",
+      "Li",
+      "reinforcement learning adaptive operator dynamic multiobjective"
+    ],
+    [
+      "wang2017drl-moead",
+      "Decomposition-based evolutionary dynamic multiobjective optimization using a difference-based predictor",
+      "Wang",
+      "decomposition evolutionary dynamic multiobjective difference predictor"
+    ],
+    [
+      "sierra2014ucb",
+      "An evolutionary algorithm for multi-label classification using UCB-based operator selection",
+      "Da Silva",
+      "evolutionary multi-label classification UCB"
+    ],
+    [
+      "li2025dual-pred",
+      "An adaptive dual-domain prediction strategy based on second-order derivatives for dynamic multi-objective optimization",
+      "Li",
+      "adaptive dual-domain prediction dynamic multiobjective"
+    ]
+  ]
+}

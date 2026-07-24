@@ -1,0 +1,272 @@
+[
+  {
+    "problem": "DF1",
+    "budget_per_gen_target": 1,
+    "total_budget": 50,
+    "seed": 0,
+    "igd": 0.7373384351040303,
+    "invocations": 14,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF1",
+    "budget_per_gen_target": 1,
+    "total_budget": 50,
+    "seed": 1,
+    "igd": 0.3195122906444403,
+    "invocations": 32,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF1",
+    "budget_per_gen_target": 1,
+    "total_budget": 50,
+    "seed": 2,
+    "igd": 0.7080355030503468,
+    "invocations": 17,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF1",
+    "budget_per_gen_target": 2,
+    "total_budget": 100,
+    "seed": 0,
+    "igd": 0.7373384351040303,
+    "invocations": 14,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF1",
+    "budget_per_gen_target": 2,
+    "total_budget": 100,
+    "seed": 1,
+    "igd": 0.3195122906444403,
+    "invocations": 32,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF1",
+    "budget_per_gen_target": 2,
+    "total_budget": 100,
+    "seed": 2,
+    "igd": 0.7080355030503468,
+    "invocations": 17,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF1",
+    "budget_per_gen_target": 3,
+    "total_budget": 150,
+    "seed": 0,
+    "igd": 0.7373384351040303,
+    "invocations": 14,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF1",
+    "budget_per_gen_target": 3,
+    "total_budget": 150,
+    "seed": 1,
+    "igd": 0.3195122906444403,
+    "invocations": 32,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF1",
+    "budget_per_gen_target": 3,
+    "total_budget": 150,
+    "seed": 2,
+    "igd": 0.7080355030503468,
+    "invocations": 17,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF1",
+    "budget_per_gen_target": 4,
+    "total_budget": 200,
+    "seed": 0,
+    "igd": 0.7373384351040303,
+    "invocations": 14,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF1",
+    "budget_per_gen_target": 4,
+    "total_budget": 200,
+    "seed": 1,
+    "igd": 0.3195122906444403,
+    "invocations": 32,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF1",
+    "budget_per_gen_target": 4,
+    "total_budget": 200,
+    "seed": 2,
+    "igd": 0.7080355030503468,
+    "invocations": 17,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF1",
+    "budget_per_gen_target": 5,
+    "total_budget": 250,
+    "seed": 0,
+    "igd": 0.7373384351040303,
+    "invocations": 14,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF1",
+    "budget_per_gen_target": 5,
+    "total_budget": 250,
+    "seed": 1,
+    "igd": 0.3195122906444403,
+    "invocations": 32,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF1",
+    "budget_per_gen_target": 5,
+    "total_budget": 250,
+    "seed": 2,
+    "igd": 0.7080355030503468,
+    "invocations": 17,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF5",
+    "budget_per_gen_target": 1,
+    "total_budget": 50,
+    "seed": 0,
+    "igd": 0.027810366481949546,
+    "invocations": 14,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF5",
+    "budget_per_gen_target": 1,
+    "total_budget": 50,
+    "seed": 1,
+    "igd": 0.08582646491697725,
+    "invocations": 20,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF5",
+    "budget_per_gen_target": 1,
+    "total_budget": 50,
+    "seed": 2,
+    "igd": 0.05860874310158173,
+    "invocations": 26,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF5",
+    "budget_per_gen_target": 2,
+    "total_budget": 100,
+    "seed": 0,
+    "igd": 0.027810366481949546,
+    "invocations": 14,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF5",
+    "budget_per_gen_target": 2,
+    "total_budget": 100,
+    "seed": 1,
+    "igd": 0.08582646491697725,
+    "invocations": 20,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF5",
+    "budget_per_gen_target": 2,
+    "total_budget": 100,
+    "seed": 2,
+    "igd": 0.05860874310158173,
+    "invocations": 26,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF5",
+    "budget_per_gen_target": 3,
+    "total_budget": 150,
+    "seed": 0,
+    "igd": 0.027810366481949546,
+    "invocations": 14,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF5",
+    "budget_per_gen_target": 3,
+    "total_budget": 150,
+    "seed": 1,
+    "igd": 0.08582646491697725,
+    "invocations": 20,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF5",
+    "budget_per_gen_target": 3,
+    "total_budget": 150,
+    "seed": 2,
+    "igd": 0.05860874310158173,
+    "invocations": 26,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF5",
+    "budget_per_gen_target": 4,
+    "total_budget": 200,
+    "seed": 0,
+    "igd": 0.027810366481949546,
+    "invocations": 14,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF5",
+    "budget_per_gen_target": 4,
+    "total_budget": 200,
+    "seed": 1,
+    "igd": 0.08582646491697725,
+    "invocations": 20,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF5",
+    "budget_per_gen_target": 4,
+    "total_budget": 200,
+    "seed": 2,
+    "igd": 0.05860874310158173,
+    "invocations": 26,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF5",
+    "budget_per_gen_target": 5,
+    "total_budget": 250,
+    "seed": 0,
+    "igd": 0.027810366481949546,
+    "invocations": 14,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF5",
+    "budget_per_gen_target": 5,
+    "total_budget": 250,
+    "seed": 1,
+    "igd": 0.08582646491697725,
+    "invocations": 20,
+    "elapsed_sec": 0.0
+  },
+  {
+    "problem": "DF5",
+    "budget_per_gen_target": 5,
+    "total_budget": 250,
+    "seed": 2,
+    "igd": 0.05860874310158173,
+    "invocations": 26,
+    "elapsed_sec": 0.0
+  }
+]

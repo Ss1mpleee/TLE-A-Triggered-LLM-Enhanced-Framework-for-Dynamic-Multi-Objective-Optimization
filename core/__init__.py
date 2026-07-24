@@ -15,4 +15,5 @@ from .bandit import UCBBandit, FixedBudgetScheduler, HeuristicDecayScheduler
 from .prompts import (
     SYSTEM_PROMPT, build_population_summary, call_llm_for_advice, apply_advice
 )
-from .tle import TLE, DEBaseline, StaticLMEABaseline, RandomLMEABaseline, PPSDMOEA, DNSGAIIA
+from .tle import TLE, DEBaseline, StaticLMEABaseline, RandomLMEABaseline, PPSDMOEA, DNSGAIIA, TLEMultiAction
+from .multi_action import Action, VALID_ACTIONS
