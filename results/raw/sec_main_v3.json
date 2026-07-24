@@ -55,224 +55,31 @@
     "invocations": 0
   },
   {
-    "algo": "DE-LM-static-trigger",
+    "algo": "DE",
     "problem": "DF1",
-    "seed": 0,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.7373384351040303,
-    "hv": 0.17537231652138538,
-    "elapsed_sec": 38.502681255340576,
-    "invocations": 14
+    "seed": 5,
+    "igd": 0.38645316628074255,
+    "hv": 0.6041644125995604,
+    "invocations": 0,
+    "elapsed_sec": 0.15837478637695312
   },
   {
-    "algo": "DE-LM-static-trigger",
+    "algo": "DE",
     "problem": "DF1",
-    "seed": 1,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.4398799482711009,
-    "hv": 0.30397299626914576,
-    "elapsed_sec": 58.3506121635437,
-    "invocations": 20
+    "seed": 6,
+    "igd": 0.27004042899606967,
+    "hv": 0.8049138913667861,
+    "invocations": 0,
+    "elapsed_sec": 0.18724346160888672
   },
   {
-    "algo": "DE-LM-static-trigger",
+    "algo": "DE",
     "problem": "DF1",
-    "seed": 2,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.7080355030503468,
-    "hv": 0.33659512884464576,
-    "elapsed_sec": 49.71329402923584,
-    "invocations": 17
-  },
-  {
-    "algo": "DE-LM-static-trigger",
-    "problem": "DF1",
-    "seed": 3,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.7133723389817826,
-    "hv": 0.3317223428780006,
-    "elapsed_sec": 41.06547737121582,
-    "invocations": 14
-  },
-  {
-    "algo": "DE-LM-static-trigger",
-    "problem": "DF1",
-    "seed": 4,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.726395139694296,
-    "hv": 0.3030418298503432,
-    "elapsed_sec": 41.03731727600098,
-    "invocations": 14
-  },
-  {
-    "algo": "PPS-DMOEA",
-    "problem": "DF1",
-    "seed": 0,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.3716033168501045,
-    "hv": 0.5761892702792043,
-    "elapsed_sec": 0.22783279418945312,
-    "invocations": 0
-  },
-  {
-    "algo": "PPS-DMOEA",
-    "problem": "DF1",
-    "seed": 1,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.5698210627008766,
-    "hv": 0.5499365776080386,
-    "elapsed_sec": 0.2136366367340088,
-    "invocations": 0
-  },
-  {
-    "algo": "PPS-DMOEA",
-    "problem": "DF1",
-    "seed": 2,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.5070828804086089,
-    "hv": 0.2520155064756408,
-    "elapsed_sec": 0.21222758293151855,
-    "invocations": 0
-  },
-  {
-    "algo": "PPS-DMOEA",
-    "problem": "DF1",
-    "seed": 3,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.48333609289866075,
-    "hv": 0.19186717033393252,
-    "elapsed_sec": 0.2204127311706543,
-    "invocations": 0
-  },
-  {
-    "algo": "PPS-DMOEA",
-    "problem": "DF1",
-    "seed": 4,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.5218712786879891,
-    "hv": 0.2799725005392085,
-    "elapsed_sec": 0.2285778522491455,
-    "invocations": 0
-  },
-  {
-    "algo": "DNSGA-II-A",
-    "problem": "DF1",
-    "seed": 0,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.53401369191986,
-    "hv": 0.29519946513767625,
-    "elapsed_sec": 7.982633352279663,
-    "invocations": 0
-  },
-  {
-    "algo": "DNSGA-II-A",
-    "problem": "DF1",
-    "seed": 1,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.4282541855372875,
-    "hv": 0.4620054537806558,
-    "elapsed_sec": 7.857144594192505,
-    "invocations": 0
-  },
-  {
-    "algo": "DNSGA-II-A",
-    "problem": "DF1",
-    "seed": 2,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.4747983621377167,
-    "hv": 0.4962279694091438,
-    "elapsed_sec": 7.8628990650177,
-    "invocations": 0
-  },
-  {
-    "algo": "DNSGA-II-A",
-    "problem": "DF1",
-    "seed": 3,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.4331144631630252,
-    "hv": 0.41309854268138535,
-    "elapsed_sec": 7.832129001617432,
-    "invocations": 0
-  },
-  {
-    "algo": "DNSGA-II-A",
-    "problem": "DF1",
-    "seed": 4,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.403124804243057,
-    "hv": 0.5701618549293738,
-    "elapsed_sec": 7.916491508483887,
-    "invocations": 0
-  },
-  {
-    "algo": "TLE",
-    "problem": "DF1",
-    "seed": 0,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.7201582973911438,
-    "hv": 0.3503954336407448,
-    "elapsed_sec": 85.97253203392029,
-    "invocations": 30
-  },
-  {
-    "algo": "TLE",
-    "problem": "DF1",
-    "seed": 1,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.7025953701260002,
-    "hv": 0.32731800776946424,
-    "elapsed_sec": 181.2002387046814,
-    "invocations": 63
-  },
-  {
-    "algo": "TLE",
-    "problem": "DF1",
-    "seed": 2,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.7016673561281007,
-    "hv": 0.37940127560027836,
-    "elapsed_sec": 151.76547765731812,
-    "invocations": 52
-  },
-  {
-    "algo": "TLE",
-    "problem": "DF1",
-    "seed": 3,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.3940858221873544,
-    "hv": 0.29543709328471845,
-    "elapsed_sec": 253.6535611152649,
-    "invocations": 87
-  },
-  {
-    "algo": "TLE",
-    "problem": "DF1",
-    "seed": 4,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.7194340929080023,
-    "hv": 0.33479834504154926,
-    "elapsed_sec": 120.28325843811035,
-    "invocations": 41
+    "seed": 7,
+    "igd": 0.37485382849453275,
+    "hv": 0.6394780646532282,
+    "invocations": 0,
+    "elapsed_sec": 0.1816120147705078
   },
   {
     "algo": "DE",
@@ -330,774 +137,31 @@
     "invocations": 0
   },
   {
-    "algo": "DE-LM-static-trigger",
+    "algo": "DE",
     "problem": "DF2",
-    "seed": 0,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.9175560515958484,
+    "seed": 5,
+    "igd": 0.8813685321450336,
     "hv": 0.0,
-    "elapsed_sec": 33.316540002822876,
-    "invocations": 12
-  },
-  {
-    "algo": "DE-LM-static-trigger",
-    "problem": "DF2",
-    "seed": 1,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.8857789231141721,
-    "hv": 0.0,
-    "elapsed_sec": 59.894535303115845,
-    "invocations": 20
-  },
-  {
-    "algo": "DE-LM-static-trigger",
-    "problem": "DF2",
-    "seed": 2,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.9267917497343141,
-    "hv": 0.0,
-    "elapsed_sec": 55.65149545669556,
-    "invocations": 19
-  },
-  {
-    "algo": "DE-LM-static-trigger",
-    "problem": "DF2",
-    "seed": 3,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.9040299681612076,
-    "hv": 0.0,
-    "elapsed_sec": 57.73369812965393,
-    "invocations": 19
-  },
-  {
-    "algo": "DE-LM-static-trigger",
-    "problem": "DF2",
-    "seed": 4,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.9107920651735658,
-    "hv": 0.0,
-    "elapsed_sec": 60.99761366844177,
-    "invocations": 20
-  },
-  {
-    "algo": "PPS-DMOEA",
-    "problem": "DF2",
-    "seed": 0,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 258.17892131504794,
-    "hv": 0.1750261237471906,
-    "elapsed_sec": 0.17544865608215332,
-    "invocations": 0
-  },
-  {
-    "algo": "PPS-DMOEA",
-    "problem": "DF2",
-    "seed": 1,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.8324391355501723,
-    "hv": 0.07797385127042905,
-    "elapsed_sec": 0.1762256622314453,
-    "invocations": 0
-  },
-  {
-    "algo": "PPS-DMOEA",
-    "problem": "DF2",
-    "seed": 2,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.5434348975808735,
-    "hv": 0.5623724855960602,
-    "elapsed_sec": 0.17583966255187988,
-    "invocations": 0
-  },
-  {
-    "algo": "PPS-DMOEA",
-    "problem": "DF2",
-    "seed": 3,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.5317451953030672,
-    "hv": 0.3241913632216311,
-    "elapsed_sec": 0.17572784423828125,
-    "invocations": 0
-  },
-  {
-    "algo": "PPS-DMOEA",
-    "problem": "DF2",
-    "seed": 4,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.9304819884434566,
-    "hv": 0.07103510594218031,
-    "elapsed_sec": 0.17707204818725586,
-    "invocations": 0
-  },
-  {
-    "algo": "DNSGA-II-A",
-    "problem": "DF2",
-    "seed": 0,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.6564963027028758,
-    "hv": 0.8296256172691177,
-    "elapsed_sec": 6.95952582359314,
-    "invocations": 0
-  },
-  {
-    "algo": "DNSGA-II-A",
-    "problem": "DF2",
-    "seed": 1,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.6505552560130196,
-    "hv": 0.6024698369052783,
-    "elapsed_sec": 6.888988494873047,
-    "invocations": 0
-  },
-  {
-    "algo": "DNSGA-II-A",
-    "problem": "DF2",
-    "seed": 2,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.6853991732897114,
-    "hv": 0.4683764546969903,
-    "elapsed_sec": 6.869726181030273,
-    "invocations": 0
-  },
-  {
-    "algo": "DNSGA-II-A",
-    "problem": "DF2",
-    "seed": 3,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.6534033986705688,
-    "hv": 0.6348141697461163,
-    "elapsed_sec": 6.85157036781311,
-    "invocations": 0
-  },
-  {
-    "algo": "DNSGA-II-A",
-    "problem": "DF2",
-    "seed": 4,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.6834756284699924,
-    "hv": 0.6394121590007281,
-    "elapsed_sec": 6.881114482879639,
-    "invocations": 0
-  },
-  {
-    "algo": "TLE",
-    "problem": "DF2",
-    "seed": 0,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.9251154412527984,
-    "hv": 0.0,
-    "elapsed_sec": 101.96453142166138,
-    "invocations": 35
-  },
-  {
-    "algo": "TLE",
-    "problem": "DF2",
-    "seed": 1,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.854654726001894,
-    "hv": 0.0,
-    "elapsed_sec": 59.99154996871948,
-    "invocations": 21
-  },
-  {
-    "algo": "TLE",
-    "problem": "DF2",
-    "seed": 2,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.9273521697818802,
-    "hv": 0.0,
-    "elapsed_sec": 121.4713659286499,
-    "invocations": 42
-  },
-  {
-    "algo": "TLE",
-    "problem": "DF2",
-    "seed": 3,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.78507421666575,
-    "hv": 0.0,
-    "elapsed_sec": 48.9174439907074,
-    "invocations": 16
-  },
-  {
-    "algo": "TLE",
-    "problem": "DF2",
-    "seed": 4,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.9272361714763029,
-    "hv": 0.0,
-    "elapsed_sec": 126.84039878845215,
-    "invocations": 43
+    "invocations": 0,
+    "elapsed_sec": 0.19476985931396484
   },
   {
     "algo": "DE",
-    "problem": "DF5",
-    "seed": 0,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.0602814764141722,
-    "hv": 0.5328038872662235,
-    "elapsed_sec": 0.15276408195495605,
-    "invocations": 0
+    "problem": "DF2",
+    "seed": 6,
+    "igd": 0.8828582501458045,
+    "hv": 0.0,
+    "invocations": 0,
+    "elapsed_sec": 0.19712209701538086
   },
   {
     "algo": "DE",
-    "problem": "DF5",
-    "seed": 1,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.09653168262972393,
-    "hv": 0.49095579076416346,
-    "elapsed_sec": 0.15421795845031738,
-    "invocations": 0
-  },
-  {
-    "algo": "DE",
-    "problem": "DF5",
-    "seed": 2,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.054301938936292676,
-    "hv": 0.5356130526971332,
-    "elapsed_sec": 0.15256047248840332,
-    "invocations": 0
-  },
-  {
-    "algo": "DE",
-    "problem": "DF5",
-    "seed": 3,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.07363688787360283,
-    "hv": 0.5290102341142161,
-    "elapsed_sec": 0.1523113250732422,
-    "invocations": 0
-  },
-  {
-    "algo": "DE",
-    "problem": "DF5",
-    "seed": 4,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.06650672543641974,
-    "hv": 0.4863993938801968,
-    "elapsed_sec": 0.15319156646728516,
-    "invocations": 0
-  },
-  {
-    "algo": "DE-LM-static-trigger",
-    "problem": "DF5",
-    "seed": 0,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.027810366481949546,
-    "hv": 0.5509923688940053,
-    "elapsed_sec": 40.89732074737549,
-    "invocations": 14
-  },
-  {
-    "algo": "DE-LM-static-trigger",
-    "problem": "DF5",
-    "seed": 1,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.08582646491697725,
-    "hv": 0.5188872463324519,
-    "elapsed_sec": 59.248403787612915,
-    "invocations": 20
-  },
-  {
-    "algo": "DE-LM-static-trigger",
-    "problem": "DF5",
-    "seed": 2,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.07602945336643398,
-    "hv": 0.4986658643943028,
-    "elapsed_sec": 61.241844177246094,
-    "invocations": 20
-  },
-  {
-    "algo": "DE-LM-static-trigger",
-    "problem": "DF5",
-    "seed": 3,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.07343394573196871,
-    "hv": 0.5545441780822172,
-    "elapsed_sec": 61.14071249961853,
-    "invocations": 20
-  },
-  {
-    "algo": "DE-LM-static-trigger",
-    "problem": "DF5",
-    "seed": 4,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.05004652803389236,
-    "hv": 0.5439342374786985,
-    "elapsed_sec": 50.370402812957764,
-    "invocations": 17
-  },
-  {
-    "algo": "PPS-DMOEA",
-    "problem": "DF5",
-    "seed": 0,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.04956015654594252,
-    "hv": 0.5494886266532144,
-    "elapsed_sec": 0.18825912475585938,
-    "invocations": 0
-  },
-  {
-    "algo": "PPS-DMOEA",
-    "problem": "DF5",
-    "seed": 1,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.07030060271287675,
-    "hv": 0.5038136953713507,
-    "elapsed_sec": 0.18659591674804688,
-    "invocations": 0
-  },
-  {
-    "algo": "PPS-DMOEA",
-    "problem": "DF5",
-    "seed": 2,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.08070726619897446,
-    "hv": 0.5007637111941489,
-    "elapsed_sec": 0.18299031257629395,
-    "invocations": 0
-  },
-  {
-    "algo": "PPS-DMOEA",
-    "problem": "DF5",
-    "seed": 3,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.18810890320174065,
-    "hv": 0.29294628363196257,
-    "elapsed_sec": 0.18492603302001953,
-    "invocations": 0
-  },
-  {
-    "algo": "PPS-DMOEA",
-    "problem": "DF5",
-    "seed": 4,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.1325623613645396,
-    "hv": 0.3823766413595922,
-    "elapsed_sec": 0.18357062339782715,
-    "invocations": 0
-  },
-  {
-    "algo": "DNSGA-II-A",
-    "problem": "DF5",
-    "seed": 0,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.0598986564357968,
-    "hv": 0.6470440929734516,
-    "elapsed_sec": 6.684216022491455,
-    "invocations": 0
-  },
-  {
-    "algo": "DNSGA-II-A",
-    "problem": "DF5",
-    "seed": 1,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.062314502521211894,
-    "hv": 0.6630116744762219,
-    "elapsed_sec": 6.546224117279053,
-    "invocations": 0
-  },
-  {
-    "algo": "DNSGA-II-A",
-    "problem": "DF5",
-    "seed": 2,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.05359232803766116,
-    "hv": 0.6348287257970592,
-    "elapsed_sec": 6.643256425857544,
-    "invocations": 0
-  },
-  {
-    "algo": "DNSGA-II-A",
-    "problem": "DF5",
-    "seed": 3,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.052327626907520824,
-    "hv": 0.6344796045719551,
-    "elapsed_sec": 6.488154649734497,
-    "invocations": 0
-  },
-  {
-    "algo": "DNSGA-II-A",
-    "problem": "DF5",
-    "seed": 4,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.05789333830466038,
-    "hv": 0.6456478999016074,
-    "elapsed_sec": 6.497263669967651,
-    "invocations": 0
-  },
-  {
-    "algo": "TLE",
-    "problem": "DF5",
-    "seed": 0,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.06515367793813714,
-    "hv": 0.5160481958224221,
-    "elapsed_sec": 64.2367832660675,
-    "invocations": 42
-  },
-  {
-    "algo": "TLE",
-    "problem": "DF5",
-    "seed": 1,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.06254341942957989,
-    "hv": 0.5053526416345568,
-    "elapsed_sec": 172.1193745136261,
-    "invocations": 60
-  },
-  {
-    "algo": "TLE",
-    "problem": "DF5",
-    "seed": 2,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.08628624305725639,
-    "hv": 0.5063037773069489,
-    "elapsed_sec": 131.04760479927063,
-    "invocations": 46
-  },
-  {
-    "algo": "TLE",
-    "problem": "DF5",
-    "seed": 3,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.06831311830915983,
-    "hv": 0.4938832249890961,
-    "elapsed_sec": 181.82282543182373,
-    "invocations": 62
-  },
-  {
-    "algo": "TLE",
-    "problem": "DF5",
-    "seed": 4,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.06795853249321626,
-    "hv": 0.4954125240626367,
-    "elapsed_sec": 109.45197987556458,
-    "invocations": 37
-  },
-  {
-    "algo": "DE",
-    "problem": "DF7",
-    "seed": 0,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.3609156368943347,
-    "hv": 0.6209213243242314,
-    "elapsed_sec": 0.20450258255004883,
-    "invocations": 0
-  },
-  {
-    "algo": "DE",
-    "problem": "DF7",
-    "seed": 1,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.31108967918636377,
-    "hv": 0.45079545637879337,
-    "elapsed_sec": 0.1955430507659912,
-    "invocations": 0
-  },
-  {
-    "algo": "DE",
-    "problem": "DF7",
-    "seed": 2,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.3455879303917624,
-    "hv": 0.41507902324340706,
-    "elapsed_sec": 0.197465181350708,
-    "invocations": 0
-  },
-  {
-    "algo": "DE",
-    "problem": "DF7",
-    "seed": 3,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.40346233351670935,
-    "hv": 0.35811720081158993,
-    "elapsed_sec": 0.1936359405517578,
-    "invocations": 0
-  },
-  {
-    "algo": "DE",
-    "problem": "DF7",
-    "seed": 4,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.36899798595763306,
-    "hv": 0.2776879451654919,
-    "elapsed_sec": 0.20867252349853516,
-    "invocations": 0
-  },
-  {
-    "algo": "DE-LM-static-trigger",
-    "problem": "DF7",
-    "seed": 0,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.6651214670908253,
-    "hv": 0.17447100751705147,
-    "elapsed_sec": 58.250964641571045,
-    "invocations": 20
-  },
-  {
-    "algo": "DE-LM-static-trigger",
-    "problem": "DF7",
-    "seed": 1,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.7292712770805487,
-    "hv": 0.06927747951505296,
-    "elapsed_sec": 52.35062026977539,
-    "invocations": 18
-  },
-  {
-    "algo": "DE-LM-static-trigger",
-    "problem": "DF7",
-    "seed": 2,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.655505016109835,
-    "hv": 0.2865529454031158,
-    "elapsed_sec": 48.40730929374695,
-    "invocations": 16
-  },
-  {
-    "algo": "DE-LM-static-trigger",
-    "problem": "DF7",
-    "seed": 3,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.6737268413179538,
-    "hv": 0.2801953674969987,
-    "elapsed_sec": 61.454447984695435,
-    "invocations": 20
-  },
-  {
-    "algo": "DE-LM-static-trigger",
-    "problem": "DF7",
-    "seed": 4,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.4225484346670968,
-    "hv": 0.42849257609943253,
-    "elapsed_sec": 60.94225549697876,
-    "invocations": 20
-  },
-  {
-    "algo": "PPS-DMOEA",
-    "problem": "DF7",
-    "seed": 0,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.3769559910554131,
-    "hv": 0.6316874838394693,
-    "elapsed_sec": 0.18320107460021973,
-    "invocations": 0
-  },
-  {
-    "algo": "PPS-DMOEA",
-    "problem": "DF7",
-    "seed": 1,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.4748005283595375,
-    "hv": 0.2642909530505156,
-    "elapsed_sec": 0.18352150917053223,
-    "invocations": 0
-  },
-  {
-    "algo": "PPS-DMOEA",
-    "problem": "DF7",
-    "seed": 2,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.5299252688222967,
-    "hv": 0.09199732002180144,
-    "elapsed_sec": 0.1857590675354004,
-    "invocations": 0
-  },
-  {
-    "algo": "PPS-DMOEA",
-    "problem": "DF7",
-    "seed": 3,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.48438515973282115,
-    "hv": 0.2342274016932479,
-    "elapsed_sec": 0.18395185470581055,
-    "invocations": 0
-  },
-  {
-    "algo": "PPS-DMOEA",
-    "problem": "DF7",
-    "seed": 4,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.45748550179421094,
-    "hv": 0.6892783129835751,
-    "elapsed_sec": 0.18549418449401855,
-    "invocations": 0
-  },
-  {
-    "algo": "DNSGA-II-A",
-    "problem": "DF7",
-    "seed": 0,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.5065752459932571,
-    "hv": 0.3334878653186481,
-    "elapsed_sec": 6.803606748580933,
-    "invocations": 0
-  },
-  {
-    "algo": "DNSGA-II-A",
-    "problem": "DF7",
-    "seed": 1,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.4272410483202084,
-    "hv": 0.5049386761403276,
-    "elapsed_sec": 6.921323776245117,
-    "invocations": 0
-  },
-  {
-    "algo": "DNSGA-II-A",
-    "problem": "DF7",
-    "seed": 2,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.3825767721284239,
-    "hv": 0.545603667985398,
-    "elapsed_sec": 7.238187074661255,
-    "invocations": 0
-  },
-  {
-    "algo": "DNSGA-II-A",
-    "problem": "DF7",
-    "seed": 3,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.45006131411055145,
-    "hv": 0.35838186975528946,
-    "elapsed_sec": 7.30441951751709,
-    "invocations": 0
-  },
-  {
-    "algo": "DNSGA-II-A",
-    "problem": "DF7",
-    "seed": 4,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.4056456595632305,
-    "hv": 0.5417255895650711,
-    "elapsed_sec": 7.273056983947754,
-    "invocations": 0
-  },
-  {
-    "algo": "TLE",
-    "problem": "DF7",
-    "seed": 0,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.6574757707671667,
-    "hv": 0.2982591921392043,
-    "elapsed_sec": 82.41114687919617,
-    "invocations": 29
-  },
-  {
-    "algo": "TLE",
-    "problem": "DF7",
-    "seed": 1,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.7092830419418646,
-    "hv": 0.07878103377851527,
-    "elapsed_sec": 136.6156039237976,
-    "invocations": 47
-  },
-  {
-    "algo": "TLE",
-    "problem": "DF7",
-    "seed": 2,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.7187070451465533,
-    "hv": 0.08814893264950123,
-    "elapsed_sec": 88.9003415107727,
-    "invocations": 29
-  },
-  {
-    "algo": "TLE",
-    "problem": "DF7",
-    "seed": 3,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.7203531742416839,
-    "hv": 0.08241671631263014,
-    "elapsed_sec": 95.96147084236145,
-    "invocations": 31
-  },
-  {
-    "algo": "TLE",
-    "problem": "DF7",
-    "seed": 4,
-    "max_gen": 200,
-    "pop_size": 50,
-    "igd": 0.7247967029450255,
-    "hv": 0.07259481193621045,
-    "elapsed_sec": 82.28498220443726,
-    "invocations": 27
+    "problem": "DF2",
+    "seed": 7,
+    "igd": 0.8902313307312443,
+    "hv": 0.0,
+    "invocations": 0,
+    "elapsed_sec": 0.19707179069519043
   },
   {
     "algo": "DE",
@@ -1155,6 +219,361 @@
     "invocations": 0
   },
   {
+    "algo": "DE",
+    "problem": "DF3",
+    "seed": 5,
+    "igd": 0.6766691315456188,
+    "hv": 0.0,
+    "invocations": 0,
+    "elapsed_sec": 0.2012004852294922
+  },
+  {
+    "algo": "DE",
+    "problem": "DF3",
+    "seed": 6,
+    "igd": 0.6764374984090148,
+    "hv": 0.0,
+    "invocations": 0,
+    "elapsed_sec": 0.21025729179382324
+  },
+  {
+    "algo": "DE",
+    "problem": "DF3",
+    "seed": 7,
+    "igd": 0.6323930336838575,
+    "hv": 0.0,
+    "invocations": 0,
+    "elapsed_sec": 0.18013358116149902
+  },
+  {
+    "algo": "DE",
+    "problem": "DF5",
+    "seed": 0,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.0602814764141722,
+    "hv": 0.5328038872662235,
+    "elapsed_sec": 0.15276408195495605,
+    "invocations": 0
+  },
+  {
+    "algo": "DE",
+    "problem": "DF5",
+    "seed": 1,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.09653168262972393,
+    "hv": 0.49095579076416346,
+    "elapsed_sec": 0.15421795845031738,
+    "invocations": 0
+  },
+  {
+    "algo": "DE",
+    "problem": "DF5",
+    "seed": 2,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.054301938936292676,
+    "hv": 0.5356130526971332,
+    "elapsed_sec": 0.15256047248840332,
+    "invocations": 0
+  },
+  {
+    "algo": "DE",
+    "problem": "DF5",
+    "seed": 3,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.07363688787360283,
+    "hv": 0.5290102341142161,
+    "elapsed_sec": 0.1523113250732422,
+    "invocations": 0
+  },
+  {
+    "algo": "DE",
+    "problem": "DF5",
+    "seed": 4,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.06650672543641974,
+    "hv": 0.4863993938801968,
+    "elapsed_sec": 0.15319156646728516,
+    "invocations": 0
+  },
+  {
+    "algo": "DE",
+    "problem": "DF5",
+    "seed": 5,
+    "igd": 0.0568110641734679,
+    "hv": 0.5317909325927958,
+    "invocations": 0,
+    "elapsed_sec": 0.1869657039642334
+  },
+  {
+    "algo": "DE",
+    "problem": "DF5",
+    "seed": 6,
+    "igd": 0.08151440916346553,
+    "hv": 0.5364399940913486,
+    "invocations": 0,
+    "elapsed_sec": 0.18519949913024902
+  },
+  {
+    "algo": "DE",
+    "problem": "DF5",
+    "seed": 7,
+    "igd": 0.08363604788032462,
+    "hv": 0.49547191241712696,
+    "invocations": 0,
+    "elapsed_sec": 0.17861628532409668
+  },
+  {
+    "algo": "DE",
+    "problem": "DF7",
+    "seed": 0,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.3609156368943347,
+    "hv": 0.6209213243242314,
+    "elapsed_sec": 0.20450258255004883,
+    "invocations": 0
+  },
+  {
+    "algo": "DE",
+    "problem": "DF7",
+    "seed": 1,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.31108967918636377,
+    "hv": 0.45079545637879337,
+    "elapsed_sec": 0.1955430507659912,
+    "invocations": 0
+  },
+  {
+    "algo": "DE",
+    "problem": "DF7",
+    "seed": 2,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.3455879303917624,
+    "hv": 0.41507902324340706,
+    "elapsed_sec": 0.197465181350708,
+    "invocations": 0
+  },
+  {
+    "algo": "DE",
+    "problem": "DF7",
+    "seed": 3,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.40346233351670935,
+    "hv": 0.35811720081158993,
+    "elapsed_sec": 0.1936359405517578,
+    "invocations": 0
+  },
+  {
+    "algo": "DE",
+    "problem": "DF7",
+    "seed": 4,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.36899798595763306,
+    "hv": 0.2776879451654919,
+    "elapsed_sec": 0.20867252349853516,
+    "invocations": 0
+  },
+  {
+    "algo": "DE",
+    "problem": "DF7",
+    "seed": 5,
+    "igd": 0.6585955863419709,
+    "hv": 0.3145137416041691,
+    "invocations": 0,
+    "elapsed_sec": 0.20019078254699707
+  },
+  {
+    "algo": "DE",
+    "problem": "DF7",
+    "seed": 6,
+    "igd": 0.40861357098547946,
+    "hv": 0.20179935830579288,
+    "invocations": 0,
+    "elapsed_sec": 0.19391441345214844
+  },
+  {
+    "algo": "DE",
+    "problem": "DF7",
+    "seed": 7,
+    "igd": 0.2619254106322741,
+    "hv": 0.6220330434140389,
+    "invocations": 0,
+    "elapsed_sec": 0.18215608596801758
+  },
+  {
+    "algo": "DE-LM-static-trigger",
+    "problem": "DF1",
+    "seed": 0,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.7373384351040303,
+    "hv": 0.17537231652138538,
+    "elapsed_sec": 38.502681255340576,
+    "invocations": 14
+  },
+  {
+    "algo": "DE-LM-static-trigger",
+    "problem": "DF1",
+    "seed": 1,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.4398799482711009,
+    "hv": 0.30397299626914576,
+    "elapsed_sec": 58.3506121635437,
+    "invocations": 20
+  },
+  {
+    "algo": "DE-LM-static-trigger",
+    "problem": "DF1",
+    "seed": 2,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.7080355030503468,
+    "hv": 0.33659512884464576,
+    "elapsed_sec": 49.71329402923584,
+    "invocations": 17
+  },
+  {
+    "algo": "DE-LM-static-trigger",
+    "problem": "DF1",
+    "seed": 3,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.7133723389817826,
+    "hv": 0.3317223428780006,
+    "elapsed_sec": 41.06547737121582,
+    "invocations": 14
+  },
+  {
+    "algo": "DE-LM-static-trigger",
+    "problem": "DF1",
+    "seed": 4,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.726395139694296,
+    "hv": 0.3030418298503432,
+    "elapsed_sec": 41.03731727600098,
+    "invocations": 14
+  },
+  {
+    "algo": "DE-LM-static-trigger",
+    "problem": "DF1",
+    "seed": 5,
+    "igd": 0.7268772723833372,
+    "hv": 0.30347704785391755,
+    "invocations": 20,
+    "elapsed_sec": 59.911070585250854
+  },
+  {
+    "algo": "DE-LM-static-trigger",
+    "problem": "DF1",
+    "seed": 6,
+    "igd": 0.4628270821234791,
+    "hv": 0.3143891127701361,
+    "invocations": 20,
+    "elapsed_sec": 59.108861684799194
+  },
+  {
+    "algo": "DE-LM-static-trigger",
+    "problem": "DF1",
+    "seed": 7,
+    "igd": 0.7036513627997222,
+    "hv": 0.3392929457300786,
+    "invocations": 20,
+    "elapsed_sec": 59.18846082687378
+  },
+  {
+    "algo": "DE-LM-static-trigger",
+    "problem": "DF2",
+    "seed": 0,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.9175560515958484,
+    "hv": 0.0,
+    "elapsed_sec": 33.316540002822876,
+    "invocations": 12
+  },
+  {
+    "algo": "DE-LM-static-trigger",
+    "problem": "DF2",
+    "seed": 1,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.8857789231141721,
+    "hv": 0.0,
+    "elapsed_sec": 59.894535303115845,
+    "invocations": 20
+  },
+  {
+    "algo": "DE-LM-static-trigger",
+    "problem": "DF2",
+    "seed": 2,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.9267917497343141,
+    "hv": 0.0,
+    "elapsed_sec": 55.65149545669556,
+    "invocations": 19
+  },
+  {
+    "algo": "DE-LM-static-trigger",
+    "problem": "DF2",
+    "seed": 3,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.9040299681612076,
+    "hv": 0.0,
+    "elapsed_sec": 57.73369812965393,
+    "invocations": 19
+  },
+  {
+    "algo": "DE-LM-static-trigger",
+    "problem": "DF2",
+    "seed": 4,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.9107920651735658,
+    "hv": 0.0,
+    "elapsed_sec": 60.99761366844177,
+    "invocations": 20
+  },
+  {
+    "algo": "DE-LM-static-trigger",
+    "problem": "DF2",
+    "seed": 5,
+    "igd": 62818.857005436264,
+    "hv": 0.9234262543055487,
+    "invocations": 14,
+    "elapsed_sec": 41.90313982963562
+  },
+  {
+    "algo": "DE-LM-static-trigger",
+    "problem": "DF2",
+    "seed": 6,
+    "igd": 0.8926926278998638,
+    "hv": 0.0,
+    "invocations": 20,
+    "elapsed_sec": 59.02679681777954
+  },
+  {
+    "algo": "DE-LM-static-trigger",
+    "problem": "DF2",
+    "seed": 7,
+    "igd": 9.109751262458042,
+    "hv": 1.1149924097560004,
+    "invocations": 13,
+    "elapsed_sec": 38.758408069610596
+  },
+  {
     "algo": "DE-LM-static-trigger",
     "problem": "DF3",
     "seed": 0,
@@ -1210,59 +629,359 @@
     "invocations": 18
   },
   {
-    "algo": "PPS-DMOEA",
+    "algo": "DE-LM-static-trigger",
     "problem": "DF3",
+    "seed": 5,
+    "igd": 0.7071567607723707,
+    "hv": 0.0,
+    "invocations": 20,
+    "elapsed_sec": 59.33778786659241
+  },
+  {
+    "algo": "DE-LM-static-trigger",
+    "problem": "DF3",
+    "seed": 6,
+    "igd": 0.6352598878928148,
+    "hv": 0.0,
+    "invocations": 20,
+    "elapsed_sec": 58.94010138511658
+  },
+  {
+    "algo": "DE-LM-static-trigger",
+    "problem": "DF3",
+    "seed": 7,
+    "igd": 0.7114361903185462,
+    "hv": 0.0,
+    "invocations": 18,
+    "elapsed_sec": 52.925156593322754
+  },
+  {
+    "algo": "DE-LM-static-trigger",
+    "problem": "DF5",
     "seed": 0,
     "max_gen": 200,
     "pop_size": 50,
-    "igd": 0.8387845402117978,
-    "hv": 0.0,
-    "elapsed_sec": 0.22656679153442383,
-    "invocations": 0
+    "igd": 0.027810366481949546,
+    "hv": 0.5509923688940053,
+    "elapsed_sec": 40.89732074737549,
+    "invocations": 14
   },
   {
-    "algo": "PPS-DMOEA",
-    "problem": "DF3",
+    "algo": "DE-LM-static-trigger",
+    "problem": "DF5",
     "seed": 1,
     "max_gen": 200,
     "pop_size": 50,
-    "igd": 0.8387845402117975,
-    "hv": 0.0,
-    "elapsed_sec": 0.2237260341644287,
-    "invocations": 0
+    "igd": 0.08582646491697725,
+    "hv": 0.5188872463324519,
+    "elapsed_sec": 59.248403787612915,
+    "invocations": 20
   },
   {
-    "algo": "PPS-DMOEA",
-    "problem": "DF3",
+    "algo": "DE-LM-static-trigger",
+    "problem": "DF5",
     "seed": 2,
     "max_gen": 200,
     "pop_size": 50,
-    "igd": 0.8387845402117975,
-    "hv": 0.0,
-    "elapsed_sec": 0.23219752311706543,
-    "invocations": 0
+    "igd": 0.07602945336643398,
+    "hv": 0.4986658643943028,
+    "elapsed_sec": 61.241844177246094,
+    "invocations": 20
   },
   {
-    "algo": "PPS-DMOEA",
-    "problem": "DF3",
+    "algo": "DE-LM-static-trigger",
+    "problem": "DF5",
     "seed": 3,
     "max_gen": 200,
     "pop_size": 50,
-    "igd": 0.8387845402117978,
-    "hv": 0.0,
-    "elapsed_sec": 0.23647356033325195,
-    "invocations": 0
+    "igd": 0.07343394573196871,
+    "hv": 0.5545441780822172,
+    "elapsed_sec": 61.14071249961853,
+    "invocations": 20
   },
   {
-    "algo": "PPS-DMOEA",
-    "problem": "DF3",
+    "algo": "DE-LM-static-trigger",
+    "problem": "DF5",
     "seed": 4,
     "max_gen": 200,
     "pop_size": 50,
-    "igd": 0.8387845402117978,
-    "hv": 0.0,
-    "elapsed_sec": 0.21911144256591797,
+    "igd": 0.05004652803389236,
+    "hv": 0.5439342374786985,
+    "elapsed_sec": 50.370402812957764,
+    "invocations": 17
+  },
+  {
+    "algo": "DE-LM-static-trigger",
+    "problem": "DF5",
+    "seed": 5,
+    "igd": 0.08607666694339888,
+    "hv": 0.5047039661696089,
+    "invocations": 20,
+    "elapsed_sec": 56.19683074951172
+  },
+  {
+    "algo": "DE-LM-static-trigger",
+    "problem": "DF5",
+    "seed": 6,
+    "igd": 0.03457277380641284,
+    "hv": 0.541936657217778,
+    "invocations": 20,
+    "elapsed_sec": 58.968730211257935
+  },
+  {
+    "algo": "DE-LM-static-trigger",
+    "problem": "DF5",
+    "seed": 7,
+    "igd": 0.11613215323497793,
+    "hv": 0.45130068615159147,
+    "invocations": 20,
+    "elapsed_sec": 58.60447335243225
+  },
+  {
+    "algo": "DE-LM-static-trigger",
+    "problem": "DF7",
+    "seed": 0,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.6651214670908253,
+    "hv": 0.17447100751705147,
+    "elapsed_sec": 58.250964641571045,
+    "invocations": 20
+  },
+  {
+    "algo": "DE-LM-static-trigger",
+    "problem": "DF7",
+    "seed": 1,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.7292712770805487,
+    "hv": 0.06927747951505296,
+    "elapsed_sec": 52.35062026977539,
+    "invocations": 18
+  },
+  {
+    "algo": "DE-LM-static-trigger",
+    "problem": "DF7",
+    "seed": 2,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.655505016109835,
+    "hv": 0.2865529454031158,
+    "elapsed_sec": 48.40730929374695,
+    "invocations": 16
+  },
+  {
+    "algo": "DE-LM-static-trigger",
+    "problem": "DF7",
+    "seed": 3,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.6737268413179538,
+    "hv": 0.2801953674969987,
+    "elapsed_sec": 61.454447984695435,
+    "invocations": 20
+  },
+  {
+    "algo": "DE-LM-static-trigger",
+    "problem": "DF7",
+    "seed": 4,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.4225484346670968,
+    "hv": 0.42849257609943253,
+    "elapsed_sec": 60.94225549697876,
+    "invocations": 20
+  },
+  {
+    "algo": "DE-LM-static-trigger",
+    "problem": "DF7",
+    "seed": 5,
+    "igd": 0.38641517298628636,
+    "hv": 0.5048137720001072,
+    "invocations": 20,
+    "elapsed_sec": 59.034881353378296
+  },
+  {
+    "algo": "DE-LM-static-trigger",
+    "problem": "DF7",
+    "seed": 6,
+    "igd": 0.40871878778067045,
+    "hv": 0.25555657073826565,
+    "invocations": 20,
+    "elapsed_sec": 58.77319669723511
+  },
+  {
+    "algo": "DE-LM-static-trigger",
+    "problem": "DF7",
+    "seed": 7,
+    "igd": 0.6527085056306945,
+    "hv": 0.29286192115903914,
+    "invocations": 17,
+    "elapsed_sec": 50.50550603866577
+  },
+  {
+    "algo": "DNSGA-II-A",
+    "problem": "DF1",
+    "seed": 0,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.53401369191986,
+    "hv": 0.29519946513767625,
+    "elapsed_sec": 7.982633352279663,
     "invocations": 0
+  },
+  {
+    "algo": "DNSGA-II-A",
+    "problem": "DF1",
+    "seed": 1,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.4282541855372875,
+    "hv": 0.4620054537806558,
+    "elapsed_sec": 7.857144594192505,
+    "invocations": 0
+  },
+  {
+    "algo": "DNSGA-II-A",
+    "problem": "DF1",
+    "seed": 2,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.4747983621377167,
+    "hv": 0.4962279694091438,
+    "elapsed_sec": 7.8628990650177,
+    "invocations": 0
+  },
+  {
+    "algo": "DNSGA-II-A",
+    "problem": "DF1",
+    "seed": 3,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.4331144631630252,
+    "hv": 0.41309854268138535,
+    "elapsed_sec": 7.832129001617432,
+    "invocations": 0
+  },
+  {
+    "algo": "DNSGA-II-A",
+    "problem": "DF1",
+    "seed": 4,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.403124804243057,
+    "hv": 0.5701618549293738,
+    "elapsed_sec": 7.916491508483887,
+    "invocations": 0
+  },
+  {
+    "algo": "DNSGA-II-A",
+    "problem": "DF1",
+    "seed": 5,
+    "igd": 0.45615484157269637,
+    "hv": 0.4522404989625888,
+    "invocations": 0,
+    "elapsed_sec": 7.7440454959869385
+  },
+  {
+    "algo": "DNSGA-II-A",
+    "problem": "DF1",
+    "seed": 6,
+    "igd": 0.48790563476978543,
+    "hv": 0.29703196345494404,
+    "invocations": 0,
+    "elapsed_sec": 7.886458873748779
+  },
+  {
+    "algo": "DNSGA-II-A",
+    "problem": "DF1",
+    "seed": 7,
+    "igd": 0.5033321520213188,
+    "hv": 0.2801055578925613,
+    "invocations": 0,
+    "elapsed_sec": 7.834389925003052
+  },
+  {
+    "algo": "DNSGA-II-A",
+    "problem": "DF2",
+    "seed": 0,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.6564963027028758,
+    "hv": 0.8296256172691177,
+    "elapsed_sec": 6.95952582359314,
+    "invocations": 0
+  },
+  {
+    "algo": "DNSGA-II-A",
+    "problem": "DF2",
+    "seed": 1,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.6505552560130196,
+    "hv": 0.6024698369052783,
+    "elapsed_sec": 6.888988494873047,
+    "invocations": 0
+  },
+  {
+    "algo": "DNSGA-II-A",
+    "problem": "DF2",
+    "seed": 2,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.6853991732897114,
+    "hv": 0.4683764546969903,
+    "elapsed_sec": 6.869726181030273,
+    "invocations": 0
+  },
+  {
+    "algo": "DNSGA-II-A",
+    "problem": "DF2",
+    "seed": 3,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.6534033986705688,
+    "hv": 0.6348141697461163,
+    "elapsed_sec": 6.85157036781311,
+    "invocations": 0
+  },
+  {
+    "algo": "DNSGA-II-A",
+    "problem": "DF2",
+    "seed": 4,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.6834756284699924,
+    "hv": 0.6394121590007281,
+    "elapsed_sec": 6.881114482879639,
+    "invocations": 0
+  },
+  {
+    "algo": "DNSGA-II-A",
+    "problem": "DF2",
+    "seed": 5,
+    "igd": 0.6837646717008425,
+    "hv": 0.7488394197997287,
+    "invocations": 0,
+    "elapsed_sec": 7.897160291671753
+  },
+  {
+    "algo": "DNSGA-II-A",
+    "problem": "DF2",
+    "seed": 6,
+    "igd": 0.7305510430637642,
+    "hv": 0.3609136941177906,
+    "invocations": 0,
+    "elapsed_sec": 8.096101999282837
+  },
+  {
+    "algo": "DNSGA-II-A",
+    "problem": "DF2",
+    "seed": 7,
+    "igd": 0.6447518463626003,
+    "hv": 0.6090860266459639,
+    "invocations": 0,
+    "elapsed_sec": 7.4072511196136475
   },
   {
     "algo": "DNSGA-II-A",
@@ -1320,6 +1039,1151 @@
     "invocations": 0
   },
   {
+    "algo": "DNSGA-II-A",
+    "problem": "DF3",
+    "seed": 5,
+    "igd": 0.5711026228839645,
+    "hv": 0.04091910151055432,
+    "invocations": 0,
+    "elapsed_sec": 7.942857980728149
+  },
+  {
+    "algo": "DNSGA-II-A",
+    "problem": "DF3",
+    "seed": 6,
+    "igd": 0.6392645209906547,
+    "hv": 0.010387426902761569,
+    "invocations": 0,
+    "elapsed_sec": 8.472411394119263
+  },
+  {
+    "algo": "DNSGA-II-A",
+    "problem": "DF3",
+    "seed": 7,
+    "igd": 0.5065530165080896,
+    "hv": 0.13615460074907162,
+    "invocations": 0,
+    "elapsed_sec": 7.67497444152832
+  },
+  {
+    "algo": "DNSGA-II-A",
+    "problem": "DF5",
+    "seed": 0,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.0598986564357968,
+    "hv": 0.6470440929734516,
+    "elapsed_sec": 6.684216022491455,
+    "invocations": 0
+  },
+  {
+    "algo": "DNSGA-II-A",
+    "problem": "DF5",
+    "seed": 1,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.062314502521211894,
+    "hv": 0.6630116744762219,
+    "elapsed_sec": 6.546224117279053,
+    "invocations": 0
+  },
+  {
+    "algo": "DNSGA-II-A",
+    "problem": "DF5",
+    "seed": 2,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.05359232803766116,
+    "hv": 0.6348287257970592,
+    "elapsed_sec": 6.643256425857544,
+    "invocations": 0
+  },
+  {
+    "algo": "DNSGA-II-A",
+    "problem": "DF5",
+    "seed": 3,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.052327626907520824,
+    "hv": 0.6344796045719551,
+    "elapsed_sec": 6.488154649734497,
+    "invocations": 0
+  },
+  {
+    "algo": "DNSGA-II-A",
+    "problem": "DF5",
+    "seed": 4,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.05789333830466038,
+    "hv": 0.6456478999016074,
+    "elapsed_sec": 6.497263669967651,
+    "invocations": 0
+  },
+  {
+    "algo": "DNSGA-II-A",
+    "problem": "DF5",
+    "seed": 5,
+    "igd": 0.057280070863215064,
+    "hv": 0.6484902967863003,
+    "invocations": 0,
+    "elapsed_sec": 7.492693662643433
+  },
+  {
+    "algo": "DNSGA-II-A",
+    "problem": "DF5",
+    "seed": 6,
+    "igd": 0.06413570574384228,
+    "hv": 0.6750704131414683,
+    "invocations": 0,
+    "elapsed_sec": 7.441123723983765
+  },
+  {
+    "algo": "DNSGA-II-A",
+    "problem": "DF5",
+    "seed": 7,
+    "igd": 0.06680131033526629,
+    "hv": 0.6544743051651092,
+    "invocations": 0,
+    "elapsed_sec": 7.032991647720337
+  },
+  {
+    "algo": "DNSGA-II-A",
+    "problem": "DF7",
+    "seed": 0,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.5065752459932571,
+    "hv": 0.3334878653186481,
+    "elapsed_sec": 6.803606748580933,
+    "invocations": 0
+  },
+  {
+    "algo": "DNSGA-II-A",
+    "problem": "DF7",
+    "seed": 1,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.4272410483202084,
+    "hv": 0.5049386761403276,
+    "elapsed_sec": 6.921323776245117,
+    "invocations": 0
+  },
+  {
+    "algo": "DNSGA-II-A",
+    "problem": "DF7",
+    "seed": 2,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.3825767721284239,
+    "hv": 0.545603667985398,
+    "elapsed_sec": 7.238187074661255,
+    "invocations": 0
+  },
+  {
+    "algo": "DNSGA-II-A",
+    "problem": "DF7",
+    "seed": 3,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.45006131411055145,
+    "hv": 0.35838186975528946,
+    "elapsed_sec": 7.30441951751709,
+    "invocations": 0
+  },
+  {
+    "algo": "DNSGA-II-A",
+    "problem": "DF7",
+    "seed": 4,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.4056456595632305,
+    "hv": 0.5417255895650711,
+    "elapsed_sec": 7.273056983947754,
+    "invocations": 0
+  },
+  {
+    "algo": "DNSGA-II-A",
+    "problem": "DF7",
+    "seed": 5,
+    "igd": 0.43062504258883627,
+    "hv": 0.43911425579323693,
+    "invocations": 0,
+    "elapsed_sec": 7.6252686977386475
+  },
+  {
+    "algo": "DNSGA-II-A",
+    "problem": "DF7",
+    "seed": 6,
+    "igd": 0.48854590737131126,
+    "hv": 0.3001263787460989,
+    "invocations": 0,
+    "elapsed_sec": 7.771667003631592
+  },
+  {
+    "algo": "DNSGA-II-A",
+    "problem": "DF7",
+    "seed": 7,
+    "igd": 0.4350844680038923,
+    "hv": 0.4362443861515466,
+    "invocations": 0,
+    "elapsed_sec": 7.3225250244140625
+  },
+  {
+    "algo": "MOEA/DD",
+    "problem": "DF1",
+    "seed": 0,
+    "igd": 0.4712176427632035,
+    "hv": 1.4149484387893123
+  },
+  {
+    "algo": "MOEA/DD",
+    "problem": "DF1",
+    "seed": 1,
+    "igd": 0.6435603176478928,
+    "hv": 0.14606032337112115
+  },
+  {
+    "algo": "MOEA/DD",
+    "problem": "DF1",
+    "seed": 2,
+    "igd": 0.6121822483517679,
+    "hv": 1.4123354355755418
+  },
+  {
+    "algo": "MOEA/DD",
+    "problem": "DF1",
+    "seed": 3,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.6009137701290722,
+    "hv": 1.4573671641282926,
+    "elapsed_sec": 0.0,
+    "invocations": 0
+  },
+  {
+    "algo": "MOEA/DD",
+    "problem": "DF1",
+    "seed": 4,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.6866216500657697,
+    "hv": 0.10952877175657905,
+    "elapsed_sec": 0.0,
+    "invocations": 0
+  },
+  {
+    "algo": "MOEA/DD",
+    "problem": "DF1",
+    "seed": 5,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.6978493843367168,
+    "hv": 1.4231056370801924,
+    "elapsed_sec": 0.0,
+    "invocations": 0
+  },
+  {
+    "algo": "MOEA/DD",
+    "problem": "DF1",
+    "seed": 6,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.6756382818582541,
+    "hv": 0.14961836256100247,
+    "elapsed_sec": 0.0,
+    "invocations": 0
+  },
+  {
+    "algo": "MOEA/DD",
+    "problem": "DF1",
+    "seed": 7,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.6098533939332575,
+    "hv": 0.728273989334782,
+    "elapsed_sec": 0.0,
+    "invocations": 0
+  },
+  {
+    "algo": "MOEA/DD",
+    "problem": "DF2",
+    "seed": 0,
+    "igd": 1.3061252913068894e+26,
+    "hv": 0.0
+  },
+  {
+    "algo": "MOEA/DD",
+    "problem": "DF2",
+    "seed": 1,
+    "igd": 5.273665444207068e+24,
+    "hv": 0.0
+  },
+  {
+    "algo": "MOEA/DD",
+    "problem": "DF2",
+    "seed": 2,
+    "igd": 1.618571586048431e+26,
+    "hv": 0.0
+  },
+  {
+    "algo": "MOEA/DD",
+    "problem": "DF2",
+    "seed": 3,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 2.7152292743911263e+22,
+    "hv": 0.0,
+    "elapsed_sec": 0.0,
+    "invocations": 0
+  },
+  {
+    "algo": "MOEA/DD",
+    "problem": "DF2",
+    "seed": 4,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 45844554.73734068,
+    "hv": 0.0,
+    "elapsed_sec": 0.0,
+    "invocations": 0
+  },
+  {
+    "algo": "MOEA/DD",
+    "problem": "DF2",
+    "seed": 5,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 2.464963184383462e+27,
+    "hv": 0.0,
+    "elapsed_sec": 0.0,
+    "invocations": 0
+  },
+  {
+    "algo": "MOEA/DD",
+    "problem": "DF2",
+    "seed": 6,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 1.5596298098051483e+26,
+    "hv": 0.0,
+    "elapsed_sec": 0.0,
+    "invocations": 0
+  },
+  {
+    "algo": "MOEA/DD",
+    "problem": "DF2",
+    "seed": 7,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 6.16585400874938e+20,
+    "hv": 0.0,
+    "elapsed_sec": 0.0,
+    "invocations": 0
+  },
+  {
+    "algo": "MOEA/DD",
+    "problem": "DF3",
+    "seed": 0,
+    "igd": 0.39000635696808567,
+    "hv": 1.0999999215466518
+  },
+  {
+    "algo": "MOEA/DD",
+    "problem": "DF3",
+    "seed": 1,
+    "igd": 0.3900064395201815,
+    "hv": 1.0999999987973832
+  },
+  {
+    "algo": "MOEA/DD",
+    "problem": "DF3",
+    "seed": 2,
+    "igd": 0.3900064368230823,
+    "hv": 1.0999999920916854
+  },
+  {
+    "algo": "MOEA/DD",
+    "problem": "DF3",
+    "seed": 3,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.39000637900844204,
+    "hv": 1.099999885124525,
+    "elapsed_sec": 0.0,
+    "invocations": 0
+  },
+  {
+    "algo": "MOEA/DD",
+    "problem": "DF3",
+    "seed": 4,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.3900064417838421,
+    "hv": 1.0999999988384201,
+    "elapsed_sec": 0.0,
+    "invocations": 0
+  },
+  {
+    "algo": "MOEA/DD",
+    "problem": "DF3",
+    "seed": 5,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.2260866838953144,
+    "hv": 0.9789954697863152,
+    "elapsed_sec": 0.0,
+    "invocations": 0
+  },
+  {
+    "algo": "MOEA/DD",
+    "problem": "DF3",
+    "seed": 6,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.39000643048808215,
+    "hv": 1.0999999857052813,
+    "elapsed_sec": 0.0,
+    "invocations": 0
+  },
+  {
+    "algo": "MOEA/DD",
+    "problem": "DF3",
+    "seed": 7,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.39000644208550683,
+    "hv": 1.0999999990418856,
+    "elapsed_sec": 0.0,
+    "invocations": 0
+  },
+  {
+    "algo": "MOEA/DD",
+    "problem": "DF5",
+    "seed": 0,
+    "igd": 0.14041237761329156,
+    "hv": 0.6464471483195487
+  },
+  {
+    "algo": "MOEA/DD",
+    "problem": "DF5",
+    "seed": 1,
+    "igd": 0.037122307358476235,
+    "hv": 0.6099824714544183
+  },
+  {
+    "algo": "MOEA/DD",
+    "problem": "DF5",
+    "seed": 2,
+    "igd": 0.06140510646424018,
+    "hv": 0.5996895625273598
+  },
+  {
+    "algo": "MOEA/DD",
+    "problem": "DF5",
+    "seed": 3,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.23558934963913206,
+    "hv": 0.290765783885791,
+    "elapsed_sec": 0.0,
+    "invocations": 0
+  },
+  {
+    "algo": "MOEA/DD",
+    "problem": "DF5",
+    "seed": 4,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.08413801160461602,
+    "hv": 0.5655148768870251,
+    "elapsed_sec": 0.0,
+    "invocations": 0
+  },
+  {
+    "algo": "MOEA/DD",
+    "problem": "DF5",
+    "seed": 5,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.10687438304026532,
+    "hv": 0.4443550429184494,
+    "elapsed_sec": 0.0,
+    "invocations": 0
+  },
+  {
+    "algo": "MOEA/DD",
+    "problem": "DF5",
+    "seed": 6,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.06597634472763746,
+    "hv": 0.34932368929727836,
+    "elapsed_sec": 0.0,
+    "invocations": 0
+  },
+  {
+    "algo": "MOEA/DD",
+    "problem": "DF5",
+    "seed": 7,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.05048277649348185,
+    "hv": 0.544421860021076,
+    "elapsed_sec": 0.0,
+    "invocations": 0
+  },
+  {
+    "algo": "MOEA/DD",
+    "problem": "DF7",
+    "seed": 0,
+    "igd": 0.4406562243811166,
+    "hv": 1.3628575850732765
+  },
+  {
+    "algo": "MOEA/DD",
+    "problem": "DF7",
+    "seed": 1,
+    "igd": 0.6372612799383679,
+    "hv": 0.20635974081240255
+  },
+  {
+    "algo": "MOEA/DD",
+    "problem": "DF7",
+    "seed": 2,
+    "igd": 0.6852361688314871,
+    "hv": 0.0572312532026861
+  },
+  {
+    "algo": "MOEA/DD",
+    "problem": "DF7",
+    "seed": 3,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.5757453039930235,
+    "hv": 1.0360601216136416,
+    "elapsed_sec": 0.0,
+    "invocations": 0
+  },
+  {
+    "algo": "MOEA/DD",
+    "problem": "DF7",
+    "seed": 4,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.6700111990040305,
+    "hv": 0.1314743037002174,
+    "elapsed_sec": 0.0,
+    "invocations": 0
+  },
+  {
+    "algo": "MOEA/DD",
+    "problem": "DF7",
+    "seed": 5,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.6101295756295503,
+    "hv": 1.5586706791862919,
+    "elapsed_sec": 0.0,
+    "invocations": 0
+  },
+  {
+    "algo": "MOEA/DD",
+    "problem": "DF7",
+    "seed": 6,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.554236543260858,
+    "hv": 0.5387806308603446,
+    "elapsed_sec": 0.0,
+    "invocations": 0
+  },
+  {
+    "algo": "MOEA/DD",
+    "problem": "DF7",
+    "seed": 7,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.6003794972858592,
+    "hv": 0.4133136332569196,
+    "elapsed_sec": 0.0,
+    "invocations": 0
+  },
+  {
+    "algo": "PPS-DMOEA",
+    "problem": "DF1",
+    "seed": 0,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.3716033168501045,
+    "hv": 0.5761892702792043,
+    "elapsed_sec": 0.22783279418945312,
+    "invocations": 0
+  },
+  {
+    "algo": "PPS-DMOEA",
+    "problem": "DF1",
+    "seed": 1,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.5698210627008766,
+    "hv": 0.5499365776080386,
+    "elapsed_sec": 0.2136366367340088,
+    "invocations": 0
+  },
+  {
+    "algo": "PPS-DMOEA",
+    "problem": "DF1",
+    "seed": 2,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.5070828804086089,
+    "hv": 0.2520155064756408,
+    "elapsed_sec": 0.21222758293151855,
+    "invocations": 0
+  },
+  {
+    "algo": "PPS-DMOEA",
+    "problem": "DF1",
+    "seed": 3,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.48333609289866075,
+    "hv": 0.19186717033393252,
+    "elapsed_sec": 0.2204127311706543,
+    "invocations": 0
+  },
+  {
+    "algo": "PPS-DMOEA",
+    "problem": "DF1",
+    "seed": 4,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.5218712786879891,
+    "hv": 0.2799725005392085,
+    "elapsed_sec": 0.2285778522491455,
+    "invocations": 0
+  },
+  {
+    "algo": "PPS-DMOEA",
+    "problem": "DF1",
+    "seed": 5,
+    "igd": 0.4815756255953718,
+    "hv": 0.3615843063693547,
+    "invocations": 0,
+    "elapsed_sec": 0.2284526824951172
+  },
+  {
+    "algo": "PPS-DMOEA",
+    "problem": "DF1",
+    "seed": 6,
+    "igd": 0.42721375317665716,
+    "hv": 0.40705169232976385,
+    "invocations": 0,
+    "elapsed_sec": 0.2404468059539795
+  },
+  {
+    "algo": "PPS-DMOEA",
+    "problem": "DF1",
+    "seed": 7,
+    "igd": 0.44104905073475614,
+    "hv": 0.3660447560782789,
+    "invocations": 0,
+    "elapsed_sec": 0.22315144538879395
+  },
+  {
+    "algo": "PPS-DMOEA",
+    "problem": "DF2",
+    "seed": 0,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 258.17892131504794,
+    "hv": 0.1750261237471906,
+    "elapsed_sec": 0.17544865608215332,
+    "invocations": 0
+  },
+  {
+    "algo": "PPS-DMOEA",
+    "problem": "DF2",
+    "seed": 1,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.8324391355501723,
+    "hv": 0.07797385127042905,
+    "elapsed_sec": 0.1762256622314453,
+    "invocations": 0
+  },
+  {
+    "algo": "PPS-DMOEA",
+    "problem": "DF2",
+    "seed": 2,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.5434348975808735,
+    "hv": 0.5623724855960602,
+    "elapsed_sec": 0.17583966255187988,
+    "invocations": 0
+  },
+  {
+    "algo": "PPS-DMOEA",
+    "problem": "DF2",
+    "seed": 3,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.5317451953030672,
+    "hv": 0.3241913632216311,
+    "elapsed_sec": 0.17572784423828125,
+    "invocations": 0
+  },
+  {
+    "algo": "PPS-DMOEA",
+    "problem": "DF2",
+    "seed": 4,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.9304819884434566,
+    "hv": 0.07103510594218031,
+    "elapsed_sec": 0.17707204818725586,
+    "invocations": 0
+  },
+  {
+    "algo": "PPS-DMOEA",
+    "problem": "DF2",
+    "seed": 5,
+    "igd": 0.8032584675073033,
+    "hv": 0.042763250039067696,
+    "invocations": 0,
+    "elapsed_sec": 0.22159886360168457
+  },
+  {
+    "algo": "PPS-DMOEA",
+    "problem": "DF2",
+    "seed": 6,
+    "igd": 0.9262321807596229,
+    "hv": 0.16858754913942892,
+    "invocations": 0,
+    "elapsed_sec": 0.21681737899780273
+  },
+  {
+    "algo": "PPS-DMOEA",
+    "problem": "DF2",
+    "seed": 7,
+    "igd": 0.6542977558241921,
+    "hv": 0.08874163944002368,
+    "invocations": 0,
+    "elapsed_sec": 0.19658136367797852
+  },
+  {
+    "algo": "PPS-DMOEA",
+    "problem": "DF3",
+    "seed": 0,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.8387845402117978,
+    "hv": 0.0,
+    "elapsed_sec": 0.22656679153442383,
+    "invocations": 0
+  },
+  {
+    "algo": "PPS-DMOEA",
+    "problem": "DF3",
+    "seed": 1,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.8387845402117975,
+    "hv": 0.0,
+    "elapsed_sec": 0.2237260341644287,
+    "invocations": 0
+  },
+  {
+    "algo": "PPS-DMOEA",
+    "problem": "DF3",
+    "seed": 2,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.8387845402117975,
+    "hv": 0.0,
+    "elapsed_sec": 0.23219752311706543,
+    "invocations": 0
+  },
+  {
+    "algo": "PPS-DMOEA",
+    "problem": "DF3",
+    "seed": 3,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.8387845402117978,
+    "hv": 0.0,
+    "elapsed_sec": 0.23647356033325195,
+    "invocations": 0
+  },
+  {
+    "algo": "PPS-DMOEA",
+    "problem": "DF3",
+    "seed": 4,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.8387845402117978,
+    "hv": 0.0,
+    "elapsed_sec": 0.21911144256591797,
+    "invocations": 0
+  },
+  {
+    "algo": "PPS-DMOEA",
+    "problem": "DF3",
+    "seed": 5,
+    "igd": 0.8387845402117975,
+    "hv": 0.0,
+    "invocations": 0,
+    "elapsed_sec": 0.2104477882385254
+  },
+  {
+    "algo": "PPS-DMOEA",
+    "problem": "DF3",
+    "seed": 6,
+    "igd": 0.8387845402117979,
+    "hv": 0.0,
+    "invocations": 0,
+    "elapsed_sec": 0.21331405639648438
+  },
+  {
+    "algo": "PPS-DMOEA",
+    "problem": "DF3",
+    "seed": 7,
+    "igd": 0.8387845402117975,
+    "hv": 0.0,
+    "invocations": 0,
+    "elapsed_sec": 0.20287680625915527
+  },
+  {
+    "algo": "PPS-DMOEA",
+    "problem": "DF5",
+    "seed": 0,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.04956015654594252,
+    "hv": 0.5494886266532144,
+    "elapsed_sec": 0.18825912475585938,
+    "invocations": 0
+  },
+  {
+    "algo": "PPS-DMOEA",
+    "problem": "DF5",
+    "seed": 1,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.07030060271287675,
+    "hv": 0.5038136953713507,
+    "elapsed_sec": 0.18659591674804688,
+    "invocations": 0
+  },
+  {
+    "algo": "PPS-DMOEA",
+    "problem": "DF5",
+    "seed": 2,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.08070726619897446,
+    "hv": 0.5007637111941489,
+    "elapsed_sec": 0.18299031257629395,
+    "invocations": 0
+  },
+  {
+    "algo": "PPS-DMOEA",
+    "problem": "DF5",
+    "seed": 3,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.18810890320174065,
+    "hv": 0.29294628363196257,
+    "elapsed_sec": 0.18492603302001953,
+    "invocations": 0
+  },
+  {
+    "algo": "PPS-DMOEA",
+    "problem": "DF5",
+    "seed": 4,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.1325623613645396,
+    "hv": 0.3823766413595922,
+    "elapsed_sec": 0.18357062339782715,
+    "invocations": 0
+  },
+  {
+    "algo": "PPS-DMOEA",
+    "problem": "DF5",
+    "seed": 5,
+    "igd": 0.08157091498584305,
+    "hv": 0.49559263381635893,
+    "invocations": 0,
+    "elapsed_sec": 0.22761988639831543
+  },
+  {
+    "algo": "PPS-DMOEA",
+    "problem": "DF5",
+    "seed": 6,
+    "igd": 0.05254499025749468,
+    "hv": 0.5362607328113844,
+    "invocations": 0,
+    "elapsed_sec": 0.21801304817199707
+  },
+  {
+    "algo": "PPS-DMOEA",
+    "problem": "DF5",
+    "seed": 7,
+    "igd": 0.057835349158555725,
+    "hv": 0.5438545164609716,
+    "invocations": 0,
+    "elapsed_sec": 0.20981597900390625
+  },
+  {
+    "algo": "PPS-DMOEA",
+    "problem": "DF7",
+    "seed": 0,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.3769559910554131,
+    "hv": 0.6316874838394693,
+    "elapsed_sec": 0.18320107460021973,
+    "invocations": 0
+  },
+  {
+    "algo": "PPS-DMOEA",
+    "problem": "DF7",
+    "seed": 1,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.4748005283595375,
+    "hv": 0.2642909530505156,
+    "elapsed_sec": 0.18352150917053223,
+    "invocations": 0
+  },
+  {
+    "algo": "PPS-DMOEA",
+    "problem": "DF7",
+    "seed": 2,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.5299252688222967,
+    "hv": 0.09199732002180144,
+    "elapsed_sec": 0.1857590675354004,
+    "invocations": 0
+  },
+  {
+    "algo": "PPS-DMOEA",
+    "problem": "DF7",
+    "seed": 3,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.48438515973282115,
+    "hv": 0.2342274016932479,
+    "elapsed_sec": 0.18395185470581055,
+    "invocations": 0
+  },
+  {
+    "algo": "PPS-DMOEA",
+    "problem": "DF7",
+    "seed": 4,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.45748550179421094,
+    "hv": 0.6892783129835751,
+    "elapsed_sec": 0.18549418449401855,
+    "invocations": 0
+  },
+  {
+    "algo": "PPS-DMOEA",
+    "problem": "DF7",
+    "seed": 5,
+    "igd": 0.3308331128521596,
+    "hv": 0.5338058961608594,
+    "invocations": 0,
+    "elapsed_sec": 0.2209172248840332
+  },
+  {
+    "algo": "PPS-DMOEA",
+    "problem": "DF7",
+    "seed": 6,
+    "igd": 0.5756065003207723,
+    "hv": 0.2173701884747232,
+    "invocations": 0,
+    "elapsed_sec": 0.22796082496643066
+  },
+  {
+    "algo": "PPS-DMOEA",
+    "problem": "DF7",
+    "seed": 7,
+    "igd": 0.49964374771590303,
+    "hv": 0.22176210688290296,
+    "invocations": 0,
+    "elapsed_sec": 0.20898699760437012
+  },
+  {
+    "algo": "TLE",
+    "problem": "DF1",
+    "seed": 0,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.7201582973911438,
+    "hv": 0.3503954336407448,
+    "elapsed_sec": 85.97253203392029,
+    "invocations": 30
+  },
+  {
+    "algo": "TLE",
+    "problem": "DF1",
+    "seed": 1,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.7025953701260002,
+    "hv": 0.32731800776946424,
+    "elapsed_sec": 181.2002387046814,
+    "invocations": 63
+  },
+  {
+    "algo": "TLE",
+    "problem": "DF1",
+    "seed": 2,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.7016673561281007,
+    "hv": 0.37940127560027836,
+    "elapsed_sec": 151.76547765731812,
+    "invocations": 52
+  },
+  {
+    "algo": "TLE",
+    "problem": "DF1",
+    "seed": 3,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.3940858221873544,
+    "hv": 0.29543709328471845,
+    "elapsed_sec": 253.6535611152649,
+    "invocations": 87
+  },
+  {
+    "algo": "TLE",
+    "problem": "DF1",
+    "seed": 4,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.7194340929080023,
+    "hv": 0.33479834504154926,
+    "elapsed_sec": 120.28325843811035,
+    "invocations": 41
+  },
+  {
+    "algo": "TLE",
+    "problem": "DF1",
+    "seed": 5,
+    "igd": 0.7038320891052539,
+    "hv": 0.3777022564685434,
+    "invocations": 38,
+    "elapsed_sec": 113.39790773391724
+  },
+  {
+    "algo": "TLE",
+    "problem": "DF1",
+    "seed": 6,
+    "igd": 0.7016157623518778,
+    "hv": 0.3786681756514494,
+    "invocations": 60,
+    "elapsed_sec": 177.20651626586914
+  },
+  {
+    "algo": "TLE",
+    "problem": "DF1",
+    "seed": 7,
+    "igd": 0.7040155054494994,
+    "hv": 0.3763148183683101,
+    "invocations": 38,
+    "elapsed_sec": 112.66157269477844
+  },
+  {
+    "algo": "TLE",
+    "problem": "DF2",
+    "seed": 0,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.9251154412527984,
+    "hv": 0.0,
+    "elapsed_sec": 101.96453142166138,
+    "invocations": 35
+  },
+  {
+    "algo": "TLE",
+    "problem": "DF2",
+    "seed": 1,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.854654726001894,
+    "hv": 0.0,
+    "elapsed_sec": 59.99154996871948,
+    "invocations": 21
+  },
+  {
+    "algo": "TLE",
+    "problem": "DF2",
+    "seed": 2,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.9273521697818802,
+    "hv": 0.0,
+    "elapsed_sec": 121.4713659286499,
+    "invocations": 42
+  },
+  {
+    "algo": "TLE",
+    "problem": "DF2",
+    "seed": 3,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.78507421666575,
+    "hv": 0.0,
+    "elapsed_sec": 48.9174439907074,
+    "invocations": 16
+  },
+  {
+    "algo": "TLE",
+    "problem": "DF2",
+    "seed": 4,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.9272361714763029,
+    "hv": 0.0,
+    "elapsed_sec": 126.84039878845215,
+    "invocations": 43
+  },
+  {
+    "algo": "TLE",
+    "problem": "DF2",
+    "seed": 5,
+    "igd": 0.9304583622385414,
+    "hv": 0.0,
+    "invocations": 15,
+    "elapsed_sec": 45.96877861022949
+  },
+  {
+    "algo": "TLE",
+    "problem": "DF2",
+    "seed": 6,
+    "igd": 0.9160340064153734,
+    "hv": 0.0,
+    "invocations": 33,
+    "elapsed_sec": 98.98465490341187
+  },
+  {
+    "algo": "TLE",
+    "problem": "DF2",
+    "seed": 7,
+    "igd": 11242.567276879798,
+    "hv": 0.987208388219881,
+    "invocations": 31,
+    "elapsed_sec": 87.54702711105347
+  },
+  {
     "algo": "TLE",
     "problem": "DF3",
     "seed": 0,
@@ -1375,237 +2239,6 @@
     "invocations": 26
   },
   {
-    "algo": "MOEA/DD",
-    "problem": "DF1",
-    "seed": 0,
-    "igd": 0.4712176427632035,
-    "hv": 1.4149484387893123
-  },
-  {
-    "algo": "MOEA/DD",
-    "problem": "DF1",
-    "seed": 1,
-    "igd": 0.6435603176478928,
-    "hv": 0.14606032337112115
-  },
-  {
-    "algo": "MOEA/DD",
-    "problem": "DF1",
-    "seed": 2,
-    "igd": 0.6121822483517679,
-    "hv": 1.4123354355755418
-  },
-  {
-    "algo": "MOEA/DD",
-    "problem": "DF2",
-    "seed": 0,
-    "igd": 1.3061252913068894e+26,
-    "hv": 0.0
-  },
-  {
-    "algo": "MOEA/DD",
-    "problem": "DF2",
-    "seed": 1,
-    "igd": 5.273665444207068e+24,
-    "hv": 0.0
-  },
-  {
-    "algo": "MOEA/DD",
-    "problem": "DF2",
-    "seed": 2,
-    "igd": 1.618571586048431e+26,
-    "hv": 0.0
-  },
-  {
-    "algo": "MOEA/DD",
-    "problem": "DF3",
-    "seed": 0,
-    "igd": 0.39000635696808567,
-    "hv": 1.0999999215466518
-  },
-  {
-    "algo": "MOEA/DD",
-    "problem": "DF3",
-    "seed": 1,
-    "igd": 0.3900064395201815,
-    "hv": 1.0999999987973832
-  },
-  {
-    "algo": "MOEA/DD",
-    "problem": "DF3",
-    "seed": 2,
-    "igd": 0.3900064368230823,
-    "hv": 1.0999999920916854
-  },
-  {
-    "algo": "MOEA/DD",
-    "problem": "DF5",
-    "seed": 0,
-    "igd": 0.14041237761329156,
-    "hv": 0.6464471483195487
-  },
-  {
-    "algo": "MOEA/DD",
-    "problem": "DF5",
-    "seed": 1,
-    "igd": 0.037122307358476235,
-    "hv": 0.6099824714544183
-  },
-  {
-    "algo": "MOEA/DD",
-    "problem": "DF5",
-    "seed": 2,
-    "igd": 0.06140510646424018,
-    "hv": 0.5996895625273598
-  },
-  {
-    "algo": "MOEA/DD",
-    "problem": "DF7",
-    "seed": 0,
-    "igd": 0.4406562243811166,
-    "hv": 1.3628575850732765
-  },
-  {
-    "algo": "MOEA/DD",
-    "problem": "DF7",
-    "seed": 1,
-    "igd": 0.6372612799383679,
-    "hv": 0.20635974081240255
-  },
-  {
-    "algo": "MOEA/DD",
-    "problem": "DF7",
-    "seed": 2,
-    "igd": 0.6852361688314871,
-    "hv": 0.0572312532026861
-  },
-  {
-    "algo": "DE",
-    "problem": "DF1",
-    "seed": 5,
-    "igd": 0.38645316628074255,
-    "hv": 0.6041644125995604,
-    "invocations": 0,
-    "elapsed_sec": 0.15837478637695312
-  },
-  {
-    "algo": "DE-LM-static-trigger",
-    "problem": "DF1",
-    "seed": 5,
-    "igd": 0.7268772723833372,
-    "hv": 0.30347704785391755,
-    "invocations": 20,
-    "elapsed_sec": 59.911070585250854
-  },
-  {
-    "algo": "PPS-DMOEA",
-    "problem": "DF1",
-    "seed": 5,
-    "igd": 0.4815756255953718,
-    "hv": 0.3615843063693547,
-    "invocations": 0,
-    "elapsed_sec": 0.2284526824951172
-  },
-  {
-    "algo": "DNSGA-II-A",
-    "problem": "DF1",
-    "seed": 5,
-    "igd": 0.45615484157269637,
-    "hv": 0.4522404989625888,
-    "invocations": 0,
-    "elapsed_sec": 7.7440454959869385
-  },
-  {
-    "algo": "TLE",
-    "problem": "DF1",
-    "seed": 5,
-    "igd": 0.7038320891052539,
-    "hv": 0.3777022564685434,
-    "invocations": 38,
-    "elapsed_sec": 113.39790773391724
-  },
-  {
-    "algo": "DE",
-    "problem": "DF2",
-    "seed": 5,
-    "igd": 0.8813685321450336,
-    "hv": 0.0,
-    "invocations": 0,
-    "elapsed_sec": 0.19476985931396484
-  },
-  {
-    "algo": "DE-LM-static-trigger",
-    "problem": "DF2",
-    "seed": 5,
-    "igd": 62818.857005436264,
-    "hv": 0.9234262543055487,
-    "invocations": 14,
-    "elapsed_sec": 41.90313982963562
-  },
-  {
-    "algo": "PPS-DMOEA",
-    "problem": "DF2",
-    "seed": 5,
-    "igd": 0.8032584675073033,
-    "hv": 0.042763250039067696,
-    "invocations": 0,
-    "elapsed_sec": 0.22159886360168457
-  },
-  {
-    "algo": "DNSGA-II-A",
-    "problem": "DF2",
-    "seed": 5,
-    "igd": 0.6837646717008425,
-    "hv": 0.7488394197997287,
-    "invocations": 0,
-    "elapsed_sec": 7.897160291671753
-  },
-  {
-    "algo": "TLE",
-    "problem": "DF2",
-    "seed": 5,
-    "igd": 0.9304583622385414,
-    "hv": 0.0,
-    "invocations": 15,
-    "elapsed_sec": 45.96877861022949
-  },
-  {
-    "algo": "DE",
-    "problem": "DF3",
-    "seed": 5,
-    "igd": 0.6766691315456188,
-    "hv": 0.0,
-    "invocations": 0,
-    "elapsed_sec": 0.2012004852294922
-  },
-  {
-    "algo": "DE-LM-static-trigger",
-    "problem": "DF3",
-    "seed": 5,
-    "igd": 0.7071567607723707,
-    "hv": 0.0,
-    "invocations": 20,
-    "elapsed_sec": 59.33778786659241
-  },
-  {
-    "algo": "PPS-DMOEA",
-    "problem": "DF3",
-    "seed": 5,
-    "igd": 0.8387845402117975,
-    "hv": 0.0,
-    "invocations": 0,
-    "elapsed_sec": 0.2104477882385254
-  },
-  {
-    "algo": "DNSGA-II-A",
-    "problem": "DF3",
-    "seed": 5,
-    "igd": 0.5711026228839645,
-    "hv": 0.04091910151055432,
-    "invocations": 0,
-    "elapsed_sec": 7.942857980728149
-  },
-  {
     "algo": "TLE",
     "problem": "DF3",
     "seed": 5,
@@ -1613,222 +2246,6 @@
     "hv": 0.0,
     "invocations": 41,
     "elapsed_sec": 112.91158246994019
-  },
-  {
-    "algo": "DE",
-    "problem": "DF5",
-    "seed": 5,
-    "igd": 0.0568110641734679,
-    "hv": 0.5317909325927958,
-    "invocations": 0,
-    "elapsed_sec": 0.1869657039642334
-  },
-  {
-    "algo": "DE-LM-static-trigger",
-    "problem": "DF5",
-    "seed": 5,
-    "igd": 0.08607666694339888,
-    "hv": 0.5047039661696089,
-    "invocations": 20,
-    "elapsed_sec": 56.19683074951172
-  },
-  {
-    "algo": "PPS-DMOEA",
-    "problem": "DF5",
-    "seed": 5,
-    "igd": 0.08157091498584305,
-    "hv": 0.49559263381635893,
-    "invocations": 0,
-    "elapsed_sec": 0.22761988639831543
-  },
-  {
-    "algo": "DNSGA-II-A",
-    "problem": "DF5",
-    "seed": 5,
-    "igd": 0.057280070863215064,
-    "hv": 0.6484902967863003,
-    "invocations": 0,
-    "elapsed_sec": 7.492693662643433
-  },
-  {
-    "algo": "TLE",
-    "problem": "DF5",
-    "seed": 5,
-    "igd": 0.08914374947424016,
-    "hv": 0.5040717795637571,
-    "invocations": 73,
-    "elapsed_sec": 0.47588109970092773
-  },
-  {
-    "algo": "DE",
-    "problem": "DF7",
-    "seed": 5,
-    "igd": 0.6585955863419709,
-    "hv": 0.3145137416041691,
-    "invocations": 0,
-    "elapsed_sec": 0.20019078254699707
-  },
-  {
-    "algo": "DE-LM-static-trigger",
-    "problem": "DF7",
-    "seed": 5,
-    "igd": 0.38641517298628636,
-    "hv": 0.5048137720001072,
-    "invocations": 20,
-    "elapsed_sec": 59.034881353378296
-  },
-  {
-    "algo": "PPS-DMOEA",
-    "problem": "DF7",
-    "seed": 5,
-    "igd": 0.3308331128521596,
-    "hv": 0.5338058961608594,
-    "invocations": 0,
-    "elapsed_sec": 0.2209172248840332
-  },
-  {
-    "algo": "DNSGA-II-A",
-    "problem": "DF7",
-    "seed": 5,
-    "igd": 0.43062504258883627,
-    "hv": 0.43911425579323693,
-    "invocations": 0,
-    "elapsed_sec": 7.6252686977386475
-  },
-  {
-    "algo": "TLE",
-    "problem": "DF7",
-    "seed": 5,
-    "igd": 0.7224317345380838,
-    "hv": 0.08239610506790922,
-    "invocations": 45,
-    "elapsed_sec": 133.37258768081665
-  },
-  {
-    "algo": "DE",
-    "problem": "DF1",
-    "seed": 6,
-    "igd": 0.27004042899606967,
-    "hv": 0.8049138913667861,
-    "invocations": 0,
-    "elapsed_sec": 0.18724346160888672
-  },
-  {
-    "algo": "DE-LM-static-trigger",
-    "problem": "DF1",
-    "seed": 6,
-    "igd": 0.4628270821234791,
-    "hv": 0.3143891127701361,
-    "invocations": 20,
-    "elapsed_sec": 59.108861684799194
-  },
-  {
-    "algo": "PPS-DMOEA",
-    "problem": "DF1",
-    "seed": 6,
-    "igd": 0.42721375317665716,
-    "hv": 0.40705169232976385,
-    "invocations": 0,
-    "elapsed_sec": 0.2404468059539795
-  },
-  {
-    "algo": "DNSGA-II-A",
-    "problem": "DF1",
-    "seed": 6,
-    "igd": 0.48790563476978543,
-    "hv": 0.29703196345494404,
-    "invocations": 0,
-    "elapsed_sec": 7.886458873748779
-  },
-  {
-    "algo": "TLE",
-    "problem": "DF1",
-    "seed": 6,
-    "igd": 0.7016157623518778,
-    "hv": 0.3786681756514494,
-    "invocations": 60,
-    "elapsed_sec": 177.20651626586914
-  },
-  {
-    "algo": "DE",
-    "problem": "DF2",
-    "seed": 6,
-    "igd": 0.8828582501458045,
-    "hv": 0.0,
-    "invocations": 0,
-    "elapsed_sec": 0.19712209701538086
-  },
-  {
-    "algo": "DE-LM-static-trigger",
-    "problem": "DF2",
-    "seed": 6,
-    "igd": 0.8926926278998638,
-    "hv": 0.0,
-    "invocations": 20,
-    "elapsed_sec": 59.02679681777954
-  },
-  {
-    "algo": "PPS-DMOEA",
-    "problem": "DF2",
-    "seed": 6,
-    "igd": 0.9262321807596229,
-    "hv": 0.16858754913942892,
-    "invocations": 0,
-    "elapsed_sec": 0.21681737899780273
-  },
-  {
-    "algo": "DNSGA-II-A",
-    "problem": "DF2",
-    "seed": 6,
-    "igd": 0.7305510430637642,
-    "hv": 0.3609136941177906,
-    "invocations": 0,
-    "elapsed_sec": 8.096101999282837
-  },
-  {
-    "algo": "TLE",
-    "problem": "DF2",
-    "seed": 6,
-    "igd": 0.9160340064153734,
-    "hv": 0.0,
-    "invocations": 33,
-    "elapsed_sec": 98.98465490341187
-  },
-  {
-    "algo": "DE",
-    "problem": "DF3",
-    "seed": 6,
-    "igd": 0.6764374984090148,
-    "hv": 0.0,
-    "invocations": 0,
-    "elapsed_sec": 0.21025729179382324
-  },
-  {
-    "algo": "DE-LM-static-trigger",
-    "problem": "DF3",
-    "seed": 6,
-    "igd": 0.6352598878928148,
-    "hv": 0.0,
-    "invocations": 20,
-    "elapsed_sec": 58.94010138511658
-  },
-  {
-    "algo": "PPS-DMOEA",
-    "problem": "DF3",
-    "seed": 6,
-    "igd": 0.8387845402117979,
-    "hv": 0.0,
-    "invocations": 0,
-    "elapsed_sec": 0.21331405639648438
-  },
-  {
-    "algo": "DNSGA-II-A",
-    "problem": "DF3",
-    "seed": 6,
-    "igd": 0.6392645209906547,
-    "hv": 0.010387426902761569,
-    "invocations": 0,
-    "elapsed_sec": 8.472411394119263
   },
   {
     "algo": "TLE",
@@ -1840,40 +2257,77 @@
     "elapsed_sec": 110.80607342720032
   },
   {
-    "algo": "DE",
-    "problem": "DF5",
-    "seed": 6,
-    "igd": 0.08151440916346553,
-    "hv": 0.5364399940913486,
-    "invocations": 0,
-    "elapsed_sec": 0.18519949913024902
+    "algo": "TLE",
+    "problem": "DF3",
+    "seed": 7,
+    "igd": 0.6776595889730366,
+    "hv": 0.0,
+    "invocations": 38,
+    "elapsed_sec": 107.35081768035889
   },
   {
-    "algo": "DE-LM-static-trigger",
+    "algo": "TLE",
     "problem": "DF5",
-    "seed": 6,
-    "igd": 0.03457277380641284,
-    "hv": 0.541936657217778,
-    "invocations": 20,
-    "elapsed_sec": 58.968730211257935
+    "seed": 0,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.06515367793813714,
+    "hv": 0.5160481958224221,
+    "elapsed_sec": 64.2367832660675,
+    "invocations": 42
   },
   {
-    "algo": "PPS-DMOEA",
+    "algo": "TLE",
     "problem": "DF5",
-    "seed": 6,
-    "igd": 0.05254499025749468,
-    "hv": 0.5362607328113844,
-    "invocations": 0,
-    "elapsed_sec": 0.21801304817199707
+    "seed": 1,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.06254341942957989,
+    "hv": 0.5053526416345568,
+    "elapsed_sec": 172.1193745136261,
+    "invocations": 60
   },
   {
-    "algo": "DNSGA-II-A",
+    "algo": "TLE",
     "problem": "DF5",
-    "seed": 6,
-    "igd": 0.06413570574384228,
-    "hv": 0.6750704131414683,
-    "invocations": 0,
-    "elapsed_sec": 7.441123723983765
+    "seed": 2,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.08628624305725639,
+    "hv": 0.5063037773069489,
+    "elapsed_sec": 131.04760479927063,
+    "invocations": 46
+  },
+  {
+    "algo": "TLE",
+    "problem": "DF5",
+    "seed": 3,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.06831311830915983,
+    "hv": 0.4938832249890961,
+    "elapsed_sec": 181.82282543182373,
+    "invocations": 62
+  },
+  {
+    "algo": "TLE",
+    "problem": "DF5",
+    "seed": 4,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.06795853249321626,
+    "hv": 0.4954125240626367,
+    "elapsed_sec": 109.45197987556458,
+    "invocations": 37
+  },
+  {
+    "algo": "TLE",
+    "problem": "DF5",
+    "seed": 5,
+    "igd": 0.08914374947424016,
+    "hv": 0.5040717795637571,
+    "invocations": 73,
+    "elapsed_sec": 0.47588109970092773
   },
   {
     "algo": "TLE",
@@ -1885,222 +2339,6 @@
     "elapsed_sec": 44.62305188179016
   },
   {
-    "algo": "DE",
-    "problem": "DF7",
-    "seed": 6,
-    "igd": 0.40861357098547946,
-    "hv": 0.20179935830579288,
-    "invocations": 0,
-    "elapsed_sec": 0.19391441345214844
-  },
-  {
-    "algo": "DE-LM-static-trigger",
-    "problem": "DF7",
-    "seed": 6,
-    "igd": 0.40871878778067045,
-    "hv": 0.25555657073826565,
-    "invocations": 20,
-    "elapsed_sec": 58.77319669723511
-  },
-  {
-    "algo": "PPS-DMOEA",
-    "problem": "DF7",
-    "seed": 6,
-    "igd": 0.5756065003207723,
-    "hv": 0.2173701884747232,
-    "invocations": 0,
-    "elapsed_sec": 0.22796082496643066
-  },
-  {
-    "algo": "DNSGA-II-A",
-    "problem": "DF7",
-    "seed": 6,
-    "igd": 0.48854590737131126,
-    "hv": 0.3001263787460989,
-    "invocations": 0,
-    "elapsed_sec": 7.771667003631592
-  },
-  {
-    "algo": "TLE",
-    "problem": "DF7",
-    "seed": 6,
-    "igd": 0.7188051063640697,
-    "hv": 0.08522155909679305,
-    "invocations": 34,
-    "elapsed_sec": 101.16609454154968
-  },
-  {
-    "algo": "DE",
-    "problem": "DF1",
-    "seed": 7,
-    "igd": 0.37485382849453275,
-    "hv": 0.6394780646532282,
-    "invocations": 0,
-    "elapsed_sec": 0.1816120147705078
-  },
-  {
-    "algo": "DE-LM-static-trigger",
-    "problem": "DF1",
-    "seed": 7,
-    "igd": 0.7036513627997222,
-    "hv": 0.3392929457300786,
-    "invocations": 20,
-    "elapsed_sec": 59.18846082687378
-  },
-  {
-    "algo": "PPS-DMOEA",
-    "problem": "DF1",
-    "seed": 7,
-    "igd": 0.44104905073475614,
-    "hv": 0.3660447560782789,
-    "invocations": 0,
-    "elapsed_sec": 0.22315144538879395
-  },
-  {
-    "algo": "DNSGA-II-A",
-    "problem": "DF1",
-    "seed": 7,
-    "igd": 0.5033321520213188,
-    "hv": 0.2801055578925613,
-    "invocations": 0,
-    "elapsed_sec": 7.834389925003052
-  },
-  {
-    "algo": "TLE",
-    "problem": "DF1",
-    "seed": 7,
-    "igd": 0.7040155054494994,
-    "hv": 0.3763148183683101,
-    "invocations": 38,
-    "elapsed_sec": 112.66157269477844
-  },
-  {
-    "algo": "DE",
-    "problem": "DF2",
-    "seed": 7,
-    "igd": 0.8902313307312443,
-    "hv": 0.0,
-    "invocations": 0,
-    "elapsed_sec": 0.19707179069519043
-  },
-  {
-    "algo": "DE-LM-static-trigger",
-    "problem": "DF2",
-    "seed": 7,
-    "igd": 9.109751262458042,
-    "hv": 1.1149924097560004,
-    "invocations": 13,
-    "elapsed_sec": 38.758408069610596
-  },
-  {
-    "algo": "PPS-DMOEA",
-    "problem": "DF2",
-    "seed": 7,
-    "igd": 0.6542977558241921,
-    "hv": 0.08874163944002368,
-    "invocations": 0,
-    "elapsed_sec": 0.19658136367797852
-  },
-  {
-    "algo": "DNSGA-II-A",
-    "problem": "DF2",
-    "seed": 7,
-    "igd": 0.6447518463626003,
-    "hv": 0.6090860266459639,
-    "invocations": 0,
-    "elapsed_sec": 7.4072511196136475
-  },
-  {
-    "algo": "TLE",
-    "problem": "DF2",
-    "seed": 7,
-    "igd": 11242.567276879798,
-    "hv": 0.987208388219881,
-    "invocations": 31,
-    "elapsed_sec": 87.54702711105347
-  },
-  {
-    "algo": "DE",
-    "problem": "DF3",
-    "seed": 7,
-    "igd": 0.6323930336838575,
-    "hv": 0.0,
-    "invocations": 0,
-    "elapsed_sec": 0.18013358116149902
-  },
-  {
-    "algo": "DE-LM-static-trigger",
-    "problem": "DF3",
-    "seed": 7,
-    "igd": 0.7114361903185462,
-    "hv": 0.0,
-    "invocations": 18,
-    "elapsed_sec": 52.925156593322754
-  },
-  {
-    "algo": "PPS-DMOEA",
-    "problem": "DF3",
-    "seed": 7,
-    "igd": 0.8387845402117975,
-    "hv": 0.0,
-    "invocations": 0,
-    "elapsed_sec": 0.20287680625915527
-  },
-  {
-    "algo": "DNSGA-II-A",
-    "problem": "DF3",
-    "seed": 7,
-    "igd": 0.5065530165080896,
-    "hv": 0.13615460074907162,
-    "invocations": 0,
-    "elapsed_sec": 7.67497444152832
-  },
-  {
-    "algo": "TLE",
-    "problem": "DF3",
-    "seed": 7,
-    "igd": 0.6776595889730366,
-    "hv": 0.0,
-    "invocations": 38,
-    "elapsed_sec": 107.35081768035889
-  },
-  {
-    "algo": "DE",
-    "problem": "DF5",
-    "seed": 7,
-    "igd": 0.08363604788032462,
-    "hv": 0.49547191241712696,
-    "invocations": 0,
-    "elapsed_sec": 0.17861628532409668
-  },
-  {
-    "algo": "DE-LM-static-trigger",
-    "problem": "DF5",
-    "seed": 7,
-    "igd": 0.11613215323497793,
-    "hv": 0.45130068615159147,
-    "invocations": 20,
-    "elapsed_sec": 58.60447335243225
-  },
-  {
-    "algo": "PPS-DMOEA",
-    "problem": "DF5",
-    "seed": 7,
-    "igd": 0.057835349158555725,
-    "hv": 0.5438545164609716,
-    "invocations": 0,
-    "elapsed_sec": 0.20981597900390625
-  },
-  {
-    "algo": "DNSGA-II-A",
-    "problem": "DF5",
-    "seed": 7,
-    "igd": 0.06680131033526629,
-    "hv": 0.6544743051651092,
-    "invocations": 0,
-    "elapsed_sec": 7.032991647720337
-  },
-  {
     "algo": "TLE",
     "problem": "DF5",
     "seed": 7,
@@ -2110,40 +2348,77 @@
     "elapsed_sec": 150.07414484024048
   },
   {
-    "algo": "DE",
+    "algo": "TLE",
     "problem": "DF7",
-    "seed": 7,
-    "igd": 0.2619254106322741,
-    "hv": 0.6220330434140389,
-    "invocations": 0,
-    "elapsed_sec": 0.18215608596801758
+    "seed": 0,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.6574757707671667,
+    "hv": 0.2982591921392043,
+    "elapsed_sec": 82.41114687919617,
+    "invocations": 29
   },
   {
-    "algo": "DE-LM-static-trigger",
+    "algo": "TLE",
     "problem": "DF7",
-    "seed": 7,
-    "igd": 0.6527085056306945,
-    "hv": 0.29286192115903914,
-    "invocations": 17,
-    "elapsed_sec": 50.50550603866577
+    "seed": 1,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.7092830419418646,
+    "hv": 0.07878103377851527,
+    "elapsed_sec": 136.6156039237976,
+    "invocations": 47
   },
   {
-    "algo": "PPS-DMOEA",
+    "algo": "TLE",
     "problem": "DF7",
-    "seed": 7,
-    "igd": 0.49964374771590303,
-    "hv": 0.22176210688290296,
-    "invocations": 0,
-    "elapsed_sec": 0.20898699760437012
+    "seed": 2,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.7187070451465533,
+    "hv": 0.08814893264950123,
+    "elapsed_sec": 88.9003415107727,
+    "invocations": 29
   },
   {
-    "algo": "DNSGA-II-A",
+    "algo": "TLE",
     "problem": "DF7",
-    "seed": 7,
-    "igd": 0.4350844680038923,
-    "hv": 0.4362443861515466,
-    "invocations": 0,
-    "elapsed_sec": 7.3225250244140625
+    "seed": 3,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.7203531742416839,
+    "hv": 0.08241671631263014,
+    "elapsed_sec": 95.96147084236145,
+    "invocations": 31
+  },
+  {
+    "algo": "TLE",
+    "problem": "DF7",
+    "seed": 4,
+    "max_gen": 200,
+    "pop_size": 50,
+    "igd": 0.7247967029450255,
+    "hv": 0.07259481193621045,
+    "elapsed_sec": 82.28498220443726,
+    "invocations": 27
+  },
+  {
+    "algo": "TLE",
+    "problem": "DF7",
+    "seed": 5,
+    "igd": 0.7224317345380838,
+    "hv": 0.08239610506790922,
+    "invocations": 45,
+    "elapsed_sec": 133.37258768081665
+  },
+  {
+    "algo": "TLE",
+    "problem": "DF7",
+    "seed": 6,
+    "igd": 0.7188051063640697,
+    "hv": 0.08522155909679305,
+    "invocations": 34,
+    "elapsed_sec": 101.16609454154968
   },
   {
     "algo": "TLE",

@@ -378,7 +378,10 @@ CPU-only reproduction is supported but 25--30x slower.
 ```
 results/
 ├── raw/                          # 11 small JSON files, committed for reproducibility
-│   ├── sec_main_v3.json          # 8-seed main comparison, 215 runs
+│   ├── sec_main_v3.json          # 6 algorithms × 5 problems × 8 seeds = 240 runs.
+│   │                             #   MOEA/DD's DF2 entry is imputed for the
+│   │                             #   Friedman test (its 8 raw DF2 IGDs are
+│   │                             #   catastrophic, of order 1e7 to 1e27).
 │   ├── sec_ablation_v2.json      # 5-seed ablation, 4 variants x 2 problems
 │   ├── exp3_uav_v2.json          # 5-seed UAV comparison, 4-/8-UAV
 │   ├── exp3_uav_v3.json          # 8-UAV detailed (used by Table 5)
@@ -506,3 +509,75 @@ For questions about the code:
 
 For questions about the paper itself, contact the corresponding author
 through the journal submission system.
+
+---
+
+## 14. Self-test (reviewer sanity check)
+
+A 1-minute end-to-end check is shipped at the repository root as
+`_smoke_test.py`. It verifies that:
+
+1. All five packages (`core`, `baselines`, `benchmarks`, `proposed`,
+   `experiments`) import cleanly.
+2. Every essential script in `experiments/` and `proposed/` has a
+   working `--help`.
+3. `proposed.run_tle` actually runs a 5-generation TLE and reports a
+   finite IGD.
+4. Every algorithm class (`DEBaseline`, `TLE`, `DNSGAIIA`, `PPSDMOEA`,
+   `MOEADD`, `StaticLMEABaseline`) instantiates and runs end-to-end.
+5. The LLM cache hits on a second call with an identical prompt.
+6. No `.py` file in the repo contains a hardcoded Windows path.
+
+Run it any time after cloning:
+
+```bash
+python _smoke_test.py
+```
+
+Expected output ends with `ALL SMOKE TESTS PASSED`. If a reviewer
+clones the repo on a clean machine and this script fails, please
+file an issue with the full output.
+
+---
+
+## 15. Cache limitations and reviewer-side re-runs
+
+The `results/llm_cache/` directory is **gitignored** — a fresh clone
+will not contain any cache. The first time you run an LLM-backed
+script (`experiments.run_main_cec2018`, `experiments.run_cross_llm`,
+`proposed.run_tle`, etc.), the LLM client will issue fresh Ollama
+calls. The cache will then be repopulated and subsequent calls
+will be instant.
+
+The 8-seed main comparison (240 runs) takes ~25 GPU-h on an RTX 4090
+when the cache is cold. The cross-LLM section (18 runs) needs the
+three Ollama models pulled locally:
+
+```bash
+ollama pull qwen2.5:7b
+ollama pull qwen3.5:9b
+ollama pull carstenuhlig/omnicoder-9b:q8_0
+```
+
+If you do not have all three, only the `qwen2.5:7b` part of the
+cross-LLM experiment will work; the other two model variants will
+fall back to the (empty) per-model cache and issue fresh calls.
+
+---
+
+## 16. About the data
+
+All 11 JSON files in `results/raw/` are the **end-of-run** summary
+schema described in Section 9. The 240-run `sec_main_v3.json` is
+the authoritative source for the headline Table 1 (IGD) and
+Table 2 (HV); the four other tables (Table 3 ablation, Table 4
+Friedman, Table 5 UAV) come from the other 10 JSONs. None of the
+JSONs include per-generation trajectories — those are not needed
+to regenerate any of the paper's tables or figures.
+
+The `MOEA/DD` baseline is the one exception: its 8 raw DF2 IGDs
+(1e7 to 1e27) are the catastrophic failure mode discussed in
+Section 6.2 of the paper, and they are imputed in the Friedman
+test rather than averaged in. All other algorithms' DF2 IGDs
+are filtered at the $\mathrm{IGD} > 2$ level for display in
+Table 1 (the raw values are still in the JSON).

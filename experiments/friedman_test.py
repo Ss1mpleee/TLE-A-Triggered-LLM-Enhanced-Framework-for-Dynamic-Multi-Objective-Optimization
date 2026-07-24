@@ -35,47 +35,89 @@ PROBS_FOR_MOEADD = ['DF1', 'DF3', 'DF5', 'DF7']  # exclude DF2
 
 
 def load_igd():
-    """Build (algo, problem) -> list of IGD values."""
+    """Build (algo, problem) -> list of IGD values.
+
+    We do NOT pre-filter the catastrophic MOEA/DD DF2 entries here: the
+    imputation is applied inside `friedman_table()` where we know which
+    (algo, problem) cell needs the imputation.
+    """
     fp = RAW / 'sec_main_v3.json'
     if not fp.exists():
         fp = RAW / 'sec_main_v2.json'
     data = json.load(open(fp, encoding='utf-8'))
-    # Merge MOEA/DD
+    # Backwards-compatibility: if the older exp4_moeadd.json has additional
+    # entries (it shouldn't — sec_main_v3.json already includes MOEA/DD),
+    # merge them in.
     moeadd_fp = RAW / 'exp4_moeadd.json'
     if moeadd_fp.exists():
         moeadd = json.load(open(moeadd_fp, encoding='utf-8'))
-        data.extend(moeadd)
+        existing = {(d['algo'], d['problem'], d['seed'])
+                    for d in data if d['algo'] == 'MOEA/DD'}
+        data.extend(d for d in moeadd
+                    if (d['algo'], d['problem'], d['seed']) not in existing)
     by_ap = defaultdict(list)
     for r in data:
-        if 'igd' in r and np.isfinite(r['igd']) and r['igd'] < 1.0:
+        if 'igd' in r and np.isfinite(r['igd']):
             by_ap[(r['algo'], r['problem'])].append(r['igd'])
     return by_ap
 
 
 def friedman_table():
+    """Friedman + Nemenyi on the IGD metric.
+
+    All 5 CEC 2018 problems are used. MOEA/DD's DF2 entry is imputed as
+    the mean of its ranks on the other 4 problems (its 8 raw DF2 IGDs
+    are catastrophic, of order 1e7 to 1e27).
+    """
     by_ap = load_igd()
-    # For Friedman: we use only problems where ALL algorithms have data
-    # i.e., exclude DF2 (MOEA/DD not there)
-    probs_for_test = PROBS_FOR_MOEADD
-    n_p, n_a = len(probs_for_test), len(ALGOS)
+    n_p, n_a = len(PROBS), len(ALGOS)
     mat = np.zeros((n_p, n_a))
-    for i, p in enumerate(probs_for_test):
+    moeadd_idx = ALGOS.index('MOEA/DD')
+    df2_idx = PROBS.index('DF2')
+
+    for i, p in enumerate(PROBS):
         for j, a in enumerate(ALGOS):
-            mat[i, j] = np.mean(by_ap.get((a, p), [np.nan]))
+            vals = by_ap.get((a, p), [])
+            if a == 'MOEA/DD' and p == 'DF2':
+                # Will be imputed below; mark with NaN for now.
+                mat[i, j] = np.nan
+            else:
+                mat[i, j] = np.mean(vals) if vals else np.nan
 
-    # Friedman: rank per problem (lower IGD = better = lower rank)
-    ranks = np.zeros_like(mat)
+    # First pass: rank per problem (lower IGD = better = lower rank).
+    # We rank the 5 valid (non-NaN) entries; the NaN entry will be
+    # imputed in a second pass once all other problems have been ranked.
+    ranks = np.zeros((n_p, n_a))
     for i in range(n_p):
-        ranks[i] = rankdata(mat[i], method='average')
+        valid_mask = ~np.isnan(mat[i])
+        if valid_mask.sum() < n_a:
+            # Some NaN: rank only the valid entries.
+            ranks[i, valid_mask] = rankdata(mat[i, valid_mask], method='average')
+        else:
+            ranks[i] = rankdata(mat[i], method='average')
 
-    # Friedman test
-    stat, p = friedmanchisquare(*[mat[:, j] for j in range(n_a)])
+    # Second pass: impute MOEA/DD's DF2 entry as the mean of its ranks
+    # on the other 4 problems.
+    if np.isnan(mat[df2_idx, moeadd_idx]):
+        other_ranks = [ranks[k, moeadd_idx]
+                       for k in range(n_p) if k != df2_idx]
+        ranks[df2_idx, moeadd_idx] = float(np.mean(other_ranks))
 
-    # Average ranks per algorithm
+    # Friedman test: only over the 4 problems where every algorithm has
+    # finite IGD (the 5th problem, DF2, has the imputed MOEA/DD entry
+    # which is not a "real" measurement and so is excluded from the test
+    # statistic).  This is the standard Demšar (2006) treatment.
+    valid_probs = [p for j, p in enumerate(PROBS) if j != df2_idx]
+    valid_mat = np.array([[np.mean(by_ap.get((a, p), [np.nan]))
+                           for a in ALGOS] for p in valid_probs])
+    stat, p = friedmanchisquare(*[valid_mat[:, j] for j in range(n_a)])
+
+    # Average ranks per algorithm (over the 5 problems, with imputation)
     avg_ranks = ranks.mean(axis=0)
     # Critical value for Nemenyi (Bonferroni-like)
-    # CD = q_alpha * sqrt(k(k+1) / 6N)
-    q_alpha = 2.576  # alpha=0.05, k=6 (from standard Nemenyi tables)
+    # CD = q_alpha * sqrt(k(k+1) / 6N),  with N=5 (the imputed DF2 is
+    # part of the ranking but the test statistic itself uses 4 problems).
+    q_alpha = 2.85  # alpha=0.05, k=6 (from Demsar 2006 Table 5b)
     N = n_p
     k = n_a
     cd = q_alpha * np.sqrt(k * (k + 1) / (6 * N))
