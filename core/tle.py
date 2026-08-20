@@ -14,7 +14,8 @@ from typing import Tuple, Optional, Dict, Any, Callable, List
 
 from .de_operators import de_rand_1_bin, de_best_1_bin, de_current_to_best_1_bin
 from .moo_utils import fast_non_dominated_sort, nsga2_select
-from .triggers import TripleSignalTrigger
+from .triggers import TripleSignalTrigger, DoubleSignalTrigger
+from .triggers import SingleSignalTrigger, AlwaysInvokeTrigger, NeverInvokeTrigger
 from .bandit import UCBBandit
 from .prompts import call_llm_for_advice, apply_advice, call_llm_for_multi_action
 from .llm_interface import LLMClient
@@ -59,14 +60,13 @@ class TLE:
         # Trigger
         if trigger == "triple":
             self.trigger = TripleSignalTrigger()
+        elif trigger == "double":
+            self.trigger = DoubleSignalTrigger()
         elif trigger == "single":
-            from .triggers import SingleSignalTrigger
             self.trigger = SingleSignalTrigger()
         elif trigger == "always":
-            from .triggers import AlwaysInvokeTrigger
             self.trigger = AlwaysInvokeTrigger()
         elif trigger == "never":
-            from .triggers import NeverInvokeTrigger
             self.trigger = NeverInvokeTrigger()
         else:
             raise ValueError(f"Unknown trigger: {trigger}")

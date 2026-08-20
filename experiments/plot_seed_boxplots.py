@@ -51,7 +51,7 @@ COLORS = {
     'MOEA/DD': '#e6b94d',
     'TLE': '#e8763a',
 }
-PROBLEMS = ['DF1', 'DF2', 'DF5', 'DF7']  # exclude DF3 to keep layout clean
+PROBLEMS = ['DF1', 'DF2', 'DF5', 'DF7']  # representative subset of the 14-problem suite (the full 14-problem set is in Table 1)
 
 
 def main():
@@ -85,7 +85,7 @@ def main():
 
     fig, axes = plt.subplots(2, 2, figsize=(7.0, 5.4))
     fig.suptitle(
-        r'Per-seed IGD distribution (8 seeds $\times$ 6 algorithms $\times$ 4 problems)',
+        r'Per-seed IGD distribution (30 seeds $\times$ 6 algorithms $\times$ 4 representative problems)',
         fontsize=11, y=0.995,
     )
 
@@ -110,8 +110,8 @@ def main():
 
         # log scale for DF2 to handle MOEA/DD outlier
         if prob == 'DF2':
-            ax.set_yscale('symlog', linthresh=0.5)
-            ax.set_ylim(-0.5, 200)
+            ax.set_yscale('log')
+            ax.set_ylim(0.1, 1e7)
         else:
             ax.set_yscale('log')
 

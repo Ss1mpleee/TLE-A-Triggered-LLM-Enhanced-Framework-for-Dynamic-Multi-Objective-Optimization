@@ -1,0 +1,17 @@
+% ===== AUTO: cross-LLM Friedman table =====
+\begin{table}[t]
+\centering
+\small
+\caption{Friedman test with Nemenyi post-hoc on the 3 LLM families across 14 CEC 2018 benchmarks ($n=30$ seeds each). CD = 0.886 at $\alpha=0.05$ (Dem\v{s}ar 2006 $q=2.343$ for $k=3$). LLMs connected by a bar are not significantly different.}
+\label{tab:friedman-crossllm}
+\begin{tabular}{lc}
+\toprule
+\textbf{LLM family} & \textbf{Median rank} \\
+\midrule
+omnicoder-9b (code)          & 1.86 \\
+qwen3.5:9b (chat)            & 1.96 \\
+qwen2.5:7b (chat)            & 2.18 \\
+\bottomrule
+\end{tabular}
+\end{table}
+% Friedman stat = 1.135, p = 0.566903

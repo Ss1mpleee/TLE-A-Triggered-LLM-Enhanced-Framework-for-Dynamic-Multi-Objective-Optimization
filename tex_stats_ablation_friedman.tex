@@ -1,0 +1,18 @@
+% ===== AUTO: ablation Friedman table =====
+\begin{table}[t]
+\centering
+\small
+\caption{Friedman test with Nemenyi post-hoc on the 4 trigger versions across 14 CEC 2018 benchmarks ($n=30$ seeds each). CD = 1.254 at $\alpha=0.05$ (Dem\v{s}ar 2006 $q=2.569$ for $k=4$). Versions connected by a bar are not significantly different. Median IGD is used for ranking to be robust to the catastrophic-failure outliers that affect T$2$ and T$3$ on DF2.}
+\label{tab:friedman-ablation}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Trigger version} & \textbf{Median rank} & \textbf{Mean inv./run} \\
+\midrule
+T$1$ (entropy only)    & 2.14 & 0.0 \\
+T$0$ (always, cap=50)  & 2.21 & 50.0 \\
+T$2$ (entropy+stagnation) & 2.82 & 11.3 \\
+T$3$ (proposed: triple) & 2.82 & 38.6 \\
+\bottomrule
+\end{tabular}
+\end{table}
+% Friedman stat = 4.939, p = 0.176289

@@ -8,7 +8,7 @@ from .moo_utils import (
     compute_igd, compute_hv, dominates
 )
 from .triggers import (
-    TripleSignalTrigger, SingleSignalTrigger,
+    TripleSignalTrigger, DoubleSignalTrigger, SingleSignalTrigger,
     AlwaysInvokeTrigger, NeverInvokeTrigger
 )
 from .bandit import UCBBandit, FixedBudgetScheduler, HeuristicDecayScheduler

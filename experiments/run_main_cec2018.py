@@ -32,22 +32,40 @@ from datetime import datetime
 from core import (
     LLMClient, TLE, DEBaseline,
     StaticLMEABaseline, RandomLMEABaseline,
+    PPSDMOEA, DNSGAIIA,
     DEFAULT_MODEL,
 )
+from baselines.moea_dd import MOEADD
 from benchmarks import DMOProblem, get_reference_pf
 from core.moo_utils import compute_igd, compute_hv, fast_non_dominated_sort
 
 
 # ============ Configurations ============
-PROBLEMS_2OBJ = ["DF1", "DF2", "DF3", "DF5", "DF7"]
-PROBLEMS_3OBJ = ["DF10"]
+# Stage-1 revision: complete CEC 2018 coverage — all 14 problems
+# (DF1-DF14), including the 3-objective problems DF9-DF14.
+PROBLEMS_2OBJ = ["DF1", "DF2", "DF3", "DF4", "DF5", "DF6", "DF7", "DF8"]
+PROBLEMS_3OBJ = ["DF9", "DF10", "DF11", "DF12", "DF13", "DF14"]
+ALL_PROBLEMS = PROBLEMS_2OBJ + PROBLEMS_3OBJ
 
+# All six algorithms.  Note: each algo_name below is matched in the
+# run_single dispatch below; ALGORITHMS is now only used for LLM-using
+# variants (TLE / static-trigger) to pick their trigger/scheduler combo.
+ALGORITHM_NAMES = [
+    "DE", "DE-LM-static-trigger", "TLE",
+    "PPS-DMOEA", "DNSGA-II-A", "MOEA/DD",
+]
+
+# All algorithm names MUST be in ALGORITHMS dict as keys (even if value
+# is unused) because the dispatch in run_experiment_set indexes into it.
 ALGORITHMS = {
     "DE": dict(trigger="never", scheduler="bandit"),
     "DE-LM-always": dict(trigger="always", scheduler="fixed"),
     "DE-LM-random": dict(trigger="random", scheduler="fixed"),
     "DE-LM-static-trigger": dict(trigger="triple", scheduler="heuristic"),
     "TLE": dict(trigger="triple", scheduler="bandit"),
+    "PPS-DMOEA": dict(),  # not used; dispatch handles via algo_name
+    "DNSGA-II-A": dict(),
+    "MOEA/DD": dict(),
 }
 
 
@@ -99,6 +117,21 @@ def run_single(
         algo = RandomLMEABaseline(
             d=d, bounds=(problem.lower, problem.upper), n_obj=problem.M,
             pop_size=pop_size, max_gen=max_gen, llm=llm, rate=0.1, seed=seed,
+        )
+    elif algo_name == "PPS-DMOEA":
+        algo = PPSDMOEA(
+            d=d, bounds=(problem.lower, problem.upper), n_obj=problem.M,
+            pop_size=pop_size, max_gen=max_gen, seed=seed,
+        )
+    elif algo_name == "DNSGA-II-A":
+        algo = DNSGAIIA(
+            d=d, bounds=(problem.lower, problem.upper), n_obj=problem.M,
+            pop_size=pop_size, max_gen=max_gen, seed=seed,
+        )
+    elif algo_name == "MOEA/DD":
+        algo = MOEADD(
+            d=d, bounds=(problem.lower, problem.upper), n_obj=problem.M,
+            pop_size=pop_size, max_gen=max_gen, seed=seed,
         )
     else:
         # TLE variants
@@ -160,15 +193,39 @@ def run_experiment_set(
     output_file: str = None,
 ):
     """Run full experiment set and save to JSON."""
+    # Resume support: load existing results if file exists and skip done runs
     results = []
+    done_keys = set()
+    if output_file and Path(output_file).exists():
+        try:
+            with open(output_file, "r", encoding="utf-8") as f:
+                results = json.load(f)
+            for r in results:
+                if "error" not in r and "algo" in r and "problem" in r and "seed" in r:
+                    done_keys.add((r["algo"], r["problem"], r["seed"]))
+            print(f"[Resume] Loaded {len(results)} existing runs from {output_file}, "
+                  f"{len(done_keys)} successful keys will be skipped.")
+        except Exception as e:
+            print(f"[Resume] Could not load existing {output_file}: {e}")
+            results = []
+
     total_runs = len(problems) * len(algorithms) * len(seeds)
     run_idx = 0
+    skipped = 0
 
     for problem in problems:
         for algo_name in algorithms:
             algo_kwargs = ALGORITHMS[algo_name]
             for seed in seeds:
                 run_idx += 1
+                key = (algo_name, problem, seed)
+                if key in done_keys:
+                    skipped += 1
+                    if run_idx % 30 == 0 or run_idx == total_runs:
+                        print(f"[{run_idx}/{total_runs}] "
+                              f"SKIP (already done) algo={algo_name:25s} "
+                              f"problem={problem:5s} seed={seed}  [total skipped: {skipped}]")
+                    continue
                 print(f"[{run_idx}/{total_runs}] "
                       f"algo={algo_name:25s} problem={problem:5s} seed={seed}")
                 try:
@@ -182,6 +239,7 @@ def run_experiment_set(
                         d=d,
                     )
                     results.append(result)
+                    done_keys.add(key)
                     print(f"  -> IGD={result['igd']:.4f}, HV={result['hv']:.4f}, "
                           f"invocations={result['invocations']}, "
                           f"elapsed={result['elapsed_sec']:.1f}s")
@@ -200,14 +258,17 @@ def run_experiment_set(
                     with open(output_file, "w", encoding="utf-8") as f:
                         json.dump(results, f, ensure_ascii=False, indent=2)
 
+    if skipped > 0:
+        print(f"[Done] Skipped {skipped} already-completed runs, "
+              f"wrote {len(results)} total results to {output_file}")
     return results
 
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--problems", nargs="+", default=PROBLEMS_2OBJ)
+    parser.add_argument("--problems", nargs="+", default=ALL_PROBLEMS)
     parser.add_argument("--algorithms", nargs="+", default=list(ALGORITHMS.keys()))
-    parser.add_argument("--seeds", nargs="+", type=int, default=[0, 1, 2])
+    parser.add_argument("--seeds", nargs="+", type=int, default=list(range(30)))
     parser.add_argument("--pop-size", type=int, default=50)
     parser.add_argument("--max-gen", type=int, default=100)
     parser.add_argument("--d", type=int, default=10)

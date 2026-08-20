@@ -13,7 +13,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-REPO = Path(r"D:\新论文\实验")
+REPO = Path(__file__).resolve().parent
 
 def section(label):
     print()

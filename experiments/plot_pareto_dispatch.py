@@ -60,8 +60,8 @@ def main():
 
     fig, axes = plt.subplots(1, 3, figsize=(8.5, 3.0))
     fig.suptitle(
-        'Pareto fronts after 200 generations (best of 3 seeds)',
-        fontsize=11, y=1.00,
+        'Pareto fronts after 200 generations (union over 3 seeds × 3 algorithms)',
+        fontsize=10.5, y=1.00,
     )
 
     for ax, prob in zip(axes, PROBLEMS):

@@ -1,0 +1,29 @@
+% ===== AUTO: Wilcoxon per-problem cross-LLM =====
+\begin{table}[t]
+\centering
+\scriptsize
+\caption{Paired Wilcoxon signed-rank tests between the 3 LLM families on each of the 14 CEC 2018 benchmarks ($n=30$ seeds). Bonferroni-corrected threshold $\alpha=0.05/3=0.0167$. W+ = Wilcoxon signed-rank statistic (sum of positive ranks). Cohen's $d$ is the paired effect size (negative = first LLM wins).}
+\label{tab:wilcoxon-crossllm}
+\begin{tabular}{lccccccccc}
+\toprule
+ & \multicolumn{3}{c}{qwen2.5 vs qwen3.5} & \multicolumn{3}{c}{qwen2.5 vs omnicoder} & \multicolumn{3}{c}{qwen3.5 vs omnicoder} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}\cmidrule(lr){8-10}
+Prob. & $p$ & W+ & $d$ & $p$ & W+ & $d$ & $p$ & W+ & $d$ \\
+\midrule
+DF1   & 0.0000 & 6 & +1.74 & 0.0000 & 12 & +1.60 & 0.0000 & 0 & -0.97 \\
+DF2   & 0.0234 & 123 & +0.31 & 0.0234 & 123 & +0.31 & nan & 0 & +0.00 \\
+DF3   & 0.0000 & 0 & +3.95 & 0.0000 & 0 & +3.93 & 0.1088 & 0 & +0.25 \\
+DF4   & 0.1088 & 0 & +0.25 & 0.1088 & 0 & +0.25 & nan & 0 & +0.00 \\
+DF5   & 0.0000 & 0 & -3.73 & 0.0000 & 0 & -3.37 & 0.0000 & 0 & +0.72 \\
+DF6   & 0.0000 & 0 & +4.16 & 0.0000 & 0 & +4.13 & 0.0064 & 32 & -0.54 \\
+DF7   & 0.0000 & 38 & +1.11 & 0.0000 & 22 & +1.34 & 0.0000 & 0 & +0.83 \\
+DF8   & 0.0010 & 0 & +0.80 & 0.0003 & 0 & +0.90 & 0.0007 & 0 & +0.48 \\
+DF9   & 0.3173 & 0 & -0.18 & 0.1797 & 0 & -0.21 & 0.3173 & 0 & -0.18 \\
+DF10  & 0.0000 & 0 & -3.72 & 0.0000 & 0 & -4.22 & 0.0001 & 17 & -1.00 \\
+DF11  & 0.0000 & 0 & +1.64 & 0.0000 & 0 & +1.64 & nan & 0 & +0.00 \\
+DF12  & 0.0017 & 46 & -0.61 & 0.0017 & 46 & -0.61 & nan & 0 & +0.00 \\
+DF13  & 0.0001 & 10 & -0.68 & 0.0001 & 10 & -0.68 & nan & 0 & +0.00 \\
+DF14  & 0.1088 & 0 & -0.19 & 0.0679 & 0 & -0.27 & 0.1088 & 0 & -0.20 \\
+\bottomrule
+\end{tabular}
+\end{table}

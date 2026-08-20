@@ -74,8 +74,9 @@ huggingface_token.txt
 #   - 4000+ files = ~100 MB; safe to discard, and avoids committing any private
 #     prompts users may have injected.
 # -----------------------------------------------------------------------------
-results/llm_cache/
-**/llm_cache/
+# LLM response cache IS COMMITTED for full reproducibility (~19 MB / 58k entries)
+# results/llm_cache/
+# **/llm_cache/
 *.cache.json
 llm_response_cache/
 ollama_logs/

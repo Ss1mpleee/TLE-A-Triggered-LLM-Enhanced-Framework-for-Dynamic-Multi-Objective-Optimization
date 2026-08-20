@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: |
+  If you use this code or the TLE framework in your research, please cite the
+  accompanying paper:
+
+  Chu, S.-C., Zhang, Y.-Y., Jiang, T.-B., Chen, S.-M., Snasel, V., & Pan, J.-S.
+  (2026). An Event-Triggered Large-Language-Model Evolutionary Framework for
+  Dynamic Multi-Objective Optimization. Swarm and Evolutionary Computation.
+title: "An Event-Triggered Large-Language-Model Evolutionary Framework for Dynamic Multi-Objective Optimization"
+authors:
+  - family-names: Chu
+    given-names: Shu-Chuan
+    affiliation: Nanjing University of Information Science and Technology
+  - family-names: Zhang
+    given-names: Ya-Yu
+    affiliation: Nanjing University of Information Science and Technology
+  - family-names: Jiang
+    given-names: Tong-Bang
+    affiliation: Dalian Maritime University
+  - family-names: Chen
+    given-names: Shyi-Ming
+    affiliation: Asia University
+  - family-names: Snasel
+    given-names: Vaclav
+    affiliation: VSB - Technical University of Ostrava
+  - family-names: Pan
+    given-names: Jeng-Shyang
+    affiliation: Nanjing University of Information Science and Technology
+type: article
+date-released: 2026-08-20
+keywords:
+  - evolutionary computation
+  - dynamic multi-objective optimization
+  - large language models
+  - bandit algorithms
+  - regret analysis
+  - LLM-EC integration
+license: MIT

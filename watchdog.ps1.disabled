@@ -1,0 +1,87 @@
+# Cross-LLM 14 Watchdog v2 - keep Ollama + process alive
+$ErrorActionPreference = 'Continue'
+$logFile = "D:\新论文\实验\watchdog.log"
+$workDir = "D:\新论文\实验"
+$ollamaDir = "C:\Users\Monesyyy\AppData\Local\Programs\Ollama"
+$script = "_run_cross_llm_n14.py"
+
+# Force write initial log to confirm script started
+"[$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')] Watchdog v2 starting (PID=$PID)" | Out-File -FilePath $logFile -Encoding UTF8 -Append
+
+function Log($msg) {
+    $ts = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
+    $line = "[$ts] $msg"
+    Write-Host $line
+    Add-Content -Path $logFile -Value $line -ErrorAction SilentlyContinue
+}
+
+function Test-Ollama {
+    try {
+        $r = Invoke-WebRequest -Uri "http://127.0.0.1:11434/api/tags" -TimeoutSec 5 -UseBasicParsing -ErrorAction SilentlyContinue
+        return ($r.StatusCode -eq 200)
+    } catch { return $false }
+}
+
+function Start-Ollama {
+    Log "Starting Ollama..."
+    try {
+        Start-Process -FilePath "cmd.exe" -ArgumentList "/c","start","/B","ollama serve" -WorkingDirectory $ollamaDir -WindowStyle Hidden -ErrorAction SilentlyContinue
+        Start-Sleep -Seconds 12
+    } catch { Log "  start-ollama error: $_" }
+    if (Test-Ollama) { Log "Ollama up"; return $true }
+    Log "Ollama FAILED to start"
+    return $false
+}
+
+function Test-Process {
+    $procs = Get-CimInstance Win32_Process -Filter "Name='python.exe'" -ErrorAction SilentlyContinue
+    foreach ($p in $procs) {
+        $cl = $p.CommandLine
+        if ($cl -and $cl -match [regex]::Escape($script) -and $p.ProcessId -ne 10992) {
+            return $p
+        }
+    }
+    return $null
+}
+
+function Start-CrossLLM {
+    Log "Starting cross-llm 14..."
+    try {
+        Set-Location $workDir
+        Start-Process -FilePath "cmd.exe" -ArgumentList "/c","start","/B","python -u $script > exp6_cross_llm_n14.log 2> exp6_cross_llm_n14.err" -WorkingDirectory $workDir -WindowStyle Hidden -ErrorAction SilentlyContinue
+        Start-Sleep -Seconds 10
+    } catch { Log "  start-cross error: $_" }
+    $p = Test-Process
+    if ($p) { Log "Process started: PID $($p.ProcessId)"; return $true }
+    Log "Process FAILED to start"
+    return $false
+}
+
+# Initial check
+if (-not (Test-Ollama)) { Start-Ollama | Out-Null }
+if (-not (Test-Process)) { Start-CrossLLM | Out-Null }
+
+$checkIntervalSec = 300
+$restartTimestamps = @()
+
+while ($true) {
+    Start-Sleep -Seconds $checkIntervalSec
+    try {
+        $p = Test-Process
+        if (-not $p) {
+            Log "Process not running"
+            $now = Get-Date
+            $restartTimestamps = @($restartTimestamps | Where-Object { ($now - $_).TotalMinutes -lt 60 })
+            if ($restartTimestamps.Count -ge 3) {
+                Log "Hit max restart rate (3/hour), sleeping 10 min"
+                Start-Sleep -Seconds 600
+                continue
+            }
+            if (-not (Test-Ollama)) { Start-Ollama | Out-Null }
+            Start-CrossLLM | Out-Null
+            $restartTimestamps += $now
+        }
+    } catch {
+        Log "Loop error: $_"
+    }
+}

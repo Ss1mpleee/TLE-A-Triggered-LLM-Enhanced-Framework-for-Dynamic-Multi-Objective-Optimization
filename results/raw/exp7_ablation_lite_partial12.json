@@ -1,0 +1,122 @@
+[
+  {
+    "version": "V0_baseline",
+    "trigger": "always",
+    "scheduler": "fixed",
+    "problem": "DF1",
+    "seed": 0,
+    "igd": 0.48935836582787856,
+    "invocations": 50,
+    "cache_hits": 50,
+    "elapsed_sec": 0.196303129196167,
+    "fire_rate": 1.0
+  },
+  {
+    "version": "V0_baseline",
+    "trigger": "always",
+    "scheduler": "fixed",
+    "problem": "DF1",
+    "seed": 1,
+    "igd": 0.7203516370637603,
+    "invocations": 50,
+    "cache_hits": 30,
+    "elapsed_sec": 66.2357931137085,
+    "fire_rate": 1.0
+  },
+  {
+    "version": "V0_baseline",
+    "trigger": "always",
+    "scheduler": "fixed",
+    "problem": "DF1",
+    "seed": 2,
+    "igd": 0.7040846526678284,
+    "invocations": 50,
+    "cache_hits": 0,
+    "elapsed_sec": 164.73295545578003,
+    "fire_rate": 1.0
+  },
+  {
+    "version": "V0_baseline",
+    "trigger": "always",
+    "scheduler": "fixed",
+    "problem": "DF1",
+    "seed": 3,
+    "igd": 0.7204100216084846,
+    "invocations": 50,
+    "cache_hits": 0,
+    "elapsed_sec": 163.81933665275574,
+    "fire_rate": 1.0
+  },
+  {
+    "version": "V0_baseline",
+    "trigger": "always",
+    "scheduler": "fixed",
+    "problem": "DF1",
+    "seed": 4,
+    "igd": 0.7197436756182108,
+    "invocations": 50,
+    "cache_hits": 0,
+    "elapsed_sec": 165.87258982658386,
+    "fire_rate": 1.0
+  },
+  {
+    "version": "V0_baseline",
+    "trigger": "always",
+    "scheduler": "fixed",
+    "problem": "DF1",
+    "seed": 5,
+    "igd": 0.7209262195855837,
+    "invocations": 50,
+    "cache_hits": 0,
+    "elapsed_sec": 162.7561502456665,
+    "fire_rate": 1.0
+  },
+  {
+    "version": "V0_baseline",
+    "trigger": "always",
+    "scheduler": "fixed",
+    "problem": "DF1",
+    "seed": 6,
+    "igd": 0.45096350189673123,
+    "invocations": 50,
+    "cache_hits": 0,
+    "elapsed_sec": 163.39706802368164,
+    "fire_rate": 1.0
+  },
+  {
+    "version": "V0_baseline",
+    "trigger": "always",
+    "scheduler": "fixed",
+    "problem": "DF1",
+    "seed": 7,
+    "igd": 0.5637921820789056,
+    "invocations": 50,
+    "cache_hits": 0,
+    "elapsed_sec": 156.13533425331116,
+    "fire_rate": 1.0
+  },
+  {
+    "version": "V0_baseline",
+    "trigger": "always",
+    "scheduler": "fixed",
+    "problem": "DF1",
+    "seed": 8,
+    "igd": 0.6370761324859948,
+    "invocations": 50,
+    "cache_hits": 0,
+    "elapsed_sec": 153.81703782081604,
+    "fire_rate": 1.0
+  },
+  {
+    "version": "V0_baseline",
+    "trigger": "always",
+    "scheduler": "fixed",
+    "problem": "DF1",
+    "seed": 9,
+    "igd": 0.7027528289029905,
+    "invocations": 50,
+    "cache_hits": 0,
+    "elapsed_sec": 155.50250935554504,
+    "fire_rate": 1.0
+  }
+]

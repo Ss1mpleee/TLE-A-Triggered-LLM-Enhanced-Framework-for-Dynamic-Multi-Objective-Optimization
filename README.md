@@ -58,7 +58,7 @@ DE/rand/1/bin + NSGA-II search engine with three LLM-related modules:
    $\Omega(\sqrt{KT})$ dynamic-regret lower bound.
 
 The framework is evaluated on the CEC 2018 DMO benchmark suite
-(DF1, DF2, DF3, DF5, DF7, $n = 8$ seeds per problem) and on a dynamic
+(DF1--DF14, $n = 8$ seeds per problem) and on a dynamic
 multi-UAV task-allocation scenario ($n = 5$ seeds, four fleet sizes, 200
 generations per configuration). A cross-LLM sensitivity analysis uses
 three locally deployed open-source models: **Qwen-2.5-7B-Instruct**,
@@ -98,7 +98,7 @@ Two non-trivial findings are reported in the paper:
 │
 ├── benchmarks/               # problem definitions
 │   ├── __init__.py           #     re-exports DMOProblem, get_reference_pf, ...
-│   ├── cec2018.py            #     CEC 2018 DF1/DF2/DF3/DF5/DF7/DF10 (DF10 is 3-obj)
+│   ├── cec2018.py            #     CEC 2018 DF1--DF14/DF10 (DF10 is 3-obj)
 │   └── uav_scenario.py       #     dynamic multi-UAV task-allocation simulator
 │
 ├── core/                     # TLE framework core (all algorithms live here)
@@ -114,10 +114,10 @@ Two non-trivial findings are reported in the paper:
 │
 ├── proposed/                 # single-file CLI entry point (Algorithm 1 in the paper)
 │   ├── __init__.py
-│   └── run_tle.py            #     `python -m proposed.run_tle --problem DF1 --n_seeds 8`
+│   └── run_tle.py            #     `python -m proposed.run_tle --problem DF1 --n_seeds 30`
 │
 ├── experiments/              # run scripts and plot scripts (reproduces the paper)
-│   ├── run_main_cec2018.py   # 5-algorithm × 5-problem × 8-seed main comparison
+│   ├── run_main_cec2018.py   # 6-algorithm × 5-problem × 8-seed main comparison
 │   ├── run_v3_seeds.py       # 75 extra runs that produced sec_main_v3.json
 │   ├── run_sec_experiments.py# 4-variant ablation (V0--V3)
 │   ├── run_uav.py            # 4-/8-UAV scenario
@@ -215,7 +215,7 @@ python -m proposed.run_tle --problem DF1 --seeds 0 --max-gen 5 --pop-size 10
 
 `run_all.sh` re-executes, in order:
 
-1. The 8-seed main comparison on DF1/DF2/DF3/DF5/DF7
+1. The 8-seed main comparison on DF1--DF14
 2. The 5-seed ablation (V0--V3)
 3. The 5-seed UAV comparison (4-UAV and 8-UAV)
 4. The 2-seed cross-LLM analysis (3 models × 3 problems)
@@ -286,7 +286,7 @@ files and writes a PDF + PNG pair to `results/figures/`.
 
 ```bash
 # Step 1: run the 8 seeds (writes results/raw/sec_main_v3.json)
-python -m experiments.run_main_cec2018 --n_seeds 8
+python -m experiments.run_main_cec2018 --n_seeds 30
 
 # Step 2: compute the Friedman test + Nemenyi CD
 python -m experiments.friedman_test --input results/raw/sec_main_v3.json
@@ -378,7 +378,7 @@ CPU-only reproduction is supported but 25--30x slower.
 ```
 results/
 ├── raw/                          # 11 small JSON files, committed for reproducibility
-│   ├── sec_main_v3.json          # 6 algorithms × 5 problems × 8 seeds = 240 runs.
+│   ├── sec_main_v3.json          # 6 algorithms × 14 problems × 8 seeds = 240 runs.
 │   │                             #   MOEA/DD's DF2 entry is imputed for the
 │   │                             #   Friedman test (its 8 raw DF2 IGDs are
 │   │                             #   catastrophic, of order 1e7 to 1e27).
